@@ -216,3 +216,35 @@
 .build-my-shade-popup .popup-content .slider-block .slider-block-content .slider-text ul li span.light-grey.dark{
   color: #282828;
 }
+/*build my shade*/
+.build-my-shade-main{
+  display: flex;
+  flex-direction: row;
+  margin-left:3%;
+}
+.build-my-shade-main .build-shade-left-side{
+  width: 800px;
+  max-width: 800px;
+  position: relative;
+  background: url(../../../images/ShadeExample.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 980px;
+}
+.build-shade-left-side .absolute-icons{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 152px;
+  left: 30px;
+}
+.build-shade-left-side .absolute-icons.button-onclick{
+  left: 107px;
+  z-index: 2;
+}
+.build-shade-left-side .absolute-icons i img{
+  /* background: #fff; */
+  padding: 5px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}

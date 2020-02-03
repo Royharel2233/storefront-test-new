@@ -1,7 +1,6 @@
 
 import React, {useRef, useState} from "react";
 
-import ReactToPrint from 'react-to-print';
 
 import "./scss/index.scss";
 
@@ -45,9 +44,6 @@ categories: ProductsListNew_categories;
     }
     return(
     <div className="container">
-        <ReactToPrint
-        trigger={() => <button>Print this out!</button>}
-        content={() => componentRef.current}/>
         <div className="build-my-shade-main w-1239">
             <BuildMyShadeLeftSide printOutFunc={componentRef}/>
             <BuildMyShadeRightSide products={categories} children={React.Children} setShadeName={ChangePopHeadLine} OpenPopUpAction={OpenPopUp}/>
