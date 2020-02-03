@@ -37,6 +37,8 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
     const [value4Data, setValue4Data] = useState("");
     const [attributesValuesNames, setAttributesValuesNames] = useState([])
     const [chosenFabricColor, setChosenFabricColor] = useState(0)
+    const [clickTd, setClickedTd] = useState(null);
+
 
 
     const show = (shadeNum, fabricTypeNum, name, image,attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName) => {
@@ -51,6 +53,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
         setValue4Data(value4)
         setAttributesValuesNames(attributesValues)
         setChosenFabricColor(FabricColorNumber)
+        setClickedTd(FabricColorNumber) 
         // window.alert(param);
     }
     const hide = () =>{
@@ -96,9 +99,10 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                             <p className="fabric-type-title dark-grey"><b>Fabric:</b>{item.node.name.substring(0,item.node.name.indexOf('-'))} {isVisible}</p>
                             <div className="fabric-images-table">
                             {item.node.variants.map((vairant, varIndex)=> (
-                                     <div className="fabric-images-table-single-item" key={varIndex}>
+                                     <div className={clickTd === varIndex ? "fabric-images-table-single-item" : "fabric-images-table-single-item"} key={varIndex}>
                                      {item.node.images[varIndex].url !== null ? 
-                                     <img src={item.node.images[varIndex].url} onClick={handleChange(shadeIndex, fabricIndex, item.node.variants, item.node.images[varIndex].url, 
+                                     <img src={item.node.images[varIndex].url} onClick={handleChange(shadeIndex, fabricIndex, item.node.variants, 
+                                        item.node.images[varIndex].url, 
                                          [item.node.attributes[0].attribute.name,
                                          item.node.attributes[1].attribute.name,
                                          item.node.attributes[2].attribute.name,
@@ -107,7 +111,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                                          item.node.attributes[1].attribute.values[0].name,
                                          item.node.attributes[2].attribute.values[0].name,
                                          item.node.attributes[3].attribute.values[0].name,
-                                         varIndex,
+                                         varIndex,  
                                          vairant.name
                                          )}/>
                                      :
