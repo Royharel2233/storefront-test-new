@@ -1,0 +1,400 @@
+body{
+    margin: 0px;
+}
+h1{
+    font-size: 36px;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+}
+h2{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+}
+h3{
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: 0.5px;
+}
+h4{
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0.37px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+}
+span{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.list_none {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+.dark-grey {
+  color: #343538;
+}
+.bold{
+    font-weight: bold;
+}
+.checkout-page .checkout-header {
+  position: relative;
+  margin-bottom: 36px;
+}
+.checkout-page .checkout-header .checkout-menu {
+  display: flex;
+  flex-direction: row;
+  max-width: 385px;
+  margin: auto;
+  justify-content: space-between;
+}
+.checkout-menu li p {
+  margin-bottom: 8px;
+  line-height: 1.56;
+  letter-spacing: 0.4px;
+}
+.checkout-menu .title-devideer {
+  display: none;
+  width: 30%;
+  display: inline-block;
+  margin-left: 2px;
+  margin-bottom: 4px;
+}
+.checkout-menu li.selected-menu-item p {
+  color: #343538;
+}
+.checkout-menu li.selected-menu-item .title-devideer {
+  display: block;
+}
+.checkout-page .checkout-header .button-back {
+  position: absolute;
+  top: 23px;
+}
+.checkout-page .checkout-header .button-back span {
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+.checkout-main-content {
+  display: flex;
+}
+.checkout-main-content .right-side {
+  margin-right: 70px;
+  max-width: 770px;
+}
+.checkout-main-content .block-shipping-address {
+  width: 710px;
+  box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
+  padding: 30px;
+  margin-bottom: 15px;
+}
+.checkout-main-content .right-side h3 {
+  line-height: 1.52;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 15px;
+}
+.checkout-main-content .block-shipping-address .shipping-address-form select {
+  width: 100%;
+  margin-bottom: 30px;
+  height: 32px;
+  border: solid 1px #fdcd4a;
+}
+.checkout-main-content
+  .block-shipping-address
+  .shipping-address-form
+  select
+  option:hover {
+  background: #fdcd4a;
+}
+/*block shipping address - new address form*/
+.checkout-main-content
+  .block-shipping-address
+  .shipping-address-form.new-address-state
+  select {
+  width: 47%;
+}
+.checkout-main-content .new-shipping-address {
+  display: none;
+}
+.checkout-main-content .new-shipping-address .form-field {
+  width: 47%;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+}
+.checkout-main-content .new-shipping-address .form-field:nth-child(odd) {
+  margin-right: 30px;
+}
+.checkout-main-content .new-shipping-address .form-field label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  color: #343538;
+}
+.checkout-main-content .new-shipping-address .form-field input {
+  border: 0px;
+  border-bottom: 2px #343538 solid;
+  margin-top: 23px;
+  width: 100%;
+}
+.checkout-main-content .new-shipping-address .form-field.checkbox input {
+  width: auto;
+  margin-top: 0px;
+  opacity: 0;
+}
+.checkout-main-content .new-shipping-address .form-field.checkbox label {
+  position: relative;
+}
+.checkout-main-content .new-shipping-address .form-field.checkbox label span {
+  position: absolute;
+  left: 0px;
+  width: 15px;
+  height: 15px;
+  border: 2px rgba(0, 0, 0, 0.25) solid;
+}
+/*end block shipping address - new address form*/
+.checkout-page-button {
+  color: #fdcd4a;
+  background: #282828;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+  padding: 15px 30px 14px;
+  border: 0px;
+  cursor: pointer;
+}
+.checkout-main-content .shipping-method {
+  display: none;
+  box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
+  padding: 30px;
+}
+.checkout-main-content .shipping-method h3 {
+  line-height: 1.52;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 15px;
+}
+.checkout-main-content .shipping-method .shipping-method-table table {
+  width: 100%;
+}
+.checkout-main-content .shipping-method .shipping-method-table table tbody {
+  position: relative;
+}
+.checkout-main-content .shipping-method .shipping-method-table table tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.checkout-main-content .shipping-method .shipping-method-table table tr:before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 1px #343538 solid;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 9px;
+}
+.checkout-main-content
+  .shipping-method
+  .shipping-method-table
+  table
+  tr.selected:before {
+  background: #fdcd4a;
+}
+.checkout-main-content .shipping-method .shipping-method-table table tr th {
+  margin-left: 20px;
+}
+.checkout-main-content
+  .shipping-method
+  .shipping-method-table
+  table
+  tr.fixed-freight-note-tr {
+  margin-left: 20px;
+}
+.checkout-main-content
+  .shipping-method
+  .shipping-method-table
+  table
+  tr.fixed-freight-note-tr:before {
+  display: none;
+}
+.checkout-main-content
+  .shipping-method
+  .shipping-method-table
+  table
+  tr.fixed-freight-tr {
+  margin-bottom: 0px;
+}
+.checkout-main-content .shipping-method .shipping-method-table p {
+  margin: 0px;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+}
+.checkout-main-content
+  .shipping-method
+  .shipping-method-table
+  p.fixed-freight-note {
+  font-size: 12px;
+  line-height: 1.59;
+  letter-spacing: 0.27px;
+}
+.checkout-main-content .shipping-method .shipping-method-button {
+  margin-top: 15px;
+}
+/*checkout in progress - order summery */
+.checkout-main-content .order-summary {
+  box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
+  width: 340px;
+  padding: 30px;
+  max-height: fit-content;
+}
+.checkout-main-content .order-summary .order-summary-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16.8px;
+  border-bottom: 1px #a3a5ad solid;
+  margin-bottom: 15px;
+}
+.checkout-main-content .order-summary .order-summary-header h4 {
+  margin: 0px;
+  line-height: 1.35;
+  letter-spacing: 0.37px;
+}
+.checkout-main-content .order-summary .order-summary-header span {
+  padding-top: 5px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+}
+.order-summary-details .fabric-details {
+  margin-bottom: 15px;
+}
+.order-summary-details .fabric-details .fabric-single-item {
+  width: 29%;
+  max-width: 100px;
+  box-shadow: 0 4.8px 19px 0 rgba(58, 60, 68, 0.06);
+  display: inline-block;
+  margin-right: 18px;
+}
+.order-summary-details .fabric-details .fabric-single-item img {
+  width: 98px;
+  height: 88px;
+}
+.order-summary-details
+  .fabric-details
+  .fabric-single-item
+  .fabric-single-item-names {
+  padding: 5px;
+}
+.order-summary-details
+  .fabric-details
+  .fabric-single-item
+  .fabric-single-item-names
+  span {
+  display: block;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 1.2px;
+  font-weight: bold;
+}
+.order-summary-details .fabric-extra-details {
+  padding-bottom: 15px;
+  border-bottom: 1px #a3a5ad solid;
+  margin-bottom: 15px;
+}
+.order-summary-details .fabric-extra-details .fabric-extra-details-single-item {
+  width: 47%;
+  margin-right: 16px;
+  display: inline-block;
+  box-shadow: 0 4.8px 19px 0 rgba(58, 60, 68, 0.06);
+}
+
+.order-summary-details
+  .fabric-extra-details
+  .fabric-extra-details-single-item
+  img {
+  width: 160px;
+  height: 88px;
+}
+.order-summary-details
+  .fabric-extra-details
+  .fabric-extra-details-single-item
+  .fabric-single-item-names {
+  width: auto;
+  padding: 5px;
+  margin-top: -4px;
+  background: #fff;
+}
+.order-summary-details
+  .fabric-extra-details
+  .fabric-extra-details-single-item
+  .fabric-single-item-names
+  span {
+  text-transform: uppercase;
+  font-size: 10px;
+  line-height: 1.6;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+  display: block;
+}
+.ammount-table table {
+  width: 100%;
+}
+.ammount-table table tr {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.ammount-table table tr:last-child {
+  margin-bottom: 0px;
+}
+.ammount-table table tr p {
+  margin: 0px;
+}
+.ammount-table table tr th p {
+  line-height: 1.56;
+  letter-spacing: 0.4px;
+  font-weight: normal;
+}
+.ammount-table table tr td p {
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+}
+.ammount-table table tr.tax td p {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.59;
+  letter-spacing: 0.27px;
+}
+.ammount-table table tr.total {
+  margin-top: 24px;
+}
+.ammount-table table tr.total th p {
+  font-weight: bold;
+}
+
+.w-1239 {
+  max-width: 1239px;
+  margin: auto;
+}
+
+.light-grey {
+  color: #737680;
+}
+
+.grey {
+  color: #a3a5ad;
+}
