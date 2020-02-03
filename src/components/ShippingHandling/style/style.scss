@@ -1,0 +1,197 @@
+body{
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+}
+h2{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+}
+h3{
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: 0.5px;
+}
+h4{
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0.37px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+}
+span{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dark-grey{
+    color: #343538;
+}
+
+.w-1239{
+    max-width: 1239px;
+    margin: auto;
+}
+
+.shipping-handling-page .shipping-handling-main-banner{
+    width: 100%;
+    height: 405px;
+    background: url('../../../images/shipping-handling_background.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    margin-bottom: 67px;
+}
+.shipping-handling-page .shipping-handling-main-banner .content{
+    margin-left: 197.3px;
+}
+.shipping-handling-page .shipping-handling-main-banner .content h1{
+    margin: 0px 0px 10.7px;
+}
+.delivery-method{
+    margin-bottom: 67px;
+}
+.delivery-method h1{
+    text-align: center;
+    margin: 0 0 54px;
+}
+.delivery-method .content .methods{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 66px;
+}
+.delivery-method .content .methods .single-method{
+    display: inline-block;
+    text-align: center;
+    width: 376px;
+    vertical-align: top;
+}
+.delivery-method .content .methods .single-method i img{
+    width: 32px;
+    height: 32px;
+    margin-bottom: 30px;
+}
+.delivery-method .content .methods .single-method h3{
+    margin: 0px 0px 10px;
+    color: #343538;
+}
+.delivery-method .content .methods .single-method p{
+    line-height: 1.75;
+    letter-spacing: 0.4px;
+    color: #737680;
+}
+.delivery-method .content .methods-more-details p{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+    margin: 0px;
+    color: #343538;
+}
+.delivery-method .content .methods-more-details p.title{
+    font-weight: bold;
+}
+.how-it-works{
+    color: #343538;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 126.9px;
+}
+.how-it-works:before{
+    content: '';
+    width: 864px;
+    height: 15px;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.how-it-works:after{
+    content: '';
+    width: 452.8px;
+    height: 635.9px;
+    background-color: #fafafa;
+    position: absolute;
+    bottom: -48px;
+    right: 0px;
+    z-index: -1;
+}
+.how-it-works .content{
+    margin: 0px 67px 0px 89px;
+
+}
+.how-it-works .content h1{
+    line-height: 1.23;
+    letter-spacing: 0.92px;
+}
+.how-it-works .content p{
+    line-height: 1.56;
+}
+.how-it-works img{
+    width: 453px;
+    height: 635px;
+    margin: 71px 60px 0px 0px;
+
+}
+.lead-times{
+    text-align: center;
+    position: relative;
+    padding-bottom: 81px;
+    margin-bottom: 67px;
+}
+.lead-times:before{
+    content: '';
+    width: 376px;
+    height: 16px;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.lead-times:after{
+    content: '';
+    width: 864px;
+    height: 15px;
+    background-color: #fafafa;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.lead-times .title{
+    margin-bottom: 60px;
+}
+.lead-times .title h1{
+    color: #212224;
+    margin: 0px 0px 12px;
+}
+.lead-times .title p{
+    margin: 0px;
+    color: #737680;
+}
+.lead-times .content{
+    display: flex;
+    justify-content: space-between;
+}
+.lead-times .content .single-lead h3{
+    color: #343538;
+    margin: 0px 0px 10px;
+}
+.lead-times .content .single-lead p{
+    color: #737680;
+    line-height: 1.75;
+    letter-spacing: 0.4px;
+}

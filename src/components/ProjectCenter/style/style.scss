@@ -1,0 +1,167 @@
+.project-center h2{
+    margin: 44px 0px 45px;
+    text-align: center;
+}
+.user-dashboard-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.user-dashboard-nav .nav-items a{
+    text-decoration: none;
+    margin-right: 45px;
+}
+.user-dashboard-nav .nav-items .nav-item span{
+    color: #737680;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.52;
+    letter-spacing: 0.5px;
+}
+.user-dashboard-nav .nav-items .nav-item .active{
+    color: #343538;
+}
+.user-dashboard-nav .create-new a{
+    text-decoration: none;
+}
+.user-dashboard-nav .create-new a span{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+}
+.user-dashboard-nav .create-new a span:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #343538;
+    position: absolute;
+    left: -10px;
+    top: 15%;
+}
+.user-dashboard-nav .create-new hr{
+    border-top: 2px #fdcd4a solid;
+    margin-top: 4px;
+}
+.project-center .projects-wrraper .single-project{
+    display: flex;
+    border-top: 1px #a3a5ad solid;
+    padding: 30px 0px 72px;
+}
+.project-center .projects-wrraper .single-project .details{
+    max-width: 350px;
+    margin-right: 43px;
+}
+.project-center .projects-wrraper .single-project .details .row{
+    margin-bottom: 15px;
+}
+.project-center .projects-wrraper .single-project .details p{
+    margin: 0px;
+}
+.project-center .projects-wrraper .single-project .details p.title{
+    margin-right: 5px;
+}
+.project-center .projects-wrraper .single-project .details .one-row p{
+    display: inline-block;
+}
+.project-center .projects-wrraper .single-project .details .two-rows .title{
+    margin-bottom: 10px;
+}
+.project-center .projects-wrraper .single-project .details .two-rows .content{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+.project-center .projects-wrraper .single-project .images{
+    max-width: 344px;
+    margin-right: 157px;
+}
+.project-center .projects-wrraper .single-project .images .img-nav{
+    margin-bottom: 10px;
+}
+.project-center .projects-wrraper .single-project .images .img-nav a{
+    text-decoration: none;
+    margin-right: 30px;
+}
+.project-center .projects-wrraper .single-project .images .img-nav a span{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+    color: #737680;
+}
+.project-center .projects-wrraper .single-project .images .img-nav a span.active{
+    color: #343538;
+}
+.project-center .projects-wrraper .single-project .images .img-content .single-img{
+    max-width: 162px;
+    box-shadow: 0 4.8px 19px 0 rgba(58, 60, 68, 0.06);
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.project-center .projects-wrraper .single-project .images .img-content .single-img:nth-child(odd){
+    margin-right: 14px;
+}
+.project-center .projects-wrraper .single-project .images .img-content .single-img img{
+    width: 162px;
+    height: 88px;
+}
+.project-center .projects-wrraper .single-project .images .img-content .single-img .details{
+    padding: 5px;
+}
+.project-center .projects-wrraper .single-project .images .img-content .single-img .details p {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.project-center .projects-wrraper .single-project .status{
+    width: 350px;
+}
+.project-center .projects-wrraper .single-project .status p{
+    margin: 0px 0px 15px;
+}
+.project-center .projects-wrraper .single-project .status button{
+    width: 100%;
+    height: 45px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+}
+.project-center .projects-wrraper .single-project .status hr{
+    margin: 30px 0px;
+}
+.project-center .projects-wrraper .single-project .status button.status-button{
+    background: #ffffff;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    cursor: auto;
+}
+.project-center .projects-wrraper .single-project .status button.status-button-complete{
+    background: #3dd598;
+    color: #ffffff;
+    border: 0px;
+    display: none;
+}
+.project-center .projects-wrraper .single-project .status button.view-details{
+    margin-bottom: 15px;
+    background: #343538;
+    border: 0px;
+    color: #fdcd4a;
+}
+.project-center .projects-wrraper .single-project .status button.edit{
+    background: #ffffff;
+    border: 1px solid #000000;
+    color: #343538;
+}
+.project-center .projects-wrraper .single-project.complete .status button.status-button{
+    display: none;
+}
+.project-center .projects-wrraper .single-project.complete .status button.status-button-complete{
+    display: block;
+}
+.project-center .projects-wrraper .single-project.complete .status button.edit{
+    display: none;
+}
