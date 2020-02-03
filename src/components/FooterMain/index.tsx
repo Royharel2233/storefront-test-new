@@ -20,7 +20,6 @@ import youtube from "./img/Youtube.svg";
 
 import { Link } from "react-router-dom";
 
-
 import { aboutUs, contactUs, shippingHandling, warrantyPage } from "../../routes/Routes";
 
 const FooterMain = () => (
