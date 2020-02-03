@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap');
+body{
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+}
+h2{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+}
+h3{
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: 0.5px;
+}
+h4{
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0.37px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+}
+span{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.page-header{
+    display: flex;
+    background: #fafafa;
+    padding: 0px 120px;
+    height: 405px;
+    margin-bottom: 45px;
+}
+.page-header .text{
+    margin-top: 130px;
+    margin-right: 204px;
+}
+.page-header .text h1{
+    margin: 0px 0px 10.7px;
+}
+.page-header .text p{
+    margin: 0px 0px 30.3px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+    font-size: 12px;
+}
+.page-header .text .button-view-more{
+    max-width: fit-content;
+    padding-left: 8px;
+}
+.page-header .text .button-view-more span{
+    font-size: 10px;
+    font-weight: bold;
+    position: relative;
+}
+.page-header .text .button-view-more span:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #343538;
+    position: absolute;
+    left: -8px;
+    top: 6%;
+}
+.page-header .text .button-view-more hr{
+    border-bottom: 2px #fdcd4a solid;
+    border-top: 0px;
+    margin: 3px 0px 3px -8px;
+}
+.page-header .img img{
+    width: 396px;
+    height: 100%;
+}
+.shop-fabric-menu{
+    margin-bottom: 30px;
+}
+.shop-fabric-menu ul li{
+    display: inline-block;
+    margin-right: 50px;
+}
+.shop-fabric-menu ul li span{
+    color: #a3a5ad;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 1.2px;
+
+}
+.shop-fabric-menu ul li.active span{
+    color: #343538;
+    position: relative;
+}
+.shop-fabric-menu ul li.active span:after{
+    content: "";
+    border-bottom: 2px #fdcd4a solid;
+    position: absolute;
+    width: 20px;
+    left: 0px;
+    bottom: -10px;
+}
+.fabric-filter{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.fabric-filter .filter span.title{
+    color: #a3a5ad;
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    margin-right: 45px;
+}
+.fabric-filter .filter a.single-filter span{
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    color: #3a3c44;
+    margin-right: 45px;
+    position: relative;
+}
+.fabric-filter .filter a.single-filter span:after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 6px transparent solid;
+    border-top: 6px #3a3c44 solid;
+    border-left: 6px transparent solid;
+    position: absolute;
+    right: -14px;
+    top: 2px;
+}
+.fabric-filter .products-number span{
+    font-weight: 500;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    color: #3a3c44;
+}
+.fubric-gallery h4{
+    margin: 0px 0px 20px;
+}
+.fubric-gallery .gallery .single-gallery{
+    box-shadow: 0 5px 20px 0 rgba(58, 60, 68, 0.06);
+    width: 268px;
+    margin: 0px 56px 30px 0px;
+    display: inline-block;
+}
+.fubric-gallery .gallery .single-gallery img{
+    width: 268px;
+    height: 268px;
+}
+.fubric-gallery .gallery .single-gallery .content{
+    padding: 19px 15px 21px;
+    text-align: right;
+}
+.fubric-gallery .gallery .single-gallery .content h3{
+    color: #343538;
+    margin: 0px 0px 20px;
+}
+.fubric-gallery .gallery .single-gallery .content .button{
+    margin-bottom: 20px;
+}
+.fubric-gallery .gallery .single-gallery .content .button a span{
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 1.6;
+    letter-spacing: 1.2px;
+    color: #343538;
+    position: relative;
+}
+.fubric-gallery .gallery .single-gallery .content .button a span:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #343538;
+    position: absolute;
+    left: -10px;
+    top: 6%;
+}
+.fubric-gallery .gallery .single-gallery .content .button hr{
+    width: 45%;
+    margin-right: 0px;
+    border-bottom: 2px #fdcd4a solid;
+    border-top: 0px;
+}
