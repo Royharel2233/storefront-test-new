@@ -1,0 +1,124 @@
+.static-page-header{
+    height: 405px;
+    position: relative;
+    margin-bottom: 45px;
+}
+.static-page-header .static-page-header-text{
+    position: absolute;
+    top: 165px;
+    left: 197.3px;
+}
+.static-page-header .static-page-header-text h1{
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+    margin-bottom: 5px;
+}
+.static-page-header .static-page-header-text span{
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+
+.static-page-header.about-us-header{
+    background: url('../../../images/bedroom.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-us-main-content{
+    display: flex;
+    padding: 38.4px 80px 0px 89px;
+    margin-bottom: 80.3px;
+    position: relative;
+}
+.about-us-main-content:before{
+    content: '';
+    width: 856.9px;
+    height: 566.9px;
+    background-color: #fafafa;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.about-us-main-content img{
+    width: 452.8px;
+    height: 575.3px;
+    margin-right: 164.2px;
+    z-index: 2;
+
+}
+.about-us-main-content .content{
+    padding-top: 37.6px;
+    z-index: 2;
+}
+.about-us-main-content .content h1{
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+    margin: 0px;
+    margin-bottom: 28.4px;
+}
+.about-us-main-content .content p{
+    line-height: 1.56;
+    letter-spacing: 0.4px;
+}
+.about-us-down-block{
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+}
+.about-us-down-block h1{
+    line-height: 1.39;
+    letter-spacing: 0.6px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+.about-us-down-block h1:after{
+    content: '';
+    width: 293px;
+    height: 16px;
+    background: #fafafa;
+    position: absolute;
+    top: 13px;
+    right: 0px;
+}
+.about-us-down-block button:before{
+    content: '';
+    width: 293px;
+    height: 16px;
+    background: #fafafa;
+    position: absolute;
+    top: 109px;
+    left: 0px;
+}
+
+.w-1239{
+    max-width: 1239px;
+    margin: auto;
+}
+.dark-grey{
+    color: #343538;
+}
+
+.normal{
+    font-weight: normal;
+}
+.white{
+    color: #ffffff;
+}
+.off-white{
+    color: #fafafa;
+}
+
+.checkout-page-button{
+    color: #fdcd4a;
+    background: #282828;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    padding: 15px 30px 14px;
+    border: 0px;
+    cursor: pointer;
+}

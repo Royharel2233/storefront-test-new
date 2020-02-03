@@ -35,6 +35,21 @@ import { ProductPage } from "../views/Product";
 
 import { SearchPage } from "../views/Search";
 
+import { AboutUs } from "../components/AboutUs/AboutUs";
+
+import { CheckOut } from "../components/CheckOut-Progress/CheckOut";
+
+import { ContactUs } from "../components/ContactUs/ContactUs";
+
+import { DashBoardHome } from "../../src/components/ProjectCenter/DashBoardHome";
+
+import { ShippingHandling } from "../components/ShippingHandling/ShippingHandling";
+
+import { ShopFabric } from "../components/ShopFabric/ShopFabric";
+
+import { WarrantyPage } from "../components/Warranty/WarrantyPage";
+
+
 const slugUrl = ":slug([a-z-0-9]+)/:id([0-9]+)/";
 export const baseUrl = "/";
 export const buildShadeUrl = `${baseUrl}build-shade/`;
@@ -53,6 +68,13 @@ export const accountUrl = `${baseUrl}account/`;
 export const orderHistoryUrl = `${baseUrl}order-history/`;
 export const addressBookUrl = `${baseUrl}address-book/`;
 export const paymentOptionsUrl = `${baseUrl}payment-options/`;
+export const aboutUs = `${baseUrl}about-us/`;
+export const checkOut = `${baseUrl}check-out/`;
+export const projectCenter = `${baseUrl}project-center/`;
+export const shopFabric = `${baseUrl}shop-fabric/`;
+export const contactUs = `${baseUrl}contact-us/`;
+export const shippingHandling = `${baseUrl}shipping-handling/`;
+export const warrantyPage = `${baseUrl}warranty-page/`;
 
 export const Routes: React.FC = () => (
   <Switch>
@@ -75,6 +97,13 @@ export const Routes: React.FC = () => (
     <Route path={addressBookUrl} component={Account} />
     <Route path={paymentOptionsUrl} component={Account} />
     <Route path={buildShadeUrl} component={BuildShadePage} />
+    <Route path={checkOut} component={CheckOut} />
+    <Route path={projectCenter} component={DashBoardHome} />
+    <Route path={shopFabric} component={ShopFabric} />
+    <Route path={aboutUs} component={AboutUs} />
+    <Route path={contactUs} component={ContactUs} />
+    <Route path={shippingHandling} component={ShippingHandling} />
+    <Route path={warrantyPage} component={WarrantyPage} />
     <Route component={NotFound} />
   </Switch>
 );
