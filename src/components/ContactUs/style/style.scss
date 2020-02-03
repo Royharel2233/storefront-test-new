@@ -1,0 +1,114 @@
+.w-1239{
+    max-width: 1239px;
+    margin: auto;
+}
+body{
+    margin: 0px;
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    font-size: 36px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: 0.89px;
+}
+h2{
+    font-size: 28px;
+    line-height: 1.5;
+    letter-spacing: 0.7px;
+}
+h3{
+    font-size: 21px;
+    line-height: 1.52;
+    letter-spacing: 0.5px;
+}
+h4{
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: 0.37px;
+}
+p{
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+}
+span{
+    font-size: 12px;
+    line-height: 1.59;
+    letter-spacing: 0.27px;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.contact-us-page .contact-us-main-banner{
+    width: 100%;
+    height: 405px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: url("../../../images/shipping-handling_background.png");
+    margin-bottom: 45px;
+}
+.contact-us-page .contact-us-main-banner .content{
+    margin-left: 198.3px;
+    max-width: 325px;
+
+}
+.contact-us-page .contact-us-main-banner .content h1{
+    margin: 0px 0px 10.7px;
+}
+.contact-us-page .main-content{
+    display: flex;
+    margin-bottom: 44px;
+}
+.contact-us-page .main-content .map{
+    width: 718px;
+    height: 456px;
+    margin-right: 73px;
+}
+.contact-us-page .main-content .contact-us-form h2{
+    color: #343538;
+    font-weight: normal;
+    margin: 0px 0px 12px;
+}
+.contact-us-page .main-content .contact-us-form p{
+    color: #737680;
+    line-height: 1.56;
+    letter-spacing: 0.4px;
+    margin: 0px 0px 46px;
+}
+.contact-us-page .main-content .contact-us-form form .form-row{
+    margin-bottom: 45px;
+}
+.contact-us-page .main-content .contact-us-form form .form-row:last-child{
+    margin-bottom: 30px;
+}
+.contact-us-page .main-content .contact-us-form form .form-row label{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    color: #343538;
+    display: block;
+}
+.contact-us-page .main-content .contact-us-form form .form-row input{
+    width: 100%;
+    border: 0px;
+    border-bottom: 2px #343538 solid;
+    height: 23px;
+}
+.contact-us-page .main-content .contact-us-form form .submit{
+    width: 138.8px;
+    height: 45px;
+}
+.contact-us-page .main-content .contact-us-form form .submit input{
+    background: #343538;
+    border: 0px;
+    padding: 15px 43px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.33;
+    letter-spacing: 1.2px;
+    color: #fdcd4a;
+}
