@@ -44,6 +44,8 @@ button:focus {
   font-weight: 500;
   padding-bottom: 3px;
   font-family: "Lato";
+  padding-right: 10px;
+  padding-left: 7px;
 }
 .link:hover {
   line-height: 16px;
@@ -55,6 +57,8 @@ button:focus {
   border-bottom: 2px solid #f0b74d;
   padding-bottom: 3px;
   font-family: "Lato";
+  padding-right: 10px;
+  padding-left: 7px;
 }
 .link img {
   margin-right: 3px !important;

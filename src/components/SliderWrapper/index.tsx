@@ -122,7 +122,7 @@ class SliderWrapper extends React.Component {
                                         data-width="['auto']" data-height="['auto']" data-type="button" data-responsive_offset="on"
                                         data-frames='[{"delay":2800,"speed":1000,"frame":"0","from":"x:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","force":true,"to":"o:1;rX:0;rY:0;rZ:0;z:0;"}]'
                                     >
-                                        <a href="#" className="link"><img src={caret_image} alt="LEARN More"/>LEARN More</a></div>
+                                        <a href="#" className="link-long"><img src={caret_image} alt="LEARN More"/>LEARN More</a></div>
                                 </li>   
 
 

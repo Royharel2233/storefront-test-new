@@ -1088,3 +1088,29 @@ footer .btn-subscribe {
     margin-top: 15px;
   }
 }
+.link-long{
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #343538;
+  font-size: 12px;
+  font-weight: 500;
+  padding-bottom: 3px;
+  font-family: "Lato";
+  padding-right: 10px;
+  padding-left: 7px;
+  width: 150px;
+}
+.link-long:hover {
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #343538;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 2px solid #f0b74d;
+  padding-bottom: 3px;
+  font-family: "Lato";
+  padding-right: 10px;
+  padding-left: 7px;
+}
