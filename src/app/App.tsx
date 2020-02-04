@@ -27,8 +27,11 @@ const App: React.FC<RouteComponentProps> = ({
       <header>
         <MainMenu />
         <br />
+        <br/>
       </header>
       <Routes />
+      <br/>
+      <br/>
       <footer>
         {!orderConfirmationPage && <FooterMain />}
       </footer>
