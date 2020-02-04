@@ -36,22 +36,6 @@ button:focus {
   letter-spacing: 0.4px;
   color: #737680;
 }
-.link,
-.link:hover {
-  line-height: 16px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #343538;
-  font-size: 12px;
-  font-weight: 800;
-  border-bottom: 2px solid #f0b74d;
-  padding-bottom: 3px;
-  font-family: "Avenir";
-}
-.link img {
-  margin-right: 3px !important;
-  width: 5px !important;
-}
 .order-first {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
