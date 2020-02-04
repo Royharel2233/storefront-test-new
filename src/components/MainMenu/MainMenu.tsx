@@ -80,7 +80,7 @@ const MainMenu: React.FC = () => {
               />
             </Link>
             <ul className="list-inline preheader_nav">
-            <Online>
+              <Online>
                 <Media
                   query={{ minWidth: smallScreen }}
                   render={() => (
