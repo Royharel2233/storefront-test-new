@@ -1,11 +1,11 @@
 import React from "react";
-import BedRoom from "../../images/bedroom.png";
+import aboutUs from "../../images/aboutUsPicture.svg";
 import "./css/style.scss";
 
 export const AboutMain: React.FC<{}> = () => {
   return (
     <div className="about-us-main-content">
-      <img src={BedRoom} />
+        <img src={aboutUs} />
       <div className="content">
         <h1 className="dark-grey normal">History</h1>
         <p className="dark-grey">

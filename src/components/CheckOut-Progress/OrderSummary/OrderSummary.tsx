@@ -1,9 +1,12 @@
 import React from "react";
 import "../style/style.scss";
 
-import bedroom from "../../../images/bedroom.png";
+import placeholder from "../../../img/placeholder.png";
 
-export const OrderSummary: React.FC<{}> = () => {
+import {CheckOutProps} from '../interfaces'
+import { SingleItem } from "./SingleItem";
+
+export const OrderSummary: React.FC<CheckOutProps> = ({exportObj}) => {
   return (
     <div className="order-summary mb-2">
       <div className="order-summary-header">
@@ -12,38 +15,23 @@ export const OrderSummary: React.FC<{}> = () => {
       </div>
       <div className="order-summary-details">
         <div className="fabric-details d-flex justify-content-around">
-          <div className="fabric-single-item">
-            <img src={bedroom} />
-            <div className="fabric-single-item-names">
-              <span className="dark-grey">IVORY</span>
-              <span className="grey">DIXIE (MILAN)</span>
-            </div>
+          <div>
+            <SingleItem/>
           </div>
-          <div className="fabric-single-item">
-            <img src={bedroom} />
-            <div className="fabric-single-item-names">
-              <span className="dark-grey">IVORY</span>
-              <span className="grey">DIXIE (MILAN)</span>
-            </div>
-          </div>
-          <div className="fabric-single-item">
-            <img src={bedroom} />
-            <div className="fabric-single-item-names">
-              <span className="dark-grey">IVORY</span>
-              <span className="grey">DIXIE (MILAN)</span>
-            </div>
+          <div>
+            <SingleItem/>
           </div>
         </div>
-        <div className="fabric-extra-details d-flex justify-content-around">
+        <div className="fabric-extra-details d-flex justify-content-center">
           <div className="fabric-extra-details-single-item">
-            <img src={bedroom} />
+            <img src={placeholder} />
             <div className="fabric-single-item-names">
               <span className="dark-grey">double roller</span>
               <span className="grey">custom build my shade</span>
             </div>
           </div>
           <div className="fabric-extra-details-single-item">
-            <img src={bedroom} />
+            <img src={placeholder}  />
             <div className="fabric-single-item-names">
               <span className="dark-grey">designer shade</span>
               <span className="grey">custom build my shade</span>

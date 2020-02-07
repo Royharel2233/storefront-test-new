@@ -20,7 +20,7 @@
 }
 
 .static-page-header.about-us-header{
-    background: url('../../../images/bedroom.png');
+    background: url('../../../images/aboutUsBanner.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,8 +41,7 @@
     top: 0px;
     left: 0px;
 }
-.about-us-main-content img{
-    width: 452.8px;
+.about-us-main-content  img{
     height: 575.3px;
     margin-right: 164.2px;
     z-index: 2;
@@ -106,6 +105,7 @@
 .off-white{
     color: #fafafa;
 }
+
 
 .checkout-page-button{
     color: #fdcd4a;

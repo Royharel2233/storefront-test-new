@@ -93,7 +93,6 @@
     line-height: 1.56;
 }
 .how-it-works img{
-    width: 453px;
     height: 635px;
     margin: 71px 60px 0px 0px;
 
@@ -145,4 +144,22 @@
     color: #737680;
     line-height: 1.75;
     letter-spacing: 0.4px;
+}
+
+.turn-around-shape {
+    width: 39.2px;
+    height: 35.6px;
+    background-color: #f08c7d;
+  }
+
+.airplane-shape {
+    width: 32px;
+    height: 32px;
+    background-color: var(--yellow-logo);
+}
+
+.truck-shape {
+width: 37.3px;
+  height: 32px;
+  background-color: var(--yellow-logo);
 }
