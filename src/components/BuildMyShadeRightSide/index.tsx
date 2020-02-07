@@ -17,6 +17,7 @@
 
 
 
+
 const BuildMyShadeRightSide: React.FC<{
   products: ProductsListNew_categories;
   setShadeName: any;
@@ -39,7 +40,7 @@ const BuildMyShadeRightSide: React.FC<{
     }
     return(
     <div className="build-shade-right-side">
-      {isVisible ? <ChooseFabricColor shadesData={products} shadeIndex={chosenShade} onClick={triggerChooseShade}  /> 
+      {isVisible ? <ChooseFabricColor shadesData={products} shadeIndex={chosenShade} onClick={triggerChooseShade} /> 
       :
       <ChooseYourShade shadesData={products} onClick={triggerChooseFabricColor} chooseFabricForInfoAction={moreInfoAction}/>}
     </div>

@@ -15,12 +15,24 @@ import { isPath } from "../core/utils";
 
 import { orderConfirmationUrl, Routes } from "../routes";
 
+// import {useAuth} from "@sdk/react";
+
+
 const App: React.FC<RouteComponentProps> = ({
   history: {
     location: { pathname },
   },
 }) => {
   const orderConfirmationPage = isPath(pathname, orderConfirmationUrl);
+  // const [isAuthticated, setIsAuthticated] = useState(useAuth())
+  
+  // useAuth((authenticated: boolean) => {
+  //   if (authenticated) {
+  //       setIsAuthticated()
+  //   } else {
+  //       setIsAuthticated()
+  //   }
+  //   });
   return (
     <>
       <MetaConsumer />

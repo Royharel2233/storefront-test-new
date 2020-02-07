@@ -4,6 +4,8 @@ import React, {useState} from "react";
 
 import xpng from "../../images/CloseLogo.svg";
 
+import plus from "../../images/PlusLogo.svg";
+
 
 // import {
 //     VariantsData_variants
@@ -23,15 +25,19 @@ interface PageProps {
     value2: string;
     value3: string;
     value4: string;
-
+    loggedIn: any;
 }
 
-const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, ChoiceName, imageUrl, value1,value2, value3, value4, attributesValuesNames, chosenColorIndex}) => {
+const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, ChoiceName, imageUrl, value1,value2, value3, 
+    value4, attributesValuesNames, chosenColorIndex, loggedIn}) => {
     const [isOrderd, setIsOrdered] = useState(false)
-
+    
     const orderSwatch = (fabricNum) => e => {
         alert(fabricNum)
         setIsOrdered(true)
+    }
+    const addSwatchToCart = (swatchId) => e => {
+        alert(swatchId)
     }
 
     return(
@@ -59,6 +65,7 @@ const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, 
                                     </div>
                                 </div>
                             <div> <button onClick={onClick}><img src={xpng} /></button></div>
+                            {loggedIn && <div><button onClick={addSwatchToCart(fabricData)}><img src={plus}></img></button></div>}
                         </div>
                         <div className="description">
                             <span className="dark-grey">Description:</span><span className="light-grey"> A beautiful basic light filtering solid that will help eliminate glare, maintain natural light and provide full privacy. Translucent with a subtle texture.</span>

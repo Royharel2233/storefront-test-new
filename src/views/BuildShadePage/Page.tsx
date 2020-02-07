@@ -30,6 +30,7 @@ import {
 const Page: React.FC<{
 categories: ProductsListNew_categories;
 }> = ({ categories }) => {
+    
     const [ShadeName, setShadeName] = useState("Double Roller Shade")
     const [isPopUpVIsible, setIsPopUPVisible] = useState(false)
     const [currentShade, setCurrentShade] = useState("../../images/ShadeExample.png")
@@ -48,6 +49,7 @@ categories: ProductsListNew_categories;
         setCurrentShade(newShadeUrl)
     }
     return(
+    
     <div className="container">
         <div className="build-my-shade-main w-1239">
             <BuildMyShadeLeftSide printOutFunc={componentRef} current_shade={currentShade} setNewShade={changeCurrentShade}/>
