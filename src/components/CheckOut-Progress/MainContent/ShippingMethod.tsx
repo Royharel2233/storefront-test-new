@@ -1,9 +1,11 @@
 import React from "react";
 import "../style/style.scss";
 
-export const ShippingMethod: React.FC<{}> = () => {
+import { CheckOutProps } from "../interfaces";
+
+export const ShippingMethod: React.FC<CheckOutProps> = ({}) => {
   return (
-    <div className="shipping-method">
+    <div className="shipping-method" style={{ display: "block" }}>
       <h3 className="dark-grey">Shipping Method</h3>
       <div className="shipping-method-table">
         <table>
@@ -50,7 +52,7 @@ export const ShippingMethod: React.FC<{}> = () => {
         className="checkout-page-button shipping-method-button"
         type="button"
       >
-        CONTINUE TO BILLING{" "}
+        CONTINUE TO BILLING
       </button>
     </div>
   );

@@ -1,10 +1,9 @@
 import React from "react";
-import './style/style.scss'
-
+import "./style/style.scss";
 
 export const LeadTimes: React.FC<{}> = ({}) => {
   return (
-    <div className="lead-times">
+    <div className="lead-times container">
       <div className="title">
         <h1>Lead Times</h1>
         <p>All lead times are in business days.</p>

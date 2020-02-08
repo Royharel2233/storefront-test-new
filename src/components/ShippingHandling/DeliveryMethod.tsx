@@ -1,9 +1,13 @@
 import React from "react";
 import "./style/style.scss";
 
+import airplane from "../../img/freeshipping.svg";
+
+import turnaround from "../../img/quick-turn-around.svg";
+
 export const DeliveryMethod: React.FC<{}> = () => {
   return (
-    <div className="delivery-method">
+    <div className="delivery-method container">
       <h1 className="dark-grey">Delivery Methods*</h1>
       <div className="content">
         <div className="methods">
@@ -18,15 +22,15 @@ export const DeliveryMethod: React.FC<{}> = () => {
             </p>
           </div>
           <div className="single-method">
-            <i>
-              <img />
+            <i className="airplane-shape">
+              <img src={airplane} />
             </i>
             <h3>Air Freight</h3>
             <p> Collect freight charges will apply.</p>
           </div>
           <div className="single-method">
-            <i>
-              <img />
+            <i className="turn-around-shape">
+              <img src={turnaround} style={{ color: "#f08c7d" }} />
             </i>
             <h3>Pick Up</h3>
             <p>Free of charge.</p>
