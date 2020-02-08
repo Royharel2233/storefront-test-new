@@ -7,10 +7,6 @@ import Page from "./Page";
 // import { TypedCollectionProductsQuery } from "./queries";
 
 
-// import {
-//   Online,
-// } from "../../components";
-
 
 import {ChooseFabricQuery} from "./queries"
 
