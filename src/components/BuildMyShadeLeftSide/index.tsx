@@ -26,7 +26,10 @@ const BuildMyShadeLeftSide: React.FC<{
   printOutFunc: any;
   current_shade: any;
   setNewShade: any;
-  }> = ({ printOutFunc,current_shade, setNewShade }) => {
+  opacity: any;
+  changeRightSideOpacity: any;
+  changeLeftSideOpacity: any;
+  }> = ({ printOutFunc,current_shade, setNewShade, opacity, changeRightSideOpacity, changeLeftSideOpacity }) => {
   
   const [isColorHidden, setIsColorHidden] = useState(true)
   const [isSettingHidden, setIsSettingHidden] = useState(true)
@@ -45,6 +48,8 @@ const BuildMyShadeLeftSide: React.FC<{
     setIsColorHidden(false)
     setIsSettingHidden(true)
     setChangeColorActive("absolute-icons change-color-onclick")
+    changeLeftSideOpacity("100%")
+    changeRightSideOpacity("25%")
   }  
   const clickChangeSetting= () => {
     setBlackButtonBackground(brush)
@@ -52,6 +57,8 @@ const BuildMyShadeLeftSide: React.FC<{
     setIsColorHidden(true)
     setIsSettingHidden(false)
     setChangeColorActive("absolute-icons change-setting-onclick")
+    changeLeftSideOpacity("100%")
+    changeRightSideOpacity("25%")
 
   }
   const CloseAllAction = () => {
@@ -60,6 +67,7 @@ const BuildMyShadeLeftSide: React.FC<{
     setChangeColorActive("absolute-icons")
     setBlackButtonBackgroundSetting(edit)
     setBlackButtonBackground(brush)
+    changeRightSideOpacity("100%")
   }
 
 
@@ -72,6 +80,7 @@ const BuildMyShadeLeftSide: React.FC<{
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           height: "980px",
+          opacity,
           } }
         >
           <div className={changeColorActive} style={{ zIndex: 2 }} >

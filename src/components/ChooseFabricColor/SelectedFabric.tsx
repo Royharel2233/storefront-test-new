@@ -6,6 +6,13 @@ import xpng from "../../images/CloseLogo.svg";
 
 import plus from "../../images/PlusLogo.svg";
 
+import ContniueLogo from "../../images/ContniueLogo.svg";
+
+import OrderSwatchLogo from "../../images/OrderSwatchLogo.svg";
+
+import SwatchAddedLogo from "../../images/SwatchAddedLogo.svg";
+
+
 
 // import {
 //     VariantsData_variants
@@ -74,12 +81,15 @@ const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, 
                             {loggedIn && 
                             <div className="signed_in">
                                 {isOrderd ? 
-                                <a className="display-swatch one" href="#"><span>SWATCH ADDED</span></a>
+                                <button className="display-swatch one"><img src={SwatchAddedLogo}></img></button>
+                                // <a className="display-swatch one" href="#"><span>SWATCH ADDED</span></a>
                                 :
-                                <a className="display-swatch two" href="#" onClick={orderSwatch(value4)}><span>ORDER SWATCH</span></a>
+                                <button className="display-swatch two" onClick={orderSwatch(value4)}><img src={OrderSwatchLogo}></img></button>
+                                // <a  href="#" ><span>ORDER SWATCH</span></a>
                                 }
                             </div>}
-                            <a href="#"><span>CONTINUE</span></a>
+                            <button><img src={ContniueLogo}></img></button>
+                            {/* <a href="#"><span>CONTINUE</span></a> */}
                             <br />
                         </div>
                     </div>

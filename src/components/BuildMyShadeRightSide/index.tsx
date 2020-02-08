@@ -22,24 +22,37 @@ const BuildMyShadeRightSide: React.FC<{
   products: ProductsListNew_categories;
   setShadeName: any;
   OpenPopUpAction: any;
+  opacity: any;
+  changeRightSideOpacity: any;
+  changeLeftSideOpacity: any;
 
-  }> = ({products, setShadeName, OpenPopUpAction }) => {
+  }> = ({products, setShadeName, OpenPopUpAction, opacity, changeRightSideOpacity, changeLeftSideOpacity}) => {
     const [chosenShade, setChosenShade] = useState(0)
     const [isVisible, setIsVisible] = useState(false)
 
     const triggerChooseFabricColor = (chosenShadeValue) => {
       setChosenShade(chosenShadeValue)
       setIsVisible(true)
+      changeRightSideOpacity("100%")
     }
     const triggerChooseShade = () => {
       setIsVisible(false)
+      changeRightSideOpacity("100%")
     }    
     const moreInfoAction = (ChosenShadeForInfo) => {
       setShadeName(ChosenShadeForInfo)
       OpenPopUpAction()
+      changeRightSideOpacity("25%")
+      changeLeftSideOpacity("25%")
     }
     return(
-    <div className="build-shade-right-side">
+    <div className="build-shade-right-side" style={ {
+      maxWidth: "400px",
+      background: "#fafafa",
+      maxHeight: "980px",
+      overflow: "hidden",
+      opacity,
+      } }>
       {isVisible ? <ChooseFabricColor shadesData={products} shadeIndex={chosenShade} onClick={triggerChooseShade} /> 
       :
       <ChooseYourShade shadesData={products} onClick={triggerChooseFabricColor} chooseFabricForInfoAction={moreInfoAction}/>}
