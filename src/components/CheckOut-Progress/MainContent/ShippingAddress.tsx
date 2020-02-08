@@ -38,7 +38,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
           [input]: value,
         })
       : (utilityObj.address_two = "");
-    console.log(utilityObj);
     // sets the user's new address object to the state
     setUserState({
       ...userState,
