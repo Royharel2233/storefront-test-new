@@ -24,12 +24,14 @@ import ChangeSettingType from "./ChangeSettingType"
 
 const BuildMyShadeLeftSide: React.FC<{
   printOutFunc: any;
-  }> = ({ printOutFunc }) => {
+  current_shade: any;
+  setNewShade: any;
+  }> = ({ printOutFunc,current_shade, setNewShade }) => {
   
   const [isColorHidden, setIsColorHidden] = useState(true)
   const [isSettingHidden, setIsSettingHidden] = useState(true)
   const [changeColorActive, setChangeColorActive] = useState("absolute-icons")
-  const [backgroundUrl, setBackgroundUrl] = useState("url(../../images/ShadeExample.png);")
+  // const [backgroundColor, setBackgroundColor] = useState()
   const [blackButtonChangeColor, setBlackButtonBackground] = useState(brush)
   const [blackButtonChangeSetting, setBlackButtonBackgroundSetting] = useState(edit)
 
@@ -66,7 +68,7 @@ const BuildMyShadeLeftSide: React.FC<{
           width: "800px",
           maxWidth: "800px",
           position: "relative",
-          background: `url(${ backgroundUrl })`,
+          background: `url(${ current_shade })`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",
           height: "980px",
@@ -82,7 +84,7 @@ const BuildMyShadeLeftSide: React.FC<{
           :
           <div></div>}
           {isColorHidden === true && isSettingHidden === false ?
-          <ChangeSettingType closeOnClick={CloseAllAction} ChangeBackground={setBackgroundUrl} />
+          <ChangeSettingType closeOnClick={CloseAllAction} ChangeBackground={setNewShade} />
           :
           <div></div>
           }

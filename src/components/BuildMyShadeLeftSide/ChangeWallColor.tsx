@@ -6,7 +6,7 @@ import { ChromePicker } from "react-color";
 
 import iconSvg from "../../images/z.svg";
 
-import xpng from "../../images/x.svg";
+import xpng from "../../images/CloseLogo.svg";
 
 
 // import {

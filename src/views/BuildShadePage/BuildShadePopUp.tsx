@@ -1,7 +1,7 @@
 
 import React from "react";
 
-import xpng from "../../images/x.svg";
+import xpng from "../../images/CloseLogo.svg";
 
 
 const BuildMyShadePopUp: React.FC<{

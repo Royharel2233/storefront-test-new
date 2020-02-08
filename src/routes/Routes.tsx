@@ -76,7 +76,7 @@ export const contactUs = `${baseUrl}contact-us/`;
 export const shippingHandling = `${baseUrl}shipping-handling/`;
 export const warrantyPage = `${baseUrl}warranty-page/`;
 
-export const Routes: React.FC = () => (
+export const Routes: React.FC<{}> = ({}) => (
   <Switch>
     <Route exact path={baseUrl} component={HomePage} />
     <Route path={galleryUrl} component={Gallery} />
@@ -109,3 +109,4 @@ export const Routes: React.FC = () => (
 );
 
 export default Routes;
+// onEnter={auth}

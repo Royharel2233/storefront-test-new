@@ -14,6 +14,7 @@ import {
   } from "../../views/BuildShadePage/types/ProductsListNew";
 
 
+import { useUserDetails } from "@sdk/react";
 
 
 import YellowUnde from "../../images/YellowUnderLine.svg";
@@ -26,6 +27,7 @@ interface PageProps {
 
   
 const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick }) => {
+    const { data: user } = useUserDetails();
     const [isVisible, setIsVisible] = useState(false);
     // const [fabricChoiceData, setFabricChoiceData] = useState([]);
     const [fabricTypeNum, setFabricTypeNum] = useState(0)
@@ -37,9 +39,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
     const [value4Data, setValue4Data] = useState("");
     const [attributesValuesNames, setAttributesValuesNames] = useState([])
     const [chosenFabricColor, setChosenFabricColor] = useState(0)
-    const [clickTd, setClickedTd] = useState(null);
-
-
+    const [clickTd, setClickedTd] = useState(null)
 
     const show = (shadeNum, fabricTypeNum, name, image,attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName) => {
         setIsVisible(true);
@@ -116,21 +116,25 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                                          )}/>
                                      :
                                      <div></div>}
-                                     <br />
                                      <span>{vairant.name}</span>
                                      
                                  </div>
                             ))}
+                            {isVisible && fabricIndex === fabricTypeNum ?
+                            <div>
+                                <SelectedFabric onClick={hide} fabricData={fabricTypeNum} shadeData={shadeIndex} ChoiceName={ChoiceName} 
+                                imageUrl={imageUrl} value1={value1Data} value2={value2Data} value3={value3Data} attributesValuesNames={attributesValuesNames} 
+                                value4={value4Data} chosenColorIndex={chosenFabricColor} loggedIn={user ? true : false}/>
+                                <br/>
+                            </div>                    
+                            :
+                            <div></div>
+                        }
                             </div> 
                         </div>
                     ))}
                     </div>
-                    {isVisible ?
-                    <SelectedFabric onClick={hide} fabricData={fabricTypeNum} shadeData={shadeIndex} ChoiceName={ChoiceName} 
-                    imageUrl={imageUrl} value1={value1Data} value2={value2Data} value3={value3Data} attributesValuesNames={attributesValuesNames} value4={value4Data} chosenColorIndex={chosenFabricColor}/>
-                    :
-                    <div></div>
-                                    }
+                    
 
                 {/* className={`selected-fabric${isVisible ? '' : '-hidden'}`} */}
                 {/* <div className="selected-fabric">

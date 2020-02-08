@@ -4,6 +4,8 @@ import React, {useState} from "react";
 
 import xpng from "../../images/CloseLogo.svg";
 
+import plus from "../../images/PlusLogo.svg";
+
 
 // import {
 //     VariantsData_variants
@@ -23,15 +25,19 @@ interface PageProps {
     value2: string;
     value3: string;
     value4: string;
-
+    loggedIn: any;
 }
 
-const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, ChoiceName, imageUrl, value1,value2, value3, value4, attributesValuesNames, chosenColorIndex}) => {
+const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, ChoiceName, imageUrl, value1,value2, value3, 
+    value4, attributesValuesNames, chosenColorIndex, loggedIn}) => {
     const [isOrderd, setIsOrdered] = useState(false)
-
+    
     const orderSwatch = (fabricNum) => e => {
         alert(fabricNum)
         setIsOrdered(true)
+    }
+    const addSwatchToCart = (swatchId) => e => {
+        alert(swatchId)
     }
 
     return(
@@ -58,18 +64,23 @@ const SelectedFabric: React.FC <PageProps> = ({ onClick, fabricData, shadeData, 
                                         <div className="row"><span className="dark-grey">UV Blocking: </span><span className="light-grey"></span></div>
                                     </div>
                                 </div>
-                            <div> <button onClick={onClick}><img src={xpng} /></button></div>
+                            <div className="close_button_more_info"> <button onClick={onClick}><img src={xpng} /></button></div>
+                            {loggedIn && <div className="add_swatch_to_cart"><button onClick={addSwatchToCart(fabricData)}><img src={plus}></img></button></div>}
                         </div>
                         <div className="description">
                             <span className="dark-grey">Description:</span><span className="light-grey"> A beautiful basic light filtering solid that will help eliminate glare, maintain natural light and provide full privacy. Translucent with a subtle texture.</span>
                         </div>
                         <div className="down_items">
-                            {isOrderd ? 
-                            <a className="display-swatch one" href="#"><span>SWATCH ADDED</span></a>
-                            :
-                            <a className="display-swatch two" href="#" onClick={orderSwatch(value4)}><span>ORDER SWATCH</span></a>
-                        }
+                            {loggedIn && 
+                            <div className="signed_in">
+                                {isOrderd ? 
+                                <a className="display-swatch one" href="#"><span>SWATCH ADDED</span></a>
+                                :
+                                <a className="display-swatch two" href="#" onClick={orderSwatch(value4)}><span>ORDER SWATCH</span></a>
+                                }
+                            </div>}
                             <a href="#"><span>CONTINUE</span></a>
+                            <br />
                         </div>
                     </div>
     )};
