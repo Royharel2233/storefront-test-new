@@ -6,7 +6,7 @@ import "./scss/index.scss";
 
 // import selectColor from "../../images/select-color.png";
 
-import "./scss/ustyle.css";
+// import "./scss/ustyle.css";
 
 // import "./scss/style.css";
 

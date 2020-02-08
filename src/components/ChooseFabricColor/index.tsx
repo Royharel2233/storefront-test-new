@@ -116,15 +116,17 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                                          )}/>
                                      :
                                      <div></div>}
-                                     <br />
                                      <span>{vairant.name}</span>
                                      
                                  </div>
                             ))}
                             {isVisible && fabricIndex === fabricTypeNum ?
-                            <SelectedFabric onClick={hide} fabricData={fabricTypeNum} shadeData={shadeIndex} ChoiceName={ChoiceName} 
-                            imageUrl={imageUrl} value1={value1Data} value2={value2Data} value3={value3Data} attributesValuesNames={attributesValuesNames} 
-                            value4={value4Data} chosenColorIndex={chosenFabricColor} loggedIn={user ? true : false}/>
+                            <div>
+                                <SelectedFabric onClick={hide} fabricData={fabricTypeNum} shadeData={shadeIndex} ChoiceName={ChoiceName} 
+                                imageUrl={imageUrl} value1={value1Data} value2={value2Data} value3={value3Data} attributesValuesNames={attributesValuesNames} 
+                                value4={value4Data} chosenColorIndex={chosenFabricColor} loggedIn={user ? true : false}/>
+                                <br/>
+                            </div>                    
                             :
                             <div></div>
                         }

@@ -8,6 +8,37 @@ span {
 
 
 
+.close_button_more_info{
+    margin-top: -5%;
+    margin-right: -2.5%;
+}
+
+.add_swatch_to_cart{
+    margin-top: -0.3%;
+    position: absolute;
+}
+.down_items_signed_in{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.down_items_signed_in a{
+    text-decoration-color: #fdcd4a;
+
+}
+
+.down_items_signed_in span{
+    font-size: 9px;
+    color: #343538;
+    position: relative;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+    border-bottom: 2px solid #f0b74d;
+}
+
+.down_items_signed_in span #g{    
+    display: none;
+}
 
 .down_items{
     text-align: center;
@@ -32,6 +63,8 @@ span {
     display: none;
 }
 
+
+
 .choose-slider-nav-underline{
     padding-top: 10px;
 }
@@ -53,7 +86,6 @@ span {
 
 .fabric-type-list{
     overflow-y: scroll;
-    height: 500px;
     width: 100%;
 }
 

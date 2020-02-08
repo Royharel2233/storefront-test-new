@@ -1,9 +1,10 @@
 import React from "react";
 
 // import bedroom from "./img/ShadeExample.png";
+import xpng from "../../images/CloseLogo.svg";
 
 import ShadeExample from "../../images/ShadeExample.png";
-import xpng from "../../images/x.svg";
+
 
 
 // import {

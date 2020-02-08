@@ -2,7 +2,7 @@ import React from "react";
 
 import "./css/bootstrap.css";
 
-import "./css/style.css";
+import "./index.scss";
 
 import banner_two from "./img/100x50_cb52a-banner-02.jpg";
 
