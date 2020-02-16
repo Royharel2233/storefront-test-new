@@ -49,6 +49,10 @@ import { ShopFabric } from "../components/ShopFabric/ShopFabric";
 
 import { WarrantyPage } from "../components/Warranty/WarrantyPage";
 
+import { NewsPage } from "../components/News/NewsPage";
+
+import { LoginMain } from "@temp/components/LoginPage/LoginMain";
+
 
 const slugUrl = ":slug([a-z-0-9]+)/:id([0-9]+)/";
 export const baseUrl = "/";
@@ -75,6 +79,8 @@ export const shopFabric = `${baseUrl}shop-fabric/`;
 export const contactUs = `${baseUrl}contact-us/`;
 export const shippingHandling = `${baseUrl}shipping-handling/`;
 export const warrantyPage = `${baseUrl}warranty-page/`;
+export const newsPage = `${baseUrl}news-page/`;
+export const loginPage = `${baseUrl}login-page/`;
 
 export const Routes: React.FC<{}> = ({}) => (
   <Switch>
@@ -104,6 +110,8 @@ export const Routes: React.FC<{}> = ({}) => (
     <Route path={contactUs} component={ContactUs} />
     <Route path={shippingHandling} component={ShippingHandling} />
     <Route path={warrantyPage} component={WarrantyPage} />
+    <Route path={newsPage} component={NewsPage} />
+    <Route path={loginPage} component={LoginMain} />
     <Route component={NotFound} />
   </Switch>
 );

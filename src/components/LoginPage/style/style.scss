@@ -1,0 +1,178 @@
+$white: #ffffff;
+
+.login-page {
+  .login-banner {
+    width: 100%;
+    height: 202px;
+    background: url("../../../images/warranty-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 45px;
+    .content {
+      position: absolute;
+      top: 35%;
+      left: 30%;
+      h1 {
+        margin: 0px 0px 13.7px;
+        width: 475px;
+        height: 44px;
+        font-family: Lato;
+        font-size: 36px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: 0.89px;
+        color: white;
+      }
+      p {
+        width: 374px;
+        height: 20px;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: 0.27px;
+        color: $white;
+      }
+    }
+  }
+  .login-nav {
+    ul {
+      text-align: center;
+      margin: 0px 0px 50.1px;
+    }
+    ul li {
+      display: inline-block;
+      margin-right: 50px;
+      a {
+        font-size: 16px;
+        line-height: 1.63;
+        letter-spacing: 2px;
+        color: #a3a5ad;
+      }
+    }
+    ul li:last-child {
+      margin-right: 0px;
+    }
+    ul li.active {
+      a {
+        font-size: 16px;
+        font-weight: bold;
+        color: #343538;
+        position: relative;
+      }
+    }
+    ul li.active a:after {
+      content: "";
+      border-bottom: 2px #fdcd4a solid;
+      position: absolute;
+      width: 20px;
+      left: 0px;
+      bottom: -10px;
+    }
+  }
+}
+
+.login-form {
+  h2 {
+    color: #343538;
+    font-weight: normal;
+    margin: 0px 0px 12px;
+  }
+  p {
+    color: #737680;
+    line-height: 1.56;
+    letter-spacing: 0.4px;
+    margin: 0px 0px 46px;
+  }
+  form .form-row {
+    margin-bottom: 10px;
+    label {
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.33;
+      letter-spacing: 1.2px;
+      color: #343538;
+      display: block;
+    }
+    input {
+      width: 100%;
+      border: 0px;
+      border-bottom: 2px #343538 solid;
+      height: 23px;
+    }
+  }
+  form .submit {
+    width: 138.8px;
+    height: 45px;
+    input {
+      background: #343538;
+      border: 0px;
+      padding: 15px 43px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.33;
+      letter-spacing: 1.2px;
+      color: #fdcd4a;
+    }
+    button {
+      background: #343538;
+      border: 0px;
+      padding: 15px 43px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 1.33;
+      letter-spacing: 1.2px;
+      color: #fdcd4a;
+    }
+  }
+}
+
+.sign-up {
+  form p {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+    color: black;
+  }
+
+  &.side-guide {
+    li {
+      font-family: Lato;
+      font-size: 9px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.59;
+      letter-spacing: 0.27px;
+    }
+  }
+  //   form .form-row {
+  //       margin-bottom: 10px;
+  //     label {
+  //       font-size: 12px;
+  //       font-weight: bold;
+  //       line-height: 1.33;
+  //       letter-spacing: 1.2px;
+  //       color: #343538;
+  //       display: block;
+  //     }
+  //     input {
+  //       width: 100%;
+  //       border: 0px;
+  //       border-bottom: 2px #343538 solid;
+  //       height: 23px;
+  //     }
+  //   }
+  //   form .form-row:last-child {
+  //     margin-bottom: 30px;
+  //   }
+}

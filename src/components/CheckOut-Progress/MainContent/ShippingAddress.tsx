@@ -3,21 +3,9 @@ import "../style/style.scss";
 
 import { CheckOutProps } from "../interfaces";
 
-// defines utility types
-interface Utilty {
-  address_two: string;
-  displayBlock: React.CSSProperties;
-}
 
 export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   const { userState, setUserState, setFormState } = exportObj;
-
-  // utilityObj made for temp address validation
-  let utilityObj: Utilty = {
-    address_two: "",
-    displayBlock: null,
-  };
-
   // defines the current display of the new address form
   const [displayState, setDisplayState] = useState({
     display: "",
@@ -29,8 +17,9 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   ) => {
     const value = e.target.value;
     // returns boolean
-    const addressTwo: boolean = input === "address_two";
     e.preventDefault();
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     // addresses for validation
     addressTwo
       ? (utilityObj = {
@@ -42,6 +31,10 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     console.log(utilityObj);
 =======
 >>>>>>> 8dd861e25a49388e8a863aa72404a7f1abcbbccb
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
     // sets the user's new address object to the state
     setUserState({
       ...userState,
@@ -63,16 +56,10 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
   // handles submit by "ship to this address btn"
   const handleSubmit = () => {
-    const matchingAddresses: boolean =
-      userState.address === utilityObj.address_two;
     // checkes if the phone is correct
     if (userState.phone.length >= 9) {
-      if (matchingAddresses) {
-        setNewAddress(userState.address);
+        setNewAddress(userState.address)
         setFormState(1);
-      } else {
-        console.warn("address dont match");
-      }
     } else {
       console.warn("phone number invalid");
     }

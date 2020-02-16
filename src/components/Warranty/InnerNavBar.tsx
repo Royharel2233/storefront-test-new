@@ -10,8 +10,7 @@ export const InnerNavBar: React.FC<Props> = ({
   currentState,
   setPageState,
 }) => {
-  const checkPageState = (param: number) =>
-    currentState === param ? "active" : "";
+  const checkPageState = (param: number) => currentState === param ? "active" : "";
 
   return (
     <div className="warranty-inner-navbar">
