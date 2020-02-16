@@ -1,5 +1,9 @@
 import React from "react";
+<<<<<<< HEAD
 import background from "../../img/shopfabricback.png";
+=======
+import background from "../../images/shopfabricback.png";
+>>>>>>> 8dd861e25a49388e8a863aa72404a7f1abcbbccb
 import "./style/style.scss";
 
 export const PageHeader: React.FC<{}> = ({}) => {

@@ -7,10 +7,13 @@ import Page from "./Page";
 // import { TypedCollectionProductsQuery } from "./queries";
 
 
+<<<<<<< HEAD
 // import {
 //   Online,
 // } from "../../components";
 
+=======
+>>>>>>> 8dd861e25a49388e8a863aa72404a7f1abcbbccb
 
 import {ChooseFabricQuery} from "./queries"
 

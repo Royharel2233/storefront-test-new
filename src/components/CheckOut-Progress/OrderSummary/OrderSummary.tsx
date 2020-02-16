@@ -1,9 +1,15 @@
 import React from "react";
 import "../style/style.scss";
 
+<<<<<<< HEAD
 import placeholder from "../../../img/placeholder.png";
 
 import {CheckOutProps} from '../interfaces'
+=======
+import placeholder from "../../../img/Placeholder.png";
+
+import {CheckOutProps} from '../interfaces';
+>>>>>>> 8dd861e25a49388e8a863aa72404a7f1abcbbccb
 import { SingleItem } from "./SingleItem";
 
 export const OrderSummary: React.FC<CheckOutProps> = ({exportObj}) => {
