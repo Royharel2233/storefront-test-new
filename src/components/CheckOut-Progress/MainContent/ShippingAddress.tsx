@@ -3,7 +3,6 @@ import "../style/style.scss";
 
 import { CheckOutProps } from "../interfaces";
 
-
 export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   const { userState, setUserState, setFormState } = exportObj;
   // defines the current display of the new address form
@@ -18,23 +17,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     const value = e.target.value;
     // returns boolean
     e.preventDefault();
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    // addresses for validation
-    addressTwo
-      ? (utilityObj = {
-          ...utilityObj,
-          [input]: value,
-        })
-      : (utilityObj.address_two = "");
-<<<<<<< HEAD
-    console.log(utilityObj);
-=======
->>>>>>> 8dd861e25a49388e8a863aa72404a7f1abcbbccb
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
     // sets the user's new address object to the state
     setUserState({
       ...userState,
@@ -58,8 +40,8 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   const handleSubmit = () => {
     // checkes if the phone is correct
     if (userState.phone.length >= 9) {
-        setNewAddress(userState.address)
-        setFormState(1);
+      setNewAddress(userState.address);
+      setFormState(1);
     } else {
       console.warn("phone number invalid");
     }

@@ -24,7 +24,6 @@ const LoginForm: React.FC<LoginProps> = ({ hide }) => {
       ...loginState,
       [input]: evt.target.value,
     });
-    console.log(loginState);
   };
 
   const handleOnSubmit = async evt => {
