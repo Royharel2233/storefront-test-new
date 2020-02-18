@@ -50,7 +50,6 @@ const FooterMain = () => (
                   <li>
                     <a href="#">Warranty</a>
                   </li>
->>>>>>> 75eb094757070bc6f36935acac3bd7255a57be5a
                 </Link>
                 <li>
                   <a href="#">Child Safety</a>
@@ -119,7 +118,6 @@ const FooterMain = () => (
                 <li>
                   <a href="#">Privacy Policy</a>
                 </li>
->>>>>>> 75eb094757070bc6f36935acac3bd7255a57be5a
               </ul>
             </div>
           </div>
