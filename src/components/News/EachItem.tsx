@@ -4,7 +4,7 @@ import "./style/style.scss";
 
 // }
 
-import placeholder9 from "../../img/placeholder9.png";
+import placeholder9 from "../../img/Placeholder9.png";
 
 export const EachItem: React.FC<{}> = ({}) => {
   return (

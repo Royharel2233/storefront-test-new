@@ -2,11 +2,11 @@ import React from "react";
 
 import "../style/style.scss";
 
-import placeholder from "../../../img/Placeholder.png";
+import fabricVariant1 from "../../../img/Placeholder.png";
 
-import placeholder3 from "../../../img/Placeholder3.png";
+import fabricVariant2 from "../../../img/Placeholder3.png";
 
-import placeholder9 from "../../../img/Placeholder9.png";
+import fabricVariant3 from "../../../img/Placeholder9.png";
 
 import { SingleGallery } from "./SingleGallery";
 
@@ -16,28 +16,28 @@ export const FabricGallery: React.FC<{}> = () => {
       <h4 className="row">Fabric: Dixie (Milan)</h4>
       <div className="gallery d-flex justify-content-between flex-wrap">
         <div>
-          <SingleGallery image={placeholder3} />
+          <SingleGallery image={fabricVariant2} />
         </div>
         <div>
-          <SingleGallery image={placeholder9} />
+          <SingleGallery image={fabricVariant3} />
         </div>
         <div>
-          <SingleGallery image={placeholder3} />
+          <SingleGallery image={fabricVariant2} />
         </div>
         <div>
-          <SingleGallery image={placeholder9} />
+          <SingleGallery image={fabricVariant3} />
         </div>
         <div>
-          <SingleGallery image={placeholder} />
+          <SingleGallery image={fabricVariant1} />
         </div>
         <div>
-          <SingleGallery image={placeholder9} />
+          <SingleGallery image={fabricVariant3} />
         </div>
         <div>
-          <SingleGallery image={placeholder3} />
+          <SingleGallery image={fabricVariant2} />
         </div>
         <div>
-          <SingleGallery image={placeholder} />
+          <SingleGallery image={fabricVariant1} />
         </div>
       </div>
     </div>

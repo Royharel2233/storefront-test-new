@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/style.scss";
 
-import placeholder from "../../../img/placeholder.png";
+import placeholder from "../../../img/Placeholder.png";
 
 import {CheckOutProps} from '../interfaces'
 import { SingleItem } from "./SingleItem";
