@@ -69,7 +69,7 @@
     background-color: #fafafa;
     position: absolute;
     top: 0px;
-    left: 0px;
+    left: 0px; 
 }
 .how-it-works:after{
     content: '';
@@ -149,7 +149,7 @@
 .turn-around-shape {
     width: 39.2px;
     height: 35.6px;
-    background-color: #f08c7d;
+    background-color: var(--yellow-logo);
   }
 
 .airplane-shape {

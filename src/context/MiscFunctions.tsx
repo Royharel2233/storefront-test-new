@@ -1,16 +1,15 @@
 import React, { createContext } from "react";
 
-import { ProjectCenterProps } from "../components/ProjectCenter/interface";
+// import { ProjectCenterProps } from "../components/ProjectCenter/interface";
 
 const exportFunctions = {
   RenderPage: (
-    param: number,
+    state: number,
     obj: any,
-    Component: React.FC<ProjectCenterProps>,
-    Component2: React.FC<ProjectCenterProps>,
-    pageState: number
+    Component: React.FC<any>,
+    Component2: React.FC<any>
   ) => {
-    switch (param) {
+    switch (state) {
       //   case 2:
       //     return <Repair/>;
       //     break;

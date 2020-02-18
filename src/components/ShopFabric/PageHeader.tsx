@@ -1,5 +1,7 @@
 import React from "react";
-import background from "../../images/shopfabricback.png";
+
+import background from "../../img/shopfabricback.png";
+
 import "./style/style.scss";
 
 export const PageHeader: React.FC<{}> = ({}) => {

@@ -4,19 +4,24 @@ import * as React from "react";
 import ReactSVG from "react-svg";
 
 import {
-  LoginForm,
+  // LoginForm,
   Offline,
   OfflinePlaceholder,
   Online,
   Overlay,
   OverlayContextInterface,
   OverlayTheme,
-  OverlayType
+  OverlayType,
 } from "../..";
-import RegisterForm from "./RegisterForm";
+// import RegisterForm from "./RegisterForm";
 
 import closeImg from "../../../images/x.svg";
+
 import ForgottenPassword from "./ForgottenPassword";
+
+import LoginForm from "../../LoginPage/LoginForm";
+
+import { LuxoutSignUp } from "@temp/components/LoginPage/LuxoutSignUp";
 
 class Login extends React.Component<
   { overlay: OverlayContextInterface; active?: "login" | "register" },
@@ -59,12 +64,12 @@ class Login extends React.Component<
               >
                 Sign in to account
               </span>
-              <span
+              {/* <span
                 onClick={() => this.changeActiveTab("register")}
                 className={this.state.active === "register" ? "active-tab" : ""}
               >
                 Register new account
-              </span>
+              </span> */}
             </div>
             <div className="login__content">
               {this.state.active === "login" ? (
@@ -77,7 +82,7 @@ class Login extends React.Component<
                   />
                 </>
               ) : (
-                <RegisterForm hide={hide} />
+                <LuxoutSignUp hide={hide} />
               )}
             </div>
           </Online>

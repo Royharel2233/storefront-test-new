@@ -47,8 +47,7 @@ export const DashBoardHome: React.FC<{}> = () => {
             pageState,
             exportObj,
             SingleProject,
-            OrdersPage,
-            pageState
+            OrdersPage
           )}
         </div>
       </div>

@@ -35,6 +35,9 @@ export interface RegisterCutomer {
 }
 
 export interface RegisterCutomerVariables {
+  firstName?: string;
+  lastName?: string;
   email: string;
+  phoneNumber?: string;
   password: string;
 }
