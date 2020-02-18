@@ -1,16 +1,18 @@
 
  import React from "react";
- import "./collectionMain.scss";
+
+ import caret_image from "../../img/caret.png";
  
-import placeholder_image from "./img/Placeholder.png";
+import placeholder_image from "../../img/Placeholder.png";
 
-import placeholder_image_2 from "./img/Placeholder2.png";
+import placeholder_image_2 from "../../img/Placeholder2.png";
 
-import placeholder_image_3 from "./img/Placeholder3.png";
+import placeholder_image_3 from "../../img/Placeholder3.png";
 
-import placeholder_image_9 from "./img/Placeholder9.png";
+import placeholder_image_9 from "../../img/Placeholder9.png";
 
-import caret_image from "./img/caret.png";
+import "./collectionMain.scss";
+
 
 const CollectionMain = () => {
   return (

@@ -47,9 +47,6 @@ const FooterMain = () => (
                   <a href="#">Installation</a>
                 </li>
                 <Link to={warrantyPage}>
-<<<<<<< HEAD
-                  <li>Warranty</li>
-=======
                   <li>
                     <a href="#">Warranty</a>
                   </li>
@@ -71,18 +68,6 @@ const FooterMain = () => (
             </div>
             <div className="col-md-3">
               <ul className="list-unstyled mb-0">
-<<<<<<< HEAD
-                <li>ABOUT</li>
-                <li>Why LuXout?</li>
-                <Link to={contactUs}>
-                  <li>Contact Us</li>
-                </Link>
-                <Link to={aboutUs}>
-                  <li>About Us</li>
-                </Link>
-                <Link to={shippingHandling}>
-                  <li>Shipping + Handling</li>
-=======
                 <li>about</li>
                 <li>
                   <a href="#">Why LuXout?</a>
@@ -101,7 +86,6 @@ const FooterMain = () => (
                   <li>
                     <a href="#">Shipping + Handling</a>
                   </li>
->>>>>>> 75eb094757070bc6f36935acac3bd7255a57be5a
                 </Link>
               </ul>
             </div>
@@ -132,9 +116,6 @@ const FooterMain = () => (
             <div className="col-md-3">
               <ul className="list-unstyled">
                 <li>legal</li>
-<<<<<<< HEAD
-                <li>Privacy Policy</li>
-=======
                 <li>
                   <a href="#">Privacy Policy</a>
                 </li>

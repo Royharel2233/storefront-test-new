@@ -67,7 +67,6 @@ export const LuxoutSignUp: React.FC<{ hide: () => void }> = ({ hide }) => {
     //   ...buisnessInfo,
     //   [input]: evt.target.value,
     // })
-    console.log(signUpState);
   };
 
   return (

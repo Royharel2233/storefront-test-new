@@ -16,9 +16,9 @@ import {
 
 import { useUserDetails } from "@sdk/react";
 
-import { CartContext } from "../CartProvider/context";
+// import { CartContext } from "../CartProvider/context";
 
-import ProductDescription from "../../components/ProductDescription";
+// import ProductDescription from "../../components/ProductDescription";
 
 // import AddToCart from "./AddToCart";
 
@@ -90,19 +90,19 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
     //     : quantity;
     // return quantity !== 0 && variant && variantStock >= syncedQuantityWithCart;
     // };
-    const cartContextConsumer = (
-      <CartContext.Consumer>            
-            {cart => (
-          <ProductDescription
-            name={shadesData.edges[0].node.name}
-            productVariants={shadesData.edges[0].node.products}
-            selectedAttributes={shadesData.edges[0].node.products[1].attributes}
-            addToCart={cart.add}
-          >
-          </ProductDescription>
-        )}
-      </CartContext.Consumer>
-    );
+    // const cartContextConsumer = (
+    //   <CartContext.Consumer>            
+    //         {cart => (
+    //     //   <ProductDescription
+    //     //     name={shadesData.edges[0].node.name}
+    //     //     // productVariants={shadesData.edges[0].node.products}
+    //     //     selectedAttributes={shadesData.edges[0].node.products[1].attributes}
+    //     //     addToCart={cart.add}
+    //     //   >
+    //     //   </ProductDescription>
+    //     )}
+    //   </CartContext.Consumer>
+    // );
     return(
                 <div className="choose-your-fabric-color">
                     <div className="back-button-fabric-color">
@@ -158,7 +158,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                             :
                             <div></div>
                         }
-                            {cartContextConsumer}
+                            {/* {cartContextConsumer} */}
                             </div> 
                         </div>
                     ))}
