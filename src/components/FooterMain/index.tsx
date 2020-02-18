@@ -1,22 +1,18 @@
 import React from "react";
 
-// import "./footerMain.scss";
-// import "./css/bootstrap.css";
-// import "./css/style.css";
-
 import NewsLetterSignUp from "../NewsLetterSignUp";
 
-import logo_image from "./img/logo_lux.svg";
+import logo_image from "../../img/logo_lux.svg";
 
-import facebook from "./img/Facebook.svg";
+import facebook from "../../img/Facebook.svg";
 
-import instagrem from "./img/Instagram.svg";
+import instagrem from "../../img/Instagram.svg";
 
-import pintrest from "./img/Pinterest.svg";
+import pintrest from "../../img/Pinterest.svg";
 
-import houzz from "./img/Houzz.svg";
+import houzz from "../../img/Houzz.svg";
 
-import youtube from "./img/Youtube.svg";
+import youtube from "../../img/Youtube.svg";
 
 import { Link } from "react-router-dom";
 
