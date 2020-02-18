@@ -3,12 +3,24 @@ import gql from "graphql-tag";
 import { TypedMutation } from "../../../core/mutations";
 import {
   RegisterCutomer,
-  RegisterCutomerVariables
+  RegisterCutomerVariables,
 } from "./types/RegisterCutomer";
 
 const customerRegisterMutation = gql`
-  mutation RegisterCutomer($email: String!, $password: String!) {
-    accountRegister(input: { email: $email, password: $password }) {
+  mutation RegisterCutomer(
+    $email: String!
+    $password: String!
+    $firstName: String!
+    $lastName: String!
+  ) {
+    accountRegister(
+      input: {
+        email: $email
+        password: $password
+        firstName: $firstName
+        lastName: $lastName
+      }
+    ) {
       errors {
         field
         message
