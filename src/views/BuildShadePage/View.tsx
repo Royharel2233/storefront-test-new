@@ -2,24 +2,32 @@ import React from "react";
 // import { RouteComponentProps } from "react-router";
 
 
+// import NetworkStatus from "../../components/NetworkStatus";
 
+// cosnt some = 
 import Page from "./Page";
 // import { TypedCollectionProductsQuery } from "./queries";
 
+// import { getGraphqlIdFromDBId } from "../../core/utils";
 
 
 import {ChooseFabricQuery} from "./queries"
 
-export const View: React.FC = ({}) => (
+export const View: React.FC = ({children}) => (
     <div className="home-page">
-      <ChooseFabricQuery>
-        {({data, loading}) => {
+      <ChooseFabricQuery 
+        // variables={{
+        //   id: getGraphqlIdFromDBId(match.params.id, "Product"),
+        //   }}
+        //   key={match.params.id}
+      >
+        {({data}) => {
             return (
-                <Page
-                  categories={data.categories}
-                />
-            );
-        }}
+              <Page
+                categories={data.categories}
+              />
+              );
+            }}
       </ChooseFabricQuery>
     </div>
 );

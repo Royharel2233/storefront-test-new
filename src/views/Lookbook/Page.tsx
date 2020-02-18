@@ -1,6 +1,6 @@
-// import "./scss/index.scss";
+import "./scss/index.scss";
 
-import "./scss/style.css";
+// import "./scss/style.css";
 
 import "./scss/bootstrap.css";
 

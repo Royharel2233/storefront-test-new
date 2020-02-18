@@ -16,6 +16,11 @@ import {
 
 import { useUserDetails } from "@sdk/react";
 
+import { CartContext } from "../CartProvider/context";
+
+import ProductDescription from "../../components/ProductDescription";
+
+// import AddToCart from "./AddToCart";
 
 import YellowUnde from "../../images/YellowUnderLine.svg";
 
@@ -73,8 +78,31 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
         // param is the argument you passed to the function
         // e is the event object that returned
     };
+    // const handleSubmit = () => {
+    //     addToCart(this.state.variant, this.state.quantity);
+    // };
     
-
+    // const canAddToCart = (lines: CartLine[]) => {
+    // const { variant, quantity, variantStock } = this.state;
+    // const cartLine = lines.find(({ variantId }) => variantId === variant);
+    // const syncedQuantityWithCart = cartLine
+    //     ? quantity + cartLine.quantity
+    //     : quantity;
+    // return quantity !== 0 && variant && variantStock >= syncedQuantityWithCart;
+    // };
+    const cartContextConsumer = (
+      <CartContext.Consumer>            
+            {cart => (
+          <ProductDescription
+            name={shadesData.edges[0].node.name}
+            productVariants={shadesData.edges[0].node.products}
+            selectedAttributes={shadesData.edges[0].node.products[1].attributes}
+            addToCart={cart.add}
+          >
+          </ProductDescription>
+        )}
+      </CartContext.Consumer>
+    );
     return(
                 <div className="choose-your-fabric-color">
                     <div className="back-button-fabric-color">
@@ -130,6 +158,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({shadesData,shadeIndex, onClick 
                             :
                             <div></div>
                         }
+                            {cartContextConsumer}
                             </div> 
                         </div>
                     ))}

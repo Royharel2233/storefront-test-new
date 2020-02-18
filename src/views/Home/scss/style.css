@@ -512,7 +512,7 @@ footer label {
 footer label {
   margin-bottom: 15px;
 }
-footer .container:not(.copyright) li a {
+footer .container:not(.copyright) li  {
   font-family: "IBM Plex Sans", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -522,7 +522,7 @@ footer .container:not(.copyright) li a {
   color: #a3a5ad;
   display: block;
 }
-footer .container:not(.copyright) li:not(:last-child) a {
+footer .container:not(.copyright) li:not(:last-child)  {
   margin-bottom: 24px;
 }
 footer .input-group > .form-control:not(:last-child),
@@ -765,7 +765,7 @@ footer .btn-subscribe {
     margin-bottom: 20px;
     margin-top: 20px;
   }
-  footer .container:not(.copyright) li:not(:last-child) a {
+  footer .container:not(.copyright) li:not(:last-child)  {
     margin-bottom: 10px;
   }
   footer .form-group {

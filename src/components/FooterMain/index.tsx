@@ -38,7 +38,7 @@ const FooterMain = () => (
                 <li>PRODUCT</li>
                 <li><a href="#">Installation</a></li>
                 <Link to={warrantyPage}>
-                  <li><a href="#">Warranty</a></li>
+                  <li>Warranty</li>
                 </Link>
                 <li><a href="#">Child Safety</a></li>
                 <li><a href="#">Videos</a></li>
@@ -48,23 +48,23 @@ const FooterMain = () => (
             </div>
             <div className="col-md-4">
               <ul className="list-unstyled mb-0">
-                <li>about</li>
-                <li><a href="#">Why LuXout?</a></li>
+                <li>ABOUT</li>
+                <li>Why LuXout?</li>
                 <Link to={contactUs}>
-                  <li><a href="#">Contact Us</a></li>
+                  <li>Contact Us</li>
                 </Link>
                 <Link to={aboutUs}>
-                  <li><a href="#">About Us</a></li>
+                  <li>About Us</li>
                 </Link>
                 <Link to={shippingHandling}>
-                  <li><a href="#">Shipping + Handling</a></li>
+                  <li>Shipping + Handling</li>
                 </Link>
               </ul>
             </div>
             <div className="col-md-4">
               <ul className="list-unstyled">
                 <li>legal</li>
-                <li><a href="#">Privacy Policy</a></li>
+                <li>Privacy Policy</li>
               </ul>
             </div>
           </div>
