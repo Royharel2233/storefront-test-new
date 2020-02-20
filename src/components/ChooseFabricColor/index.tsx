@@ -11,7 +11,7 @@ import {
     ProductsListNew_categories,
     // ProductsListNew_categories_edges_node_products,
     // ProductsListNew_categories_edges_node_products_edges
-} from "../../views/BuildShadePage/types/ProductsListNew";
+} from "../../views/BuildMyShade/types/ProductsListNew";
 
 
 import { useUserDetails } from "@sdk/react";

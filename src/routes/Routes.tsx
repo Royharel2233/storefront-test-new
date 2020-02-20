@@ -13,7 +13,7 @@ import { Account } from "../views/Account";
 
 import { ArticlePage } from "../views/Article";
 
-import { BuildMyShade } from "../views/BuildShadePage";
+import { BuildMyShade } from "../views/BuildMyShade";
 
 import { Gallery } from "../views/Gallery";
 

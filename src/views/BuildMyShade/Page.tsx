@@ -16,9 +16,9 @@ import BuildMyShadeRightSide from "../../components/BuildMyShadeRightSide";
 
 import BuildShadePopUp from "./BuildShadePopUp";
 
-import { CartContext } from "../../components/CartProvider/context";
+// import { CartContext } from "../../components/CartProvider/context";
 
-import { ProductDescription } from "../../components";
+// import { ProductDescription } from "../../components";
 
 
 import {
@@ -30,19 +30,19 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ categories }) => {
-    const cartContextConsumer = (
-        <CartContext.Consumer>
-            {cart => (
-                <ProductDescription
-                    name={categories.edges[0].node.name}
-                    productVariants={categories.edges[0].node.products[0].variants}
-                    selectedAttributes={categories.edges[0].node.products[0].attributes}
-                    addToCart={cart.add}
-                >
-                </ProductDescription>
-            )}
-        </CartContext.Consumer>
-    );
+    // const cartContextConsumer = (
+    //     <CartContext.Consumer>
+    //         {cart => (
+    //             <ProductDescription
+    //                 name={categories.edges[0].node.name}
+    //                 productVariants={categories.edges[0].node.products[0].variants}
+    //                 selectedAttributes={categories.edges[0].node.products[0].attributes}
+    //                 addToCart={cart.add}
+    //             >
+    //             </ProductDescription>
+    //         )}
+    //     </CartContext.Consumer>
+    // );
     const [opacityValueRightSide, setOpacityValueRightSide] = useState(1.0)
     const [opacityValueLefttSide, setOpacityValueLeftSide] = useState(1.0)
 
