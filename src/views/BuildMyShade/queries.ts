@@ -5,18 +5,6 @@ import { TypedQuery } from "../../core/queries";
 
 import { ProductsListNew } from "./types/ProductsListNew";
 
-<<<<<<< Updated upstream
-// import {
-//   ProductDetails,
-//   ProductDetailsVariables
-// } from "./types/ProductDetails";
-
-// import { VariantList, VariantListVariables } from "./types/VariantList";
-
-
-
-=======
->>>>>>> Stashed changes
 export const fabricsQuery = gql`
 query ProductsListNew {
   categories(first: 10) {
