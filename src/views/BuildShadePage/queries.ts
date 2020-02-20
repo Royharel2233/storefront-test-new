@@ -5,6 +5,7 @@ import { TypedQuery } from "../../core/queries";
 
 import { ProductsListNew } from "./types/ProductsListNew";
 
+<<<<<<< Updated upstream
 // import {
 //   ProductDetails,
 //   ProductDetailsVariables
@@ -14,6 +15,8 @@ import { ProductsListNew } from "./types/ProductsListNew";
 
 
 
+=======
+>>>>>>> Stashed changes
 export const fabricsQuery = gql`
 query ProductsListNew {
   categories(first: 10) {
@@ -29,7 +32,7 @@ query ProductsListNew {
     }
   }
 }
-fragment ProductsData on Category{
+fragment ProductsData on Category {
   products(first: 10){
     edges{
       node{

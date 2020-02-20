@@ -1,5 +1,5 @@
 
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 
 
 import "./scss/index.scss";
@@ -22,7 +22,7 @@ import { ProductDescription } from "../../components";
 
 
 import {
-  ProductsListNew_categories,
+    ProductsListNew_categories,
 } from "./types/ProductsListNew";
 
 
@@ -31,7 +31,7 @@ import {
 
 
 const Page: React.FC<{
-categories: ProductsListNew_categories;
+    categories: ProductsListNew_categories;
 }> = ({ categories }) => {
     const cartContextConsumer = (
         <CartContext.Consumer>
@@ -52,7 +52,7 @@ categories: ProductsListNew_categories;
     const [ShadeName, setShadeName] = useState("Double Roller Shade")
     const [isPopUpVIsible, setIsPopUPVisible] = useState(false)
     const [currentShade, setCurrentShade] = useState("../../images/ShadeExample.png")
-    
+
     const componentRef = useRef();
     const ClosePopUpFub = () => {
         setIsPopUPVisible(false)
@@ -68,6 +68,7 @@ categories: ProductsListNew_categories;
     const changeCurrentShade = (newShadeUrl) => {
         setCurrentShade(newShadeUrl)
     }
+<<<<<<< Updated upstream
     return(
         
     
@@ -77,15 +78,23 @@ categories: ProductsListNew_categories;
             <BuildMyShadeLeftSide printOutFunc={componentRef} current_shade={currentShade} setNewShade={changeCurrentShade} opacity={opacityValueLefttSide} changeRightSideOpacity={setOpacityValueRightSide} changeLeftSideOpacity={setOpacityValueLeftSide}/>
             <BuildMyShadeRightSide products={categories} children={React.Children} setShadeName={ChangePopHeadLine} OpenPopUpAction={OpenPopUp} opacity={opacityValueRightSide} changeRightSideOpacity={setOpacityValueRightSide} changeLeftSideOpacity={setOpacityValueLeftSide}/>
             {cartContextConsumer}
+=======
+
+    return (
+
+        <div className="container">
+            <div className="build-my-shade-main w-1239">
+                <BuildMyShadeLeftSide printOutFunc={componentRef} current_shade={currentShade} setNewShade={changeCurrentShade} opacity={opacityValueLefttSide} changeRightSideOpacity={setOpacityValueRightSide} changeLeftSideOpacity={setOpacityValueLeftSide} />
+                <BuildMyShadeRightSide products={categories} children={React.Children} setShadeName={ChangePopHeadLine} OpenPopUpAction={OpenPopUp} opacity={opacityValueRightSide} changeRightSideOpacity={setOpacityValueRightSide} changeLeftSideOpacity={setOpacityValueLeftSide} />
+            </div>
+            {isPopUpVIsible
+                ? < BuildShadePopUp ClosePopUpAction={ClosePopUpFub} fabricName={ShadeName} />
+                : <div></div>
+            }
+
+>>>>>>> Stashed changes
         </div>
-        { isPopUpVIsible ?
-        < BuildShadePopUp  ClosePopUpAction={ClosePopUpFub} fabricName={ShadeName}/>
-        :
-        <div></div> 
-    } 
-        
-    </div>
     )
-    };
+};
 
 export default Page;
