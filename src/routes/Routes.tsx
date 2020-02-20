@@ -13,7 +13,7 @@ import { Account } from "../views/Account";
 
 import { ArticlePage } from "../views/Article";
 
-import { BuildShadePage } from "../views/BuildShadePage";
+import { BuildMyShade } from "../views/BuildShadePage";
 
 import { Gallery } from "../views/Gallery";
 
@@ -82,7 +82,7 @@ export const warrantyPage = `${baseUrl}warranty-page/`;
 export const newsPage = `${baseUrl}news-page/`;
 export const loginPage = `${baseUrl}login-page/`;
 
-export const Routes: React.FC<{}> = ({}) => (
+export const Routes: React.FC<{}> = ({ }) => (
   <Switch>
     <Route exact path={baseUrl} component={HomePage} />
     <Route path={galleryUrl} component={Gallery} />
@@ -102,7 +102,7 @@ export const Routes: React.FC<{}> = ({}) => (
     <Route path={orderHistoryUrl} component={Account} />
     <Route path={addressBookUrl} component={Account} />
     <Route path={paymentOptionsUrl} component={Account} />
-    <Route path={buildShadeUrl} component={BuildShadePage} />
+    <Route path={buildShadeUrl} component={BuildMyShade} />
     <Route path={checkOut} component={CheckOut} />
     <Route path={projectCenter} component={DashBoardHome} />
     <Route path={shopFabric} component={ShopFabric} />
