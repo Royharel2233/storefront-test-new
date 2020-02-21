@@ -13,7 +13,7 @@ import { LoginNav } from "./LoginNav";
 
 import "./style/style.scss";
 
-export const LoginMain: React.FC<{}> = ({}) => {
+export const LoginMain: React.FC<{}> = ({ }) => {
 
   const [pageState, setPageState] = useState(1);
   const [loginState, setLoginState] = useState({
@@ -41,7 +41,7 @@ export const LoginMain: React.FC<{}> = ({}) => {
         </div>
       </div>
       <div className="login-container">
-        <LoginNav exportObj={exportObj}/>
+        <LoginNav exportObj={exportObj} />
         <div>
           {exportObj.functions.funcStorage.RenderPage(
             pageState,
