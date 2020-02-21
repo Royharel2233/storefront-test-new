@@ -47,7 +47,7 @@ const SelectedFabric: React.FC<SelectedFabricProps> = ({
     FarbricNmber,
     loggedIn,
     addToCart,
-    variantId
+    variantId,
 }) => {
     const [isOrderd, setIsOrdered] = useState(false)
 
