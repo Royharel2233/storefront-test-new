@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 // import bedroom from "./img/ShadeExample.png";
 
-import xpng from "../../images/CloseLogo.svg";
+import closeLogoSource from "../../images/CloseLogo.svg";
 
-import plus from "../../images/PlusLogo.svg";
+import addLogoSource from "../../images/PlusLogo.svg";
 
 import ContniueLogo from "../../images/ContniueLogo.svg";
 
@@ -23,7 +23,7 @@ import SwatchAddedLogo from "../../images/SwatchAddedLogo.svg";
 interface SelectedFabricProps {
     chosenColorIndex: number;
     ChoiceName: string;
-    onClick: () => void;
+    closeSelectedView: () => void;
     fabricData: number;
     shadeIndex: number;
     imageUrl: string;
@@ -32,10 +32,12 @@ interface SelectedFabricProps {
     fabricContent: string;
     FarbricNmber: string;
     loggedIn: boolean;
+    addToCart: (variantId: string, quantity?: number) => void;
+    variantId: string
 }
 
 const SelectedFabric: React.FC<SelectedFabricProps> = ({
-    onClick,
+    closeSelectedView: closeSelected,
     fabricData,
     ChoiceName,
     imageUrl,
@@ -44,15 +46,18 @@ const SelectedFabric: React.FC<SelectedFabricProps> = ({
     fabricContent,
     FarbricNmber,
     loggedIn,
+    addToCart,
+    variantId
 }) => {
     const [isOrderd, setIsOrdered] = useState(false)
 
-    const orderSwatch = (fabricNum) => e => {
-        alert(fabricNum)
+    const orderSwatch = (fabricId: string) => e => {
+        alert(fabricId)
         setIsOrdered(true)
     }
-    const addSwatchToCart = (swatchId) => e => {
-        alert(swatchId)
+
+    const addSwatchToCart = (variantSwatchId: string) => e => {
+        addToCart(variantSwatchId);
     }
 
     return (
@@ -61,7 +66,6 @@ const SelectedFabric: React.FC<SelectedFabricProps> = ({
                 <img className="fabric-img" src={imageUrl} />
                 <div className="fabric-description">
                     <div className="up-details">
-                        {}
                         <div className="row">
                             <span className="dark-grey">Color: </span>
                             <span className="light-grey">
@@ -82,8 +86,18 @@ const SelectedFabric: React.FC<SelectedFabricProps> = ({
                         <div className="row"><span className="dark-grey">UV Blocking: </span><span className="light-grey"></span></div>
                     </div>
                 </div>
-                <div className="close_button_more_info"> <button onClick={onClick}><img src={xpng} /></button></div>
-                {loggedIn && <div className="add_swatch_to_cart"><button onClick={addSwatchToCart(fabricData)}><img src={plus}></img></button></div>}
+                <div className="close_button_more_info">
+                    <button onClick={closeSelected}>
+                        <img src={closeLogoSource} />
+                    </button>
+                </div>
+                {loggedIn &&
+                    <div className="add_swatch_to_cart">
+                        <button onClick={addSwatchToCart(variantId)}>
+                            <img src={addLogoSource}></img>
+                        </button>
+                    </div>
+                }
             </div>
             <div className="description">
                 <span className="dark-grey">Description:</span><span className="light-grey"> A beautiful basic light filtering solid that will help eliminate glare, maintain natural light and provide full privacy. Translucent with a subtle texture.</span>
@@ -98,7 +112,8 @@ const SelectedFabric: React.FC<SelectedFabricProps> = ({
                             <button className="display-swatch two" onClick={orderSwatch(FarbricNmber)}><img src={OrderSwatchLogo}></img></button>
                             // <a  href="#" ><span>ORDER SWATCH</span></a>
                         }
-                    </div>}
+                    </div>
+                }
                 <button><img src={ContniueLogo}></img></button>
                 {/* <a href="#"><span>CONTINUE</span></a> */}
                 <br />

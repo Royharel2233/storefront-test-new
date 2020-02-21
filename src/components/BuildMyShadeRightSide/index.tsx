@@ -38,8 +38,8 @@ const BuildMyShadeRightSide: React.FC<RightSideProps> =
     const [chosenShadeIndex, setChosenShadeIndex] = useState(0)
     const [isVisible, setIsVisible] = useState(false)
 
-    const triggerChooseFabricColor = (chosenShadeValue) => {
-      setChosenShadeIndex(chosenShadeValue)
+    const triggerChooseFabricColor = (chosenShadeIndex) => {
+      setChosenShadeIndex(chosenShadeIndex)
       setIsVisible(true)
       changeRightSideOpacity(1.0)
     }
@@ -65,7 +65,7 @@ const BuildMyShadeRightSide: React.FC<RightSideProps> =
         {isVisible
           ?
           <ChooseFabricColor
-            shadesData={products}
+            categories={products}
             onClick={triggerChooseShade}
             shadeIndex={chosenShadeIndex}
           />
