@@ -7,37 +7,31 @@ import { ShippingMethod } from './ShippingMethod'
 
 import '../style/style.scss'
 
-export const MainContent: React.FC<CheckOutProps> = ({
-    exportObj,
-}) => {
+export const MainContent: React.FC<CheckOutProps> = ({ exportObj }) => {
 
     useEffect(() => {
-        RenderPage(exportObj.formState, exportObj)
+        RenderPage(exportObj.formState, exportObj);
         return () => {
             RenderPage(0, exportObj)
         };
-    }, [exportObj.formState])
-    
+    }, [exportObj.formState]);
+
     return (
-        <div className="right-side">
-            <div>
-                {RenderPage(exportObj.formState, exportObj)}
-            </div>
-        </div>
+      <div className="right-side">
+          {RenderPage(exportObj.formState, exportObj)}
+      </div>
     )
-}
+};
 
 function RenderPage(param: number, exportObj) {
     switch (param) {
         case 1:
-            return <div>
-                <div>
-                    <ShippingAddress exportObj={exportObj} />
-                </div>
-                <div>
-                    <ShippingMethod exportObj={exportObj}/>
-                </div>
-            </div>;
+            return (
+              <>
+                  <ShippingAddress exportObj={exportObj} />
+                  <ShippingMethod exportObj={exportObj}/>
+              </>
+            );
             break;
         case 0:
             return <ShippingAddress exportObj={exportObj} />;

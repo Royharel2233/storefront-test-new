@@ -3,6 +3,7 @@ import "../style/style.scss";
 
 import { CheckOutProps } from "../interfaces";
 
+
 export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   const { userState, setUserState, setFormState } = exportObj;
   // defines the current display of the new address form
@@ -49,102 +50,163 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
   return (
     <div className="block-shipping-address">
-      <h3 className="dark-grey">Shipping Address</h3>
-      <form className="shipping-address-form">
-        <select onChange={e => handleSelectChange(e)}>
-          <option value={userState.address}>{userState.address}</option>
-          <option value={newAddress}>{newAddress}</option>
-        </select>
-        <div className="new-shipping-address" style={displayState}>
-          <div className="form-field">
-            <label htmlFor="first_name">FIRST NAME</label>
-            <input
-              type="text"
-              onChange={handleChange("firstName")}
-              id="first_name"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="last_name">LAST NAME</label>
-            <input
-              onChange={handleChange("lastName")}
-              type="text"
-              id="last_name"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="address_one">ADDRESS 1</label>
-            <input
-              onChange={handleChange("address")}
-              type="text"
-              name="address"
-              id="address_one"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="address_two">ADDRESS 2</label>
-            <input
-              onChange={handleChange("address_two")}
-              type="text"
-              id="address_two"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="city">CITY</label>
-            <input onChange={handleChange("city")} type="text" id="city" />
-          </div>
-          <div className="form-field">
-            <label htmlFor="zip">ZIP</label>
-            <input onChange={handleChange("zip")} type="number" id="zip" />
-          </div>
-          <div className="form-field">
-            <label htmlFor="state">STATE</label>
-            <input onChange={handleChange("state")} type="text" id="state" />
-          </div>
-          <div className="form-field">
-            <label htmlFor="country">COUNTRY</label>
-            <input
-              onChange={handleChange("country")}
-              type="text"
-              id="country"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="email_address">EMAIL ADDRESS</label>
-            <input
-              onChange={handleChange("email")}
-              type="email"
-              id="email_address"
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="phone_number">PHONE NUMBER</label>
-            <input
-              onChange={handleChange("phone")}
-              type="tel"
-              id="phone_number"
-            />
-          </div>
-          <div className="form-field checkbox ">
-            <label>
-              <input
-                type="checkbox"
-                name="save_address"
-                id="save_address"
-                value="save_address"
-              />
-              SAVE ADDRESS FOR FUTURE USE
-              {/* <span className="design-checkbox"></span> */}
-            </label>
-          </div>
+      <div className="row">
+        <div className="col-lg-12">
+          <h3>Shipping Address</h3>
+
+          <form className="shipping-address-form">
+            <select onChange={e => handleSelectChange(e)}>
+              <option value={userState.address}>{userState.address}</option>
+              <option value={newAddress}>{newAddress}</option>
+            </select>
+
+            <div className="new-shipping-address" style={displayState}>
+              <div className="row">
+                <div className="col-lg-6">
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="first_name">
+                      FIRST NAME
+                    </label>
+
+                    <input
+                      type="text"
+                      className={"form-field-input"}
+                      onChange={handleChange("firstName")}
+                      id="first_name"
+                    />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="last_name">LAST NAME
+                    </label>
+
+                    <input
+                      onChange={handleChange("lastName")}
+                      type="text"
+                      id="last_name"
+                      className={"form-field-input"}
+                    />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="address_two">
+                      ADDRESS 2
+                    </label>
+
+                    <input
+                      onChange={handleChange("address_two")}
+                      className={"form-field-input"}
+                      type="text"
+                      id="address_two"
+                    />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="city">CITY
+                    </label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("city")}
+                      type="text"
+                      id="city" />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <div className="form-field-checkbox">
+                      <input
+                        type="checkbox"
+                        name="save_address"
+                        id="save_address"
+                        value="save_address"
+                      />
+
+                      <label
+                        className={"form-field-checkbox-label"}
+                        htmlFor="save_address">Save address for future use
+                      </label>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div className="col-lg-6">
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="state">STATE</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("state")}
+                      type="text"
+                      id="state" />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="country">COUNTRY</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("country")}
+                      type="text"
+                      id="country"
+                    />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="email_address">EMAIL ADDRESS</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("email")}
+                      type="email"
+                      id="email_address"
+                    />
+                  </div>
+
+                  <div className="form-field w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="phone_number">PHONE NUMBER</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("phone")}
+                      type="tel"
+                      id="phone_number"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-lg-12">
+                <button
+                  className="checkout-page-button"
+                  type="button"
+                  onClick={() => handleSubmit()}
+                >SHIP TO THIS ADDRESS</button>
+              </div>
+            </div>
+          </form>
         </div>
-        <input
-          className="checkout-page-button checkout-main-form-button"
-          type="button"
-          value="SHIP TO THIS ADDRESS"
-          onClick={() => handleSubmit()}
-        />
-      </form>
+      </div>
     </div>
   );
 };

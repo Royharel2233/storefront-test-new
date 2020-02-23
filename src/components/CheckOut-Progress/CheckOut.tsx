@@ -31,21 +31,26 @@ export const CheckOut: React.FC<{}> = () => {
   };
 
   return (
-    <div className="w-1239 checkout-page container">
-      <div className="checkout-header">
-        <CheckOutMenu exportObj={exportObj} />
-        <div className="button-back">
-          <i>
-            <span className="light-grey">back</span>
-          </i>
+    <div className="checkout-page">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="checkout-main-content">
+              <MainContent exportObj={exportObj} />
+              <OrderSummary exportObj={exportObj} />
+            </div>
+          </div>
         </div>
       </div>
-      <div className="checkout-main-content">
-        <MainContent exportObj={exportObj} />
-        <div>
-          <OrderSummary exportObj={exportObj} />
-        </div>
-      </div>
+      {/*<div className="checkout-header">*/}
+      {/*  <CheckOutMenu exportObj={exportObj} />*/}
+      {/*  <div className="button-back">*/}
+      {/*    <i>*/}
+      {/*      <span className="light-grey">back</span>*/}
+      {/*    </i>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
+
     </div>
   );
 };
