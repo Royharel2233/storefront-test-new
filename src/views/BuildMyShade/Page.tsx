@@ -8,7 +8,7 @@ import "./scss/index.scss";
 
 // import "./scss/ustyle.css";
 
-// import "./scss/style.css";
+// import "./scss/style.scss";
 
 import BuildMyShadeLeftSide from "../../components/BuildMyShadeLeftSide";
 
