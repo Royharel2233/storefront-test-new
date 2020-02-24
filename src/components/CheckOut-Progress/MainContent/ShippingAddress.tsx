@@ -11,6 +11,8 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     display: "",
   });
 
+  const [error, setError] = useState(false);
+
   // handles the change made by the inputs (input) variable is given as param to the onChange function
   const handleChange = (input: string | number) => (
     e: React.ChangeEvent<HTMLInputElement>
@@ -64,7 +66,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
               <div className="row">
                 <div className="col-lg-6">
 
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
                       htmlFor="first_name">
@@ -72,43 +74,36 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                     </label>
 
                     <input
+                      value={"tony"}
                       type="text"
                       className={"form-field-input"}
                       onChange={handleChange("firstName")}
                       id="first_name"
                     />
+
+                    <span className={"form-field-error"}>First name required</span>
+
                   </div>
 
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
-                      htmlFor="last_name">LAST NAME
+                      htmlFor="address">Address
                     </label>
 
                     <input
-                      onChange={handleChange("lastName")}
+                      onChange={handleChange("address")}
                       type="text"
-                      id="last_name"
+                      id="address"
+                      value="212 W 33RD ST"
                       className={"form-field-input"}
                     />
+
+                    <span className={"form-field-error"}>address required</span>
+
                   </div>
 
-                  <div className="form-field w-100">
-                    <label
-                      className={"form-field-text"}
-                      htmlFor="address_two">
-                      ADDRESS 2
-                    </label>
-
-                    <input
-                      onChange={handleChange("address_two")}
-                      className={"form-field-input"}
-                      type="text"
-                      id="address_two"
-                    />
-                  </div>
-
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
                       htmlFor="city">CITY
@@ -118,7 +113,44 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                       className={"form-field-input"}
                       onChange={handleChange("city")}
                       type="text"
+                      value="new york"
                       id="city" />
+
+                    <span className={"form-field-error"}>city required</span>
+
+                  </div>
+
+                  <div className="form-field error w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="state">STATE</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("state")}
+                      type="text"
+                      value="NY - NEW YORK"
+                      id="state" />
+
+                    <span className={"form-field-error"}>STATE MUST BE SELECTED</span>
+
+                  </div>
+
+                  <div className="form-field error w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="email_address">EMAIL ADDRESS</label>
+
+                    <input
+                      className={"form-field-input"}
+                      onChange={handleChange("email")}
+                      type="email"
+                      value="email@email.com"
+                      id="email_address"
+                    />
+
+                    <span className={"form-field-error"}>email required</span>
+
                   </div>
 
                   <div className="form-field w-100">
@@ -141,19 +173,62 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                 <div className="col-lg-6">
 
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
-                      htmlFor="state">STATE</label>
+                      htmlFor="first_name">
+                      Last name
+                    </label>
+
+                    <input
+                      value={"tony"}
+                      type="text"
+                      className={"form-field-input"}
+                      onChange={handleChange("firstName")}
+                      id="first_name"
+                    />
+
+                    <span className={"form-field-error"}>last name required</span>
+
+                  </div>
+
+                  <div className="form-field error w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="address_two">
+                      ADDRESS 2
+                    </label>
+
+                    <input
+                      onChange={handleChange("address_two")}
+                      className={"form-field-input"}
+                      type="text"
+                      value="suite 12"
+                      id="address_two"
+                    />
+
+                    <span className={"form-field-error"}>address2 required</span>
+
+                  </div>
+
+                  <div className="form-field error w-100">
+                    <label
+                      className={"form-field-text"}
+                      htmlFor="city">ZIP CODE
+                    </label>
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("state")}
+                      onChange={handleChange("city")}
                       type="text"
-                      id="state" />
+                      value="new york"
+                      id="city" />
+
+                    <span className={"form-field-error"}>city required</span>
+
                   </div>
 
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
                       htmlFor="country">COUNTRY</label>
@@ -162,24 +237,15 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                       className={"form-field-input"}
                       onChange={handleChange("country")}
                       type="text"
+                      value={"USA"}
                       id="country"
                     />
+
+                    <span className={"form-field-error"}>Country required</span>
+
                   </div>
 
-                  <div className="form-field w-100">
-                    <label
-                      className={"form-field-text"}
-                      htmlFor="email_address">EMAIL ADDRESS</label>
-
-                    <input
-                      className={"form-field-input"}
-                      onChange={handleChange("email")}
-                      type="email"
-                      id="email_address"
-                    />
-                  </div>
-
-                  <div className="form-field w-100">
+                  <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
                       htmlFor="phone_number">PHONE NUMBER</label>
@@ -188,8 +254,12 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                       className={"form-field-input"}
                       onChange={handleChange("phone")}
                       type="tel"
+                      value={"(212) - 232 - 2222"}
                       id="phone_number"
                     />
+
+                    <span className={"form-field-error"}>INVALID PHONE NUMBER</span>
+
                   </div>
                 </div>
               </div>

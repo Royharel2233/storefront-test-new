@@ -31,13 +31,36 @@ button:focus {
   position: relative;
   margin-bottom: 30px;
 
+  &.error {
+    transition: all .3s;
+
+    .form-field-text {
+      color: #a3a5ad;
+      top: 0;
+    }
+
+    .form-field-input {
+      padding: 0 10px 29px 0;
+    }
+
+    .form-field-error {
+      position: absolute;
+      top: 46px;
+      left: 0;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
   &-text {
     position: absolute;
     font-size: 12px;
     font-weight: bold;
+    text-transform: uppercase;
     line-height: 1.33;
     letter-spacing: 1.2px;
     color: #343538;
+    top: 7px;
   }
 
   &-input {
@@ -46,11 +69,19 @@ button:focus {
     margin-top: 23px;
     width: 100%;
     transition: 0.4s;
+    font-size: 12px;
+    letter-spacing: 0.27px;
 
     &:focus {
       border-bottom: 2px #83858d solid;
-      outline: none
+      outline: none;
     }
+  }
+
+  .form-field-error {
+    color: #ff4444;
+    text-transform: uppercase;
+    display: none;
   }
 
   &-checkbox {
