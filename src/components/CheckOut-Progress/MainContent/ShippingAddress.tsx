@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Select from 'react-select';
 import "../style/style.scss";
 
 import { CheckOutProps } from "../interfaces";
@@ -11,7 +12,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     display: "",
   });
 
-  const [error, setError] = useState(false);
+  const [selectedOption, setSelectOption] = useState('');
 
   // handles the change made by the inputs (input) variable is given as param to the onChange function
   const handleChange = (input: string | number) => (
@@ -29,18 +30,9 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
   const [newAddress, setNewAddress] = useState("Enter New Address");
 
-  const handleSelectChange = (event: React.ChangeEvent<{ value: string }>) => {
-    const value = event.target.value;
-    // listening to events on the select element to determine whether to show the new address form or not
-    if (newAddress === value) {
-      setDisplayState({ display: "block" });
-    } else {
-      setDisplayState({ display: "none" });
-    }
-  };
-
   // handles submit by "ship to this address btn"
   const handleSubmit = () => {
+
     // checkes if the phone is correct
     if (userState.phone.length >= 9) {
       setNewAddress(userState.address);
@@ -48,7 +40,23 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     } else {
       console.warn("phone number invalid");
     }
+
   };
+
+  const handleChangeTest = selectedOption => {
+    setSelectOption( selectedOption);
+
+    if (selectedOption.value === newAddress) {
+      setDisplayState({ display: "none" });
+    } else {
+      setDisplayState({ display: "block" });
+    }
+  };
+
+  const options = [
+    { value: userState.address, label: userState.address },
+    { value: newAddress, label: newAddress },
+  ];
 
   return (
     <div className="block-shipping-address">
@@ -57,10 +65,27 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
           <h3>Shipping Address</h3>
 
           <form className="shipping-address-form">
-            <select onChange={e => handleSelectChange(e)}>
-              <option value={userState.address}>{userState.address}</option>
-              <option value={newAddress}>{newAddress}</option>
-            </select>
+
+            <Select
+              className={"shipping-address-form-select"}
+              value={selectedOption}
+              options={options}
+              theme={theme => ({
+                ...theme,
+                borderRadius: 0,
+                colors: {
+                  ...theme.colors,
+                  primary25: '#fdcd4a',
+                  primary: '#fdcd4a',
+                },
+              })}
+              onChange={handleChangeTest}>
+            </Select>
+
+            {/*<select onChange={e => handleSelectChange(e)}>*/}
+            {/*  <option value={userState.address}>{userState.address}</option>*/}
+            {/*  <option value={newAddress}>{newAddress}</option>*/}
+            {/*</select>*/}
 
             <div className="new-shipping-address" style={displayState}>
               <div className="row">

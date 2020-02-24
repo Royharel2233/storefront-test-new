@@ -96,15 +96,17 @@
 
       .shipping-address-form {
 
-        select {
+        .css-o3h76h-control {
+          border: none;
+        }
+
+        &-select {
           width: 100%;
           margin-bottom: 15px;
-          height: 32px;
-          border: solid 1px #fdcd4a;
           font-size: 10px;
           text-transform: uppercase;
           letter-spacing: 1px;
-          padding: 0 10px;
+          border: 2px solid #fdcd4a;
 
           &:focus {
             outline: none
