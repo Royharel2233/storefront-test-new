@@ -23,15 +23,16 @@ import { useUserDetails } from "@sdk/react";
 // import AddToCart from "./AddToCart";
 
 import YellowUnde from "../../images/YellowUnderLine.svg";
+import { CartContext } from "../CartProvider/context";
 
 interface PageProps {
-    shadesData: ProductsListNew_categories;
-    shadeIndex: any;
+    categories: ProductsListNew_categories;
+    shadeIndex: number;
     onClick: any;
 }
 
 
-const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClick }) => {
+const ChooseFabricColor: React.FC<PageProps> = ({ categories: shadesData, shadeIndex, onClick }) => {
     const { data: user } = useUserDetails();
     const [isVisible, setIsVisible] = useState(false);
     // const [fabricChoiceData, setFabricChoiceData] = useState([]);
@@ -43,9 +44,10 @@ const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClic
     const [fabricContent, setFabricContent] = useState("");
     const [fabricNumber, setFabricNumber] = useState("");
     const [chosenFabricColor, setChosenFabricColor] = useState(0)
-    const [clickTd, setClickedTd] = useState(null)
+    const [clickTd, setClickedTd] = useState(null);
+    const [variantId, setVariantId] = useState("");
 
-    const show = (fabricTypeNum, image, attributesValues, fabricColor, fabricMaxShadeWidth, fabricContent, fabricNumber, FabricColorNumber, colorName) => {
+    const show = (fabricTypeNum, image, attributesValues, fabricColor, fabricMaxShadeWidth, fabricContent, fabricNumber, FabricColorNumber, colorName, variantId: string) => {
         setIsVisible(true);
         // setFabricChoiceData(shadeNum);
         setChoiceName(colorName);
@@ -57,6 +59,7 @@ const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClic
         setFabricNumber(fabricNumber)
         setChosenFabricColor(FabricColorNumber)
         setClickedTd(FabricColorNumber)
+        setVariantId(variantId)
         // window.alert(param);
     }
     const hide = () => {
@@ -71,8 +74,8 @@ const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClic
     //     setIsVisible(true)
     // }
     // const [show, toggleShow] = React.useState(true);
-    const handleChange = (fabricTypeNum, image, attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName) => e => {
-        show(fabricTypeNum, image, attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName);
+    const handleChange = (fabricTypeNum, image, attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName, variantId: string) => e => {
+        show(fabricTypeNum, image, attributesValues, value1, value2, value3, value4, FabricColorNumber, colorName, variantId);
         // param is the argument you passed to the function
         // e is the event object that returned
     };
@@ -120,30 +123,31 @@ const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClic
             </div>
             <br />
             <div className="fabric-type-list">
-                {shadesData.edges[shadeIndex].node.products.edges.map((item, fabricIndex) => (
-                    <div key={item.node.id}>
-                        <p className="fabric-type-title dark-grey"><b>Fabric:</b>{item.node.name.substring(0, item.node.name.indexOf('-'))} {isVisible}</p>
+                {shadesData.edges[shadeIndex].node.products.edges.map((product, fabricIndex) => (
+                    <div key={product.node.id}>
+                        <p className="fabric-type-title dark-grey"><b>Fabric:</b>{product.node.name.substring(0, product.node.name.indexOf('-'))} {isVisible}</p>
                         <div className="fabric-images-table">
-                            {item.node.variants.map((vairant, varIndex) => (
+                            {product.node.variants.map((vairant, varIndex) => (
                                 <div className={clickTd === varIndex ? "fabric-images-table-single-item" : "fabric-images-table-single-item"} key={varIndex}>
-                                    {item.node.images[varIndex].url !== null ?
+                                    {product.node.images[varIndex].url !== null ?
                                         <img
-                                            src={item.node.images[varIndex].url}
+                                            src={product.node.images[varIndex].url}
                                             onClick={
                                                 handleChange(
                                                     fabricIndex,
-                                                    item.node.variants[fabricIndex],
-                                                    item.node.images[varIndex].url,
+                                                    product.node.variants[fabricIndex],
+                                                    product.node.images[varIndex].url,
                                                     // Fabric Color name
-                                                    item.node.attributes[0].attribute.values[0].name,
+                                                    product.node.attributes[0].attribute.values[0].name,
                                                     // Fabric max shade width
-                                                    item.node.attributes[1].attribute.values[0].name,
+                                                    product.node.attributes[1].attribute.values[0].name,
                                                     // Fabric content
-                                                    item.node.attributes[2].attribute.values[0].name,
+                                                    product.node.attributes[2].attribute.values[0].name,
                                                     // Fabric number
-                                                    item.node.attributes[3].attribute.values[0].name,
+                                                    product.node.attributes[3].attribute.values[0].name,
                                                     varIndex,
-                                                    vairant.name
+                                                    vairant.name,
+                                                    vairant.id
                                                 )
                                             }
                                         />
@@ -155,19 +159,26 @@ const ChooseFabricColor: React.FC<PageProps> = ({ shadesData, shadeIndex, onClic
                             ))}
                             {isVisible && fabricIndex === fabricTypeNum ?
                                 <div>
-                                    <SelectedFabric
-                                        chosenColorIndex={chosenFabricColor}
-                                        ChoiceName={ChoiceName}
-                                        onClick={hide}
-                                        fabricData={fabricTypeNum}
-                                        shadeIndex={shadeIndex}
-                                        imageUrl={imageUrl}
-                                        maxShadeWidth={fabricColor}
-                                        fabricWidth={fabricMaxShadeWidth}
-                                        fabricContent={fabricContent}
-                                        FarbricNmber={fabricNumber}
-                                        loggedIn={user ? true : false}
-                                    />
+                                    <CartContext.Consumer>
+                                        {cart => (
+                                            <SelectedFabric
+                                                chosenColorIndex={chosenFabricColor}
+                                                ChoiceName={ChoiceName}
+                                                closeSelectedView={hide}
+                                                fabricData={fabricTypeNum}
+                                                shadeIndex={shadeIndex}
+                                                imageUrl={imageUrl}
+                                                maxShadeWidth={fabricColor}
+                                                fabricWidth={fabricMaxShadeWidth}
+                                                fabricContent={fabricContent}
+                                                FarbricNmber={fabricNumber}
+                                                loggedIn={user ? true : false}
+                                                addToCart={cart.add}
+                                                variantId={variantId}
+
+                                            />
+                                        )}
+                                    </CartContext.Consumer>
                                     <br />
                                 </div>
                                 :
