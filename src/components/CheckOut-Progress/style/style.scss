@@ -364,6 +364,7 @@
 
   .payment-method {
     padding: 30px;
+    cursor: pointer;
     background: white;
     box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
 
@@ -373,6 +374,10 @@
 
     &-title {
       @extend %checkout-main-title;
+
+      &.no-open {
+        margin-bottom: 0;
+      }
     }
 
     &-select {

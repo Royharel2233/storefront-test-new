@@ -2,13 +2,24 @@ import React, { useState } from "react";
 import Select from 'react-select';
 import "../style/style.scss";
 
+const classNames = require('classnames');
+
 export const PaymentMethod: React.FC<{}> = () => {
 
   const [selectedOption, setSelectOption] = useState(null);
+  const [openMethod, setOpenMethod] = useState<boolean>(false);
 
-  const handleChangeTest = selectedOption => {
+  const onSelectMethodOpenHandler = () => {
+    return setOpenMethod(!openMethod);
+  };
+
+  const onMethodSelect = selectedOption => {
     setSelectOption( selectedOption);
   };
+
+  const btnClass = classNames('payment-method-title', openMethod, {
+    'no-open': !openMethod,
+  });
 
   const options = [
     { value: 'VISA X4444 - EXP 07/20', label: 'VISA X4444 - EXP 07/20' },
@@ -17,9 +28,11 @@ export const PaymentMethod: React.FC<{}> = () => {
 
   return (
     <div className={"payment-method"}>
-      <h4 className={"payment-method-title"}>Payment Method</h4>
+      <h4
+        onClick={onSelectMethodOpenHandler}
+        className={btnClass}>Payment Method</h4>
 
-      <Select
+      {openMethod ?  <Select
         className={"payment-method-select"}
         value={selectedOption}
         options={options}
@@ -32,8 +45,8 @@ export const PaymentMethod: React.FC<{}> = () => {
             primary: '#fdcd4a',
           },
         })}
-        onChange={handleChangeTest}>
-      </Select>
+        onChange={onMethodSelect}>
+      </Select> : null }
     </div>
   );
 };
