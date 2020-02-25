@@ -102,11 +102,11 @@ const FooterMain = () => {
               <div className="col-md-3">
                 <ul className="list-unstyled">
                   <li>to the trade</li>
-                  <Link to={projectCenter}>
+                  {/* <Link to={projectCenter}>
                     <li>
                       <a href="#">Project Center</a>
                     </li>
-                  </Link>
+                  </Link> */}
                   <li>
                     <a href="#">Orders</a>
                   </li>
@@ -116,11 +116,11 @@ const FooterMain = () => {
                   <li>
                     <a href="#">Photography</a>
                   </li>
-                  <Link to={newsPage}>
+                  {/* <Link to={newsPage}>
                     <li>
                       <a href="#">News</a>
                     </li>
-                  </Link>
+                  </Link> */}
                 </ul>
               </div>
               <div className="col-md-3">

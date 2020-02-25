@@ -327,7 +327,7 @@ header .navbar-expand-md .navbar-nav .nav-link {
   padding-bottom: 5px !important;
 }
 .tp-bullets {
-  position: absolute;
+  // position: absolute;
   display: block;
   top: 50% !important;
   left: auto !important;
@@ -1099,7 +1099,7 @@ footer .btn-subscribe {
   font-family: "Lato";
   padding-right: 10px;
   padding-left: 7px;
-  width: 150px;
+  width: 180px;
 }
 .link-long:hover {
   line-height: 16px;
@@ -1113,4 +1113,5 @@ footer .btn-subscribe {
   font-family: "Lato";
   padding-right: 10px;
   padding-left: 7px;
+  width: 150px;
 }

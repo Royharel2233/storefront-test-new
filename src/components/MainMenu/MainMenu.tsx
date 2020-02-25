@@ -183,7 +183,7 @@ const MainMenu: React.FC = () => {
               {({ data }) => {
                 const items = maybe(() => data.shop.navigation.main.items, []);
                 return (
-                  <ul className="navbar-nav ml-auto">
+                  <ul className="navbar-nav ml-auto" style={{width: "1400px", paddingLeft: "6%"}}>
                         <li
                           className="nav-item"
                           onClick={() =>
