@@ -1,8 +1,11 @@
 import React from "react";
+
 import "../style/style.scss";
 
-import {CheckOutProps} from '../interfaces'
+import {CheckOutProps} from '../interfaces';
+
 import { SingleItem } from "./SingleItem";
+
 import { SingleBigItem } from "./SingleBigItem";
 
 export const OrderSummary: React.FC<CheckOutProps> = ({exportObj}) => {

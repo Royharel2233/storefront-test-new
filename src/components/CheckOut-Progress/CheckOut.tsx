@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CheckOutMenu } from "./CheckOutMenu";
+// import { CheckOutMenu } from "./CheckOutMenu";
 import { MainContent } from "./MainContent/MainContent";
 import { OrderSummary } from "./OrderSummary/OrderSummary";
 // import {useHistory} from 'react-dom'
