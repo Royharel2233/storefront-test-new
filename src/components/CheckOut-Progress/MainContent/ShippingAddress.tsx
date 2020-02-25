@@ -12,10 +12,8 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     display: "",
   });
 
-  const [, setSelectOption] = useState('');
+  const [selectedOption, setSelectOption] = useState('');
   // add selectedOption !!!!
-
-
   
   // handles the change made by the inputs (input) variable is given as param to the onChange function
   const handleChange = (input: string | number) => (
@@ -71,7 +69,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
             <Select
               className={"shipping-address-form-select"}
-              value={options[0]}
+              value={selectedOption}
               options={options}
               theme={theme => ({
                 ...theme,
