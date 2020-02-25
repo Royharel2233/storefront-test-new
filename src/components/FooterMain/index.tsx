@@ -25,6 +25,11 @@ import {
   warrantyPage,
 } from "../../routes/Routes";
 
+
+
+
+
+
 const FooterMain = () => (
   <div className="FooterMain">
     <div className="container">

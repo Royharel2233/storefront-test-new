@@ -1,3 +1,4 @@
+@import "../../../css/variables";
 
 .checkout-page {
 
@@ -101,12 +102,7 @@
         }
 
         &-select {
-          width: 100%;
-          margin-bottom: 15px;
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border: 2px solid #fdcd4a;
+         @extend %checkout-select;
 
           &:focus {
             outline: none
@@ -362,6 +358,25 @@
         }
 
       }
+    }
+
+  }
+
+  .payment-method {
+    padding: 30px;
+    background: white;
+    box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
+
+    .css-o3h76h-control {
+      border: none;
+    }
+
+    &-title {
+      @extend %checkout-main-title;
+    }
+
+    &-select {
+      @extend %checkout-select;
     }
 
   }

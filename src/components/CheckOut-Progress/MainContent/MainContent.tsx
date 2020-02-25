@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 import { CheckOutProps } from '../interfaces'
-
+import { PaymentMethod } from "./PaymentMethod";
 import { ShippingAddress } from './ShippingAddress'
 import { ShippingMethod } from './ShippingMethod'
 
@@ -34,7 +34,12 @@ function RenderPage(param: number, exportObj) {
             );
             break;
         case 0:
-            return <ShippingAddress exportObj={exportObj} />;
+            return (
+              <>
+              <ShippingAddress exportObj={exportObj} />
+              <PaymentMethod/>
+            </>
+              );
             break;
     }
 }

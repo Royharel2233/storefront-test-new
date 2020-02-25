@@ -620,6 +620,7 @@ div#rev_slider_8_1_forcefullwidth,
   color: #f0b74d;
 }
 /* footer */
+
 footer > .container:not(.copyright) {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -647,6 +648,7 @@ footer .container:not(.copyright) li a {
   letter-spacing: 0.3px;
   color: #a3a5ad;
   display: block;
+  text-transform: capitalize;
 }
 footer .container:not(.copyright) li:not(:last-child) a {
   margin-bottom: 24px;

@@ -4,7 +4,6 @@ import "../style/style.scss";
 
 import { CheckOutProps } from "../interfaces";
 
-
 export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   const { userState, setUserState, setFormState } = exportObj;
   // defines the current display of the new address form
@@ -82,15 +81,9 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
               onChange={handleChangeTest}>
             </Select>
 
-            {/*<select onChange={e => handleSelectChange(e)}>*/}
-            {/*  <option value={userState.address}>{userState.address}</option>*/}
-            {/*  <option value={newAddress}>{newAddress}</option>*/}
-            {/*</select>*/}
-
             <div className="new-shipping-address" style={displayState}>
               <div className="row">
                 <div className="col-lg-6">
-
                   <div className="form-field error w-100">
                     <label
                       className={"form-field-text"}
