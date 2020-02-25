@@ -1,6 +1,8 @@
 import React from "react";
 import "./style/style.scss";
 
+import pickuptruck from "../../img/pickUpTruckIcon.svg";
+
 import airplane from "../../img/freeshipping.svg";
 
 import turnaround from "../../img/quick-turn-around.svg";
@@ -13,7 +15,7 @@ export const DeliveryMethod: React.FC<{}> = () => {
         <div className="methods">
           <div className="single-method">
             <i>
-              <img />
+              <img src={pickuptruck}/>
             </i>
             <h3>$15 Fixed Freight</h3>
             <p>

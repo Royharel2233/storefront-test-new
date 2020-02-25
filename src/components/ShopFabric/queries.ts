@@ -1,11 +1,13 @@
 import gql from "graphql-tag";
 
 import { TypedQuery } from "../../core/queries";
+
 import {
   basicProductFragment,
   productPricingFragment
-} from "../Product/queries";
-import { Category, CategoryVariables } from "./types/Category";
+} from "../../views/Product/queries";
+
+import { Category, CategoryVariables } from "../../views/Category/types/Category";
 
 export const categoryProductsQuery = gql`
   ${basicProductFragment}
@@ -32,6 +34,19 @@ export const categoryProductsQuery = gql`
       totalCount
       edges {
         node {
+          attributes {
+                attribute {
+                  id
+                  name
+                  slug
+                  values {
+                    id
+                    name
+                    slug
+                  }
+                }
+              }
+          name
           ...BasicProductFields
           ...ProductPricingField
           category {
@@ -81,4 +96,5 @@ export const categoryProductsQuery = gql`
   }
 `;
 
-export const TypedCategoryProductsQuery = TypedQuery<Category,CategoryVariables>(categoryProductsQuery);
+export const TypedShopFabricQuery = TypedQuery<Category,CategoryVariables>(categoryProductsQuery);
+

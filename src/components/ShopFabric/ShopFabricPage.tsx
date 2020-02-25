@@ -1,10 +1,11 @@
-import "./scss/index.scss";
+// import "./scss/index.scss";
 
 import "../../components/ShopFabric/style/style.scss";
 
 import * as React from "react";
 
-import { IFilterAttributes, IFilters } from "@types";
+import {IFilterAttributes, IFilters} from "./FabricFilter";
+
 import {
   Breadcrumbs,
   extractBreadcrumbs,
@@ -13,10 +14,18 @@ import {
 } from "../../components";
 
 import { ProductListHeader } from "../../@next/components/molecules";
-import { FilterSidebar } from "../../@next/components/organisms/FilterSidebar";
+// import { FilterSidebar } from "../../@next/components/organisms/FilterSidebar";
 import { maybe } from "../../core/utils";
-import { Category_category, Category_products } from "./types/Category";
+import {
+  Category_category,
+  Category_products,
+} from "../../views/Category/types/Category";
 
+import { FabricFilter } from "@temp/components/ShopFabric/FabricFilter";
+
+import { PageHeader } from "@temp/components/ShopFabric/PageHeader";
+
+import { FabricMenu } from "@temp/components/ShopFabric/FabricMenu";
 
 interface SortItem {
   label: string;
@@ -26,8 +35,10 @@ interface SortItem {
 interface SortOptions extends Array<SortItem> {}
 
 interface PageProps {
+  currentQuery: string;
+  setCurrentQuery: React.Dispatch<React.SetStateAction<string>>;
   activeFilters: number;
-  attributes: IFilterAttributes[];
+  attributes: IFilterAttributes[][]
   activeSortOption: string;
   category: Category_category;
   displayLoader: boolean;
@@ -41,7 +52,9 @@ interface PageProps {
   onOrder: (order: { value?: string; label: string }) => void;
 }
 
-const Page: React.FC<PageProps> = ({
+const ShopFabricPage: React.FC<PageProps> = ({
+  currentQuery,
+  setCurrentQuery,
   activeFilters,
   activeSortOption,
   attributes,
@@ -66,20 +79,35 @@ const Page: React.FC<PageProps> = ({
     <div className="category">
       <div className="container">
         <Breadcrumbs breadcrumbs={extractBreadcrumbs(category)} />
-        <FilterSidebar
+        {/* <FilterSidebar
           show={showFilters}
           hide={() => setShowFilters(false)}
           onAttributeFiltersChange={onAttributeFiltersChange}
           attributes={attributes}
           filters={filters}
-        />
-        {/* <FabricFilter
+        /> */}
+        <div>
+          <PageHeader />
+        </div>
+        <div>
+          <FabricMenu
+            currentQuery={currentQuery}
+            setCurrentQuery={setCurrentQuery}
+          />
+        </div>
+        <div className="col-sm-12">
+        <FabricFilter
+          currentQuery={currentQuery}
+          currentCategory={category}
+          currentProducts={products}
           show={showFilters}
           onAttributeFiltersChange={onAttributeFiltersChange}
           attributes={attributes}
           filters={filters}
+          filtersLimit={5}
           numberOfProducts={products ? products.totalCount : 0}
-        /> */}
+        />
+        </div>
         <ProductListHeader
           activeSortOption={activeSortOption}
           openFiltersMenu={() => setShowFilters(true)}
@@ -107,4 +135,4 @@ const Page: React.FC<PageProps> = ({
   );
 };
 
-export default Page;
+export default ShopFabricPage;
