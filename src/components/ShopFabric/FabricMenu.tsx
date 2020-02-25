@@ -1,8 +1,6 @@
 import React from "react";
 import "./style/style.scss";
 
-import { ChooseFabricQuery } from "../../views/BuildShadePage/queries";
-
 interface FabricMenuProps {
   currentQuery: string;
   setCurrentQuery: React.Dispatch<React.SetStateAction<string>>;
@@ -13,8 +11,6 @@ export const FabricMenu: React.FC<FabricMenuProps> = ({
   setCurrentQuery,
 }) => {
   return (
-    <ChooseFabricQuery>
-      {({ data }) => (
         <div className="shop-fabric-menu">
           <ul className="list_none ">
             <li
@@ -49,7 +45,5 @@ export const FabricMenu: React.FC<FabricMenuProps> = ({
             </li>
           </ul>
         </div>
-      )}
-    </ChooseFabricQuery>
   );
 };

@@ -97,3 +97,4 @@ export const categoryProductsQuery = gql`
 `;
 
 export const TypedShopFabricQuery = TypedQuery<Category,CategoryVariables>(categoryProductsQuery);
+
