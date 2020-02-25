@@ -1,62 +1,82 @@
 
- import React, { useState } from "react";
+import React, { useState } from "react";
 
- import "./index.scss";
+import "./index.scss";
 
 //  add here to right CSS files
 
- import ChooseYourShade from "../../components/ChooseYourShade";
+import ChooseYourShade from "../../components/ChooseYourShade";
 
- import ChooseFabricColor from "../../components/ChooseFabricColor";
+import ChooseFabricColor from "../../components/ChooseFabricColor";
 
- import {
+import {
   ProductsListNew_categories,
   // ProductsListNew_categories_edges_node_products,
   // ProductsListNew_categories_edges_node_products_edges
-} from "../../views/BuildShadePage/types/ProductsListNew";
+} from "../../views/BuildMyShade/types/ProductsListNew";
 
 
-
-
-const BuildMyShadeRightSide: React.FC<{
+interface RightSideProps {
   products: ProductsListNew_categories;
-  setShadeName: any;
-  OpenPopUpAction: any;
-  opacity: any;
-  changeRightSideOpacity: any;
-  changeLeftSideOpacity: any;
+  setShadeName: (s: string) => void;
+  OpenPopUpAction: () => void;
+  opacity: number;
+  changeRightSideOpacity: (opacity: number) => void;
+  changeLeftSideOpacity: (opacity: number) => void;
+}
 
-  }> = ({products, setShadeName, OpenPopUpAction, opacity, changeRightSideOpacity, changeLeftSideOpacity}) => {
-    const [chosenShade, setChosenShade] = useState(0)
+
+const BuildMyShadeRightSide: React.FC<RightSideProps> =
+  ({
+    products,
+    setShadeName,
+    OpenPopUpAction,
+    opacity,
+    changeRightSideOpacity,
+    changeLeftSideOpacity,
+  }) => {
+    const [chosenShadeIndex, setChosenShadeIndex] = useState(0)
     const [isVisible, setIsVisible] = useState(false)
 
-    const triggerChooseFabricColor = (chosenShadeValue) => {
-      setChosenShade(chosenShadeValue)
+    const triggerChooseFabricColor = (chosenShadeIndex) => {
+      setChosenShadeIndex(chosenShadeIndex)
       setIsVisible(true)
-      changeRightSideOpacity("100%")
+      changeRightSideOpacity(1.0)
     }
     const triggerChooseShade = () => {
       setIsVisible(false)
-      changeRightSideOpacity("100%")
-    }    
+      changeRightSideOpacity(1.0)
+    }
     const moreInfoAction = (ChosenShadeForInfo) => {
       setShadeName(ChosenShadeForInfo)
       OpenPopUpAction()
-      changeRightSideOpacity("25%")
-      changeLeftSideOpacity("25%")
+      changeRightSideOpacity(.25);
+      changeLeftSideOpacity(.25)
     }
-    return(
-    <div className="build-shade-right-side" style={ {
-      maxWidth: "400px",
-      background: "#fafafa",
-      maxHeight: "980px",
-      overflow: "hidden",
-      opacity,
-      } }>
-      {isVisible ? <ChooseFabricColor shadesData={products} shadeIndex={chosenShade} onClick={triggerChooseShade} /> 
-      :
-      <ChooseYourShade shadesData={products} onClick={triggerChooseFabricColor} chooseFabricForInfoAction={moreInfoAction}/>}
-    </div>
+
+    return (
+      <div className="build-shade-right-side" style={{
+        maxWidth: "400px",
+        background: "#fafafa",
+        maxHeight: "980px",
+        overflow: "hidden",
+        opacity,
+      }}>
+        {isVisible
+          ?
+          <ChooseFabricColor
+            categories={products}
+            onClick={triggerChooseShade}
+            shadeIndex={chosenShadeIndex}
+          />
+          :
+          <ChooseYourShade
+            shadesData={products}
+            onClick={triggerChooseFabricColor}
+            chooseFabricForInfoAction={moreInfoAction}
+          />
+        }
+      </div>
     )
   };
 export default BuildMyShadeRightSide;

@@ -36,7 +36,7 @@ interface ProductDescriptionState {
 class ProductDescription extends React.Component<
   ProductDescriptionProps,
   ProductDescriptionState
-> {
+  > {
   constructor(props: ProductDescriptionProps) {
     super(props);
     const pickers =

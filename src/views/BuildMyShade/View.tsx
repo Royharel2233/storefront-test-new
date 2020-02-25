@@ -1,9 +1,10 @@
 import React from "react";
 // import { RouteComponentProps } from "react-router";
 
+
 // import NetworkStatus from "../../components/NetworkStatus";
 
-// cosnt some =
+// cosnt some = 
 import Page from "./Page";
 // import { TypedCollectionProductsQuery } from "./queries";
 
@@ -13,9 +14,9 @@ import Page from "./Page";
 //   Online,
 // } from "../../components";
 
-import { ChooseFabricQuery } from "./queries";
+import { ChooseFabricQuery } from "./queries"
 
-export const View: React.FC = ({ children }) => (
+export const View: React.FC = () => (
   <div className="home-page">
     <ChooseFabricQuery
     // variables={{
@@ -24,7 +25,11 @@ export const View: React.FC = ({ children }) => (
     //   key={match.params.id}
     >
       {({ data }) => {
-        return <Page categories={data.categories} />;
+        return (
+          <Page
+            categories={data.categories}
+          />
+        );
       }}
     </ChooseFabricQuery>
   </div>

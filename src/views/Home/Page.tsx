@@ -1,6 +1,6 @@
 import "./scss/index.scss";
 
-// import "./scss/style.css";
+// import "./scss/style.scss";
 
 import "./scss/bootstrap.css";
 
@@ -68,7 +68,7 @@ const Page: React.FC<{
       <section id="shades_collection">
         <CollectionOfShades />
       </section>
-      <section id="products"> 
+      <section id="products">
         <ProductSection />
       </section>
       <section id="partnership">
@@ -78,7 +78,7 @@ const Page: React.FC<{
       <section id="follow_instagram">
         <FollowOnInstegramMain />
       </section>
-        
+
       {/* Newsletter Subscription   */}
       <section id="newsletter">
         <NewsLetterSubscriptionMain />

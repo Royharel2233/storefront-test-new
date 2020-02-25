@@ -2,7 +2,7 @@ import React from 'react';
 
 // import './followOnInstegramMain.scss';
 // import './css/bootstrap.css';
-// import './css/style.css';
+// import './css/style.scss';
 
 import image_one from './img/Image1.png';
 

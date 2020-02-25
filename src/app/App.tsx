@@ -3,9 +3,7 @@ import { RouteComponentProps } from "react-router";
 
 // import "../globalStyles/scss/index.scss";
 
-import "../css/style.css";
-
-import "../css/bootstrap.css";
+import "../css/style.scss";
 
 import {MainMenu, MetaConsumer, OverlayManager } from "../components";
 
@@ -25,7 +23,7 @@ const App: React.FC<RouteComponentProps> = ({
 }) => {
   const orderConfirmationPage = isPath(pathname, orderConfirmationUrl);
   // const [isAuthticated, setIsAuthticated] = useState(useAuth())
-  
+
   // useAuth((authenticated: boolean) => {
   //   if (authenticated) {
   //       setIsAuthticated()

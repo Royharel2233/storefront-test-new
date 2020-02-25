@@ -5,15 +5,6 @@ import { TypedQuery } from "../../core/queries";
 
 import { ProductsListNew } from "./types/ProductsListNew";
 
-// import {
-//   ProductDetails,
-//   ProductDetailsVariables
-// } from "./types/ProductDetails";
-
-// import { VariantList, VariantListVariables } from "./types/VariantList";
-
-
-
 export const fabricsQuery = gql`
 query ProductsListNew {
   categories(first: 10) {
@@ -29,7 +20,7 @@ query ProductsListNew {
     }
   }
 }
-fragment ProductsData on Category{
+fragment ProductsData on Category {
   products(first: 10){
     edges{
       node{
