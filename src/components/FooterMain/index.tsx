@@ -21,8 +21,6 @@ const classNames = require('classnames');
 import {
   aboutUs,
   contactUs,
-  newsPage,
-  projectCenter,
   shippingHandling,
   warrantyPage,
 } from "../../routes/Routes";

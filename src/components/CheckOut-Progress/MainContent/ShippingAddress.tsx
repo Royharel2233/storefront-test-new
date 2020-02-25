@@ -12,7 +12,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   });
 
   const [selectedOption, setSelectOption] = useState(null);
-
   // handles the change made by the inputs (input) variable is given as param to the onChange function
   const handleChange = (input: string | number) => (
     e: React.ChangeEvent<HTMLInputElement>

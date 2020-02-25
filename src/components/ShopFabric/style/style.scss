@@ -86,7 +86,7 @@
   letter-spacing: 1.2px;
   margin-right: 45px;
 }
-.fabric-filter .filter a.single-filter span {
+.fabric-filter .filter  span.single-filter {
   font-weight: 500;
   line-height: 1.33;
   letter-spacing: 1.2px;
@@ -94,7 +94,7 @@
   margin-right: 45px;
   position: relative;
 }
-.fabric-filter .filter a.single-filter span:after {
+.fabric-filter .filter  span.single-filter:after {
   content: "";
   width: 0;
   height: 0;
@@ -107,6 +107,7 @@
 }
 .fabric-filter .products-number span {
   font-weight: 500;
+  align-self: flex-start;
   line-height: 1.33;
   letter-spacing: 1.2px;
   color: #3a3c44;
@@ -160,3 +161,13 @@
   border-bottom: 2px #fdcd4a solid;
   border-top: 0px;
 }
+
+
+.manage-display-none {
+  display: none;
+}
+
+.manage-display-block {
+  display: inline-block;
+}
+
