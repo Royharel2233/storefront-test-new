@@ -619,7 +619,14 @@ div#rev_slider_8_1_forcefullwidth,
 .btn_subscription:hover {
   color: #f0b74d;
 }
+
 /* footer */
+
+.FooterMain {
+  &.no-visible {
+    display: none;
+  }
+}
 
 footer > .container:not(.copyright) {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
