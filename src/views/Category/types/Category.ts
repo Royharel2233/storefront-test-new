@@ -3,6 +3,8 @@
 // This file was automatically generated and should not be edited.
 
 import { ProductOrder } from "./../../../../types/globalTypes";
+// import {IFilterAttributes } from "@temp/components/ShopFabric/FabricFilter";
+import {IFilterAttributes } from "../../../../src/components/ShopFabric/FabricFilter";
 
 // ====================================================
 // GraphQL query operation: Category
@@ -260,6 +262,7 @@ export interface Category_products_edges_node {
    */
   id: string;
   name: string;
+  attributes: { attribute: IFilterAttributes }[] | null;
   /**
    * The main thumbnail for a product.
    */
@@ -435,3 +438,45 @@ export interface CategoryVariables {
   priceLte?: number | null;
   priceGte?: number | null;
 }
+
+// export interface custom_Guy_4 {
+//   __typename: "AttributeValue";
+//   name: string | null;
+//   /**
+//    * Internal representation of a value (unique per attribute).
+//    */
+//   slug: string | null;
+// }
+
+// export interface custom_Guy_3 {
+//   __typename: "Attribute";
+//   slug: string | null;
+//   /**
+//    * List of attribute's values.
+//    */
+//   values: (custom_Guy_4 | null)[] | null;
+// }
+
+// export interface custom_Guy_2 {
+//   __typename: "AttributeCountableEdge";
+//   id: string;
+//   /**
+//    * Name of a value displayed in the interface.
+//    */
+//   name: string | null;
+//   /**
+//    * The item at the end of the edge.
+//    */
+//   slug: string | null;
+//   /**
+//    * List of attribute's values.
+//    */
+//   values: (custom_Guy_4 | null)[] | null;
+//   productAttributes: custom_Guy_3;
+// }
+
+// export interface custom_Guy_1 {
+//   __typename: "AttributeCountableConnection";
+//   slug: string;
+//   attribute: custom_Guy_2;
+// }

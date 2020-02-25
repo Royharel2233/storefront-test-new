@@ -19,8 +19,6 @@ import { Link } from "react-router-dom";
 import {
   aboutUs,
   contactUs,
-  newsPage,
-  projectCenter,
   shippingHandling,
   warrantyPage,
 } from "../../routes/Routes";
@@ -59,6 +57,9 @@ const FooterMain = () => (
                 <li>
                   <a href="#">Finishing Touches</a>
                 </li>
+                <li>
+                  <a href="#">Commercial Product Info</a>
+                </li>
               </ul>
             </div>
             <div className="col-md-3">
@@ -82,30 +83,12 @@ const FooterMain = () => (
                     <a href="#">Shipping + Handling</a>
                   </li>
                 </Link>
-              </ul>
-            </div>
-            <div className="col-md-3">
-              <ul className="list-unstyled">
-                <li>to the trade</li>
-                <Link to={projectCenter}>
-                  <li>
-                    <a href="#">Project Center</a>
+                <li>
+                    <a href="#">Our Process</a>
                   </li>
-                </Link>
-                <li>
-                  <a href="#">Orders</a>
-                </li>
-                <li>
-                  <a href="#">Product Details</a>
-                </li>
-                <li>
-                  <a href="#">Photography</a>
-                </li>
-                <Link to={newsPage}>
                   <li>
-                    <a href="#">News</a>
+                    <a href="#">FAQ</a>
                   </li>
-                </Link>
               </ul>
             </div>
             <div className="col-md-3">

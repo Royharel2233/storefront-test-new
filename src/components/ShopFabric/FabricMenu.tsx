@@ -1,41 +1,55 @@
 import React from "react";
 import "./style/style.scss";
 
-export const FabricMenu: React.FC<{}> = ({}) => {
+import { ChooseFabricQuery } from "../../views/BuildShadePage/queries";
+
+interface FabricMenuProps {
+  currentQuery: string;
+  setCurrentQuery: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const FabricMenu: React.FC<FabricMenuProps> = ({
+  currentQuery,
+  setCurrentQuery,
+}) => {
   return (
-    <div className="shop-fabric-menu">
-      <ul className="list_none">
-        <li className="active">
-          <a href="#">
-            <span>LUXSHADE</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span>LUXSHADE SOLAR</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span>DOUBLE ROLLER</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span>SLIMLINE DUAL</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span>LUXSHADE LARGE DUAL</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span>COUPLE LUXSHADE</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+    <ChooseFabricQuery>
+      {({ data }) => (
+        <div className="shop-fabric-menu">
+          <ul className="list_none ">
+            <li
+              className={currentQuery === "356" ? "active" : null}
+              onClick={() => setCurrentQuery("356")}
+            >
+              <span>Designer Roller Shades</span>
+            </li>
+            <li
+              className={currentQuery === "357" ? "active" : null}
+              onClick={() => setCurrentQuery("357")}
+            >
+              <span>Luxshade Roller Shades</span>
+            </li>
+            <li
+              className={currentQuery === "358" ? "active" : null}
+              onClick={() => setCurrentQuery("358")}
+            >
+              <span>Slimline Dual Roller Shades</span>
+            </li>
+            <li
+              className={currentQuery === "359" ? "active" : null}
+              onClick={() => setCurrentQuery("359")}
+            >
+              <span>Luxshade Dual Roller Shades</span>
+            </li>
+            <li
+              className={currentQuery === "361" ? "active" : null}
+              onClick={() => setCurrentQuery("361")}
+            >
+              <span>Tailored Roman Shades</span>
+            </li>
+          </ul>
+        </div>
+      )}
+    </ChooseFabricQuery>
   );
 };
