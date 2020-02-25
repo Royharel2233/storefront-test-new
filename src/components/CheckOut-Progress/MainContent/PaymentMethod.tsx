@@ -30,7 +30,7 @@ export const PaymentMethod: React.FC<{}> = () => {
     <div className={"payment-method"}>
       <h4
         onClick={onSelectMethodOpenHandler}
-        className={btnClass}>Payment Method</h4>
+        className={btnClass}>Shipping Method</h4>
 
       {openMethod ?  <Select
         className={"payment-method-select"}
