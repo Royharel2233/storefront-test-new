@@ -10,7 +10,7 @@ const BuildMyShadePopUp: React.FC<{
     }> = ({ ClosePopUpAction, fabricName }) => {
         const ClosePopUp = () => (
             ClosePopUpAction()
-        )
+        );
         return(
             <div className="build-my-shade-popup">
         <div className="close_button" onClick={ClosePopUp}><img src={xpng}/></div>
@@ -68,6 +68,6 @@ const BuildMyShadePopUp: React.FC<{
         </div>
         )
         };
-    
+
 export default BuildMyShadePopUp;
 

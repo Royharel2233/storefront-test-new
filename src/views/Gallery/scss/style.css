@@ -579,16 +579,6 @@ footer .btn-subscribe {
   margin-right: 16px;
 }
 
-@media (min-width: 1440px) {
-  .container {
-    max-width: 1270px;
-  }
-}
-@media (min-width: 1366px) and (max-width: 1400px) {
-  .container {
-    max-width: 1210px;
-  }
-}
 @media (min-width: 1200px) {
   .tp-bullet {
     left: 0 !important;

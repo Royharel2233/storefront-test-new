@@ -15,10 +15,6 @@ import houzz_small from "./img/HouzzSmall.svg";
 
 import youtube_small from "./img/YoutubeSmall.svg";
 
-
-  
-  
-
 const SocialMediaMain: React.FC = () => (
         <div className="SocialMediaMain">
             <ul className="list-unstyled social_media">
