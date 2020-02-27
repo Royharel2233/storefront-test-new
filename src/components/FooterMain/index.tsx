@@ -76,6 +76,7 @@ const FooterMain = () => {
                   </li>
                 </ul>
               </div>
+
               <div className="col-md-3">
                 <ul className="list-unstyled mb-0">
                   <li>about</li>
@@ -144,22 +145,22 @@ const FooterMain = () => {
           <div className="col-sm-6">
             <ul className="list-inline text-sm-right mb-0">
               <li className="list-inline-item">
-                <a href="https://www.facebook.com/LuXoutShades/">
+                <a target={"_blank"} href="https://www.facebook.com/LuXoutShades/">
                   <img src={facebook} alt="Facebook" />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="https://www.instagram.com/luxoutshades/">
+                <a target={"_blank"} href="https://www.instagram.com/luxoutshades/">
                   <img src={instagrem} alt="Instagram" />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="https://www.pinterest.com/search/pins/?q=luxout%20shades">
+                <a target={"_blank"} href="https://www.pinterest.com/search/pins/?q=luxout%20shades">
                   <img src={pintrest} alt="Pinterest" />
                 </a>
               </li>
               <li className="list-inline-item">
-                <a href="https://www.houzz.com/professionals/window-treatments/luxout-shades-pfvwus-pf~1419787701">
+                <a target={"_blank"} href="https://www.houzz.com/professionals/window-treatments/luxout-shades-pfvwus-pf~1419787701">
                   <img src={houzz} alt="Houzz" />
                 </a>
               </li>

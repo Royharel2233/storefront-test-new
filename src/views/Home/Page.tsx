@@ -2,7 +2,6 @@ import "./scss/index.scss";
 
 // import "./scss/style.scss";
 
-import "./scss/bootstrap.css";
 
 // import classNames from "classnames";
 
