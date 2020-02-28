@@ -17,27 +17,33 @@ export const ShippingMethod: React.FC<{}> = () => {
     setSelectOption( selectedOption);
   };
 
-  const btnClass = classNames('payment-method-title', openMethod, {
+  const btnClass = classNames('shipping-method-title', openMethod, {
     'no-open': !openMethod,
   });
 
   const options = [
-    { value: '43 W 33rd Street NEW YORK, NY 10001, usa - ship to “tony danza”',
-      label: '43 W 33rd Street NEW YORK, NY 10001, usa - ship to “tony danza”',
+    { value: 'post office',
+      label: 'post office',
     },
-    { value: 'new address',
-      label: 'new address',
+
+    { value: 'tax',
+      label: 'tax',
     },
+
+    { value: 'other option',
+      label: 'other option',
+    },
+
   ];
 
   return (
-    <div className={"payment-method"}>
+    <div className={"shipping-method"}>
       <h4
         onClick={onSelectMethodOpenHandler}
         className={btnClass}>Shipping Method</h4>
 
       {openMethod ?  <Select
-        className={"payment-method-select"}
+        className={"shipping-method-select"}
         value={selectedOption}
         options={options}
         theme={theme => ({

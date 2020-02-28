@@ -120,51 +120,8 @@
           }
 
         }
-
       }
-
     }
-    .shipping-method {
-      display: none;
-      box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
-      padding: 30px;
-
-      h3 {
-        line-height: 1.52;
-        letter-spacing: 0.5px;
-        margin: 0 0 15px;
-      }
-
-      table {
-        width: 100%;
-
-        tbody {
-          position: relative;
-
-          tr {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-
-            &:before {
-              content: "";
-              width: 8px;
-              height: 8px;
-              background: #fff;
-              border: 1px #343538 solid;
-              border-radius: 50%;
-              position: absolute;
-              margin-top: 9px;
-            }
-
-          }
-
-        }
-
-      }
-
-    }
-
   }
 
   .order-summary {
@@ -362,7 +319,7 @@
 
   }
 
-  .payment-method {
+  .shipping-method {
     padding: 30px;
     cursor: pointer;
     background: white;
