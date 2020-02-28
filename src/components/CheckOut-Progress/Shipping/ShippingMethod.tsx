@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Select from 'react-select';
-import "../style/style.scss";
+import "../style.scss";
 
 const classNames = require('classnames');
 
-export const PaymentMethod: React.FC<{}> = () => {
+export const ShippingMethod: React.FC<{}> = () => {
 
   const [selectedOption, setSelectOption] = useState(null);
   const [openMethod, setOpenMethod] = useState<boolean>(false);
@@ -22,8 +22,12 @@ export const PaymentMethod: React.FC<{}> = () => {
   });
 
   const options = [
-    { value: 'VISA X4444 - EXP 07/20', label: 'VISA X4444 - EXP 07/20' },
-    { value: '354', label: '5t34' },
+    { value: '43 W 33rd Street NEW YORK, NY 10001, usa - ship to “tony danza”',
+      label: '43 W 33rd Street NEW YORK, NY 10001, usa - ship to “tony danza”',
+    },
+    { value: 'new address',
+      label: 'new address',
+    },
   ];
 
   return (
@@ -47,6 +51,7 @@ export const PaymentMethod: React.FC<{}> = () => {
         })}
         onChange={onMethodSelect}>
       </Select> : null }
+
     </div>
   );
 };

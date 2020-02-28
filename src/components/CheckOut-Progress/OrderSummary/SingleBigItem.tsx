@@ -1,7 +1,6 @@
 import React from "react";
 import placeholder from "../../../img/Placeholder.png";
 
-
 export const SingleBigItem: React.FC<{}> = ({}) => {
   return (
 

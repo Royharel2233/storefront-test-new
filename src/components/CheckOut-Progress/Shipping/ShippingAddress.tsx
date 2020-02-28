@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from 'react-select';
-import "../style/style.scss";
+import "../style.scss";
 
 import { CheckOutProps } from "../interfaces";
 
@@ -287,8 +287,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                 <button
                   className="checkout-page-button"
                   type="button"
-                  onClick={() => handleSubmit()}
-                >SHIP TO THIS ADDRESS</button>
+                  onClick={() => handleSubmit()}>SHIP TO THIS ADDRESS</button>
               </div>
             </div>
           </form>

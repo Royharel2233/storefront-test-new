@@ -86,7 +86,7 @@ module.exports = _plop => ({
 
     actions.push({
       type: "append",
-      path: utils.componentPath("{{componentGroup}}/index.ts"),
+      path: utils.componentPath("{{componentGroup}}/BillingAddress.ts"),
       separator: "",
       templateFile: utils.templatePath("exportAll.ts.hbs")
     });

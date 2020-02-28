@@ -17,7 +17,7 @@ const readDirSync = dirPath => {
   let paths = fs.readdirSync(dirPath);
 
   return paths
-    .filter(path => path !== "index.ts")
+    .filter(path => path !== "BillingAddress.tsx")
     .map(path => path.replace(/\.[^\.]+$/, ""));
 };
 

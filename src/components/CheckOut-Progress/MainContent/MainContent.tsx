@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 
 import { CheckOutProps } from '../interfaces'
-import { PaymentMethod } from "./PaymentMethod";
-import { ShippingAddress } from './ShippingAddress'
-import { ShippingMethod } from './ShippingMethod'
+import { ShippingAddress } from '../Shipping/ShippingAddress'
+import { ShippingMethod } from '../Shipping/ShippingMethod'
 
-import '../style/style.scss'
+import '../style.scss'
 
 export const MainContent: React.FC<CheckOutProps> = ({ exportObj }) => {
 
@@ -29,7 +28,7 @@ function RenderPage(param: number, exportObj) {
             return (
               <>
                   <ShippingAddress exportObj={exportObj} />
-                  <ShippingMethod exportObj={exportObj}/>
+                  <ShippingMethod/>
               </>
             );
             break;
@@ -37,7 +36,7 @@ function RenderPage(param: number, exportObj) {
             return (
               <>
               <ShippingAddress exportObj={exportObj} />
-              <PaymentMethod/>
+              <ShippingMethod/>
             </>
               );
             break;

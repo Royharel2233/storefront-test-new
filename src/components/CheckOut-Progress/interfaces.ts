@@ -17,6 +17,7 @@ export interface CheckOutProps {
       email: string;
       phone: string;
     };
+
     setUserState: React.Dispatch<
       React.SetStateAction<{
         firstName: string;

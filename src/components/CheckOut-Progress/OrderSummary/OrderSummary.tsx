@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../style/style.scss";
+import "../style.scss";
 
 import {CheckOutProps} from '../interfaces';
 
