@@ -1,3 +1,4 @@
+
 @import "../../css/variables";
 
 .checkout-page {
@@ -7,7 +8,7 @@
   }
 
   &-button {
-    color: #fdcd4a;
+    color: $yellow;
     background: #282828;
     font-size: 12px;
     line-height: 1.33;
@@ -16,6 +17,7 @@
     padding: 15px 30px 14px;
     cursor: pointer;
     transition: all .3s;
+    text-transform: uppercase;
 
     &:hover {
       background: #141211;
@@ -52,7 +54,7 @@
       }
 
       li.selected-menu-item p {
-        color: #343538;
+        color: $mainBlack;
       }
 
       li.selected-menu-item .title-devideer {
@@ -152,7 +154,7 @@
 
       h4 {
         margin: 0;
-        color: #343538;
+        color: $mainBlack;
         line-height: 1.35;
         font-weight: 900;
         font-size: 18px;
@@ -292,7 +294,7 @@
           }
 
           .table-order-data {
-            color: #fdcd4a;
+            color: $yellow;
           }
         }
 
@@ -316,14 +318,10 @@
 
       }
     }
-
   }
 
-  .shipping-method {
-    padding: 30px;
-    cursor: pointer;
-    background: white;
-    box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
+  .shipping-method, .payment-method {
+    @extend %checkout-method;
 
     .css-o3h76h-control {
       border: none;

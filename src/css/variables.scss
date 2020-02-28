@@ -1,12 +1,44 @@
 // main style variables
 
+$yellow: #fdcd4a;
+$mainBlack: #343538;
+
+$screen-small: 576px;
+$screen-medium: 768px;
+$screen-large: 992px;
+$extra-large: 1260px;
+
+// include media breakpoint
+
+@mixin respond-to($media) {
+  @if $media == screen-extra-small {
+    @media only screen and (max-width: $screen-small) { @content; }
+  }
+
+  @else if $media == screen-small {
+    @media only screen and (min-width: $screen-small + 1) and (max-width: $screen-medium - 1) { @content; }
+  }
+
+  @else if $media == screen-medium {
+    @media only screen and (min-width: $screen-medium + 1) and (max-width: $screen-large - 1) { @content; }
+  }
+
+  @else if $media == screen-large {
+    @media only screen and (min-width: $screen-large + 1) and (max-width: $extra-large - 1) { @content; }
+  }
+
+  @else if $media == screen-other {
+    @media only screen and (min-width: $extra-large) { @content; }
+  }
+}
+
 %checkout-select {
   width: 100%;
   margin-bottom: 15px;
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 2px solid #fdcd4a;
+  border: 2px solid $yellow;
 }
 
 %checkout-main-title {
@@ -15,5 +47,13 @@
   font-weight: 900;
   letter-spacing: 0.5px;
   margin: 0 0 15px;
-  color: #343538;
+  color: $mainBlack;
+}
+
+%checkout-method {
+  padding: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background: white;
+  box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
 }
