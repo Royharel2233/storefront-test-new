@@ -33,6 +33,15 @@ export const CheckOut: React.FC<{}> = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
+            <div className="checkout-navbar">
+              <ul className="checkout-menu" >
+                <li className="checkout-menu-item">Shipping</li>
+                <li className="checkout-menu-item active">Billing</li>
+                <li className="checkout-menu-item">Review</li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-lg-12">
             <div className="checkout-main-content">
               <MainContent exportObj={exportObj} />
               <OrderSummary exportObj={exportObj} />

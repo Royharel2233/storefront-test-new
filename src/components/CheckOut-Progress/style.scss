@@ -26,7 +26,43 @@
     &:focus {
       outline: none;
     }
+  }
 
+  .checkout-navbar {
+    position: relative;
+    margin-bottom: 36px;
+
+    .checkout-menu {
+      display: flex;
+      max-width: 385px;
+      margin: auto;
+      padding: 0;
+      justify-content: space-between;
+
+      &-item{
+        margin-top: 15px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        line-height:  25px;
+        letter-spacing: 0.4px;
+        color: #a3a5ad;
+        position: relative;
+
+        &.active {
+          color: $mainBlack;
+
+          &:before {
+            content: '';
+            background: $yellow;
+            position: absolute;
+            width: 13px;
+            bottom: -5px;
+            height: 2px;
+          }
+        }
+      }
+    }
   }
 
   .checkout-header {
@@ -78,6 +114,7 @@
 
   .checkout-main-content {
     display: flex;
+    margin-top: 10px;
 
     .right-side {
       margin-right: 70px;
@@ -91,6 +128,7 @@
         margin: 0 0 15px;
       }
     }
+
     .block-shipping-address {
       width: 770px;
       box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
@@ -104,7 +142,7 @@
         }
 
         &-select {
-         @extend %checkout-select;
+          @extend %checkout-select;
 
           &:focus {
             outline: none
@@ -113,14 +151,12 @@
           option:hover {
             background: #fdcd4a;
           }
-
         }
 
         .new-address-state {
           select {
             width: 47%;
           }
-
         }
       }
     }

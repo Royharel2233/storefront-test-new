@@ -24,7 +24,7 @@ export const PaymentMethod: React.FC<{}> = () => {
   return (
     <div className={"payment-method"}>
       <h4 className={"payment-method-title"}>Payment Method</h4>
-    <Select
+      <Select
         className={"payment-method-select"}
         value={selectedOption}
         options={options}

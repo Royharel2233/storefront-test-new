@@ -1,4 +1,3 @@
-import 'bootstrap/scss/bootstrap.scss';
 import { hot } from "react-hot-loader";
 import { ThemeProvider } from "styled-components";
 
