@@ -30,7 +30,61 @@
 
   .checkout-navbar {
     position: relative;
+    margin-top: 16px;
     margin-bottom: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-back {
+      cursor: pointer;
+      color: #737680;
+      text-transform: uppercase;
+      font-size: 10px;
+      padding-left: 15px;
+      position: absolute;
+      left: 5px;
+
+      &:hover {
+        color: $mainBlack;
+      }
+
+      &-wrap {
+        position: relative;
+
+        &-arrow {
+          position: absolute;
+          height: 1px;
+          top: 50%;
+          left: -18px;
+          transform: translate(-20%,-50%);
+          background: #737680;
+          width: 9px;
+
+          &:before {
+            content: '';
+            width: 5px;
+            top: -2px;
+            background: #737680;
+            height: 1px;
+            transform: rotate(-45deg);
+            position: absolute;
+          }
+
+          &:after {
+            content: '';
+            width: 5px;
+            top: 2px;
+            background: #737680;
+            height: 1px;
+            transform: rotate(45deg);
+            position: absolute;
+          }
+        }
+
+      }
+
+    }
 
     .checkout-menu {
       display: flex;
@@ -40,8 +94,7 @@
       justify-content: space-between;
 
       &-item{
-        margin-top: 15px;
-        margin-bottom: 8px;
+        margin-right: 110px;
         cursor: pointer;
         font-size: 16px;
         line-height:  25px;

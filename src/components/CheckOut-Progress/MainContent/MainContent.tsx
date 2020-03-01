@@ -30,7 +30,6 @@ function RenderPage(param: number, exportObj) {
         <>
           <ShippingAddress exportObj={exportObj} />
           <ShippingMethod/>
-
         </>
       );
       break;

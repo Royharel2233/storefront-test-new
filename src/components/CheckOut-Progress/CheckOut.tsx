@@ -34,6 +34,13 @@ export const CheckOut: React.FC<{}> = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="checkout-navbar">
+              <div className="checkout-navbar-back">
+                <div className="checkout-navbar-back-wrap">
+                  <span className="checkout-navbar-back-wrap-arrow"></span>
+                  <span className="checkout-navbar-back-wrap-text">Back</span>
+                </div>
+              </div>
+
               <ul className="checkout-menu" >
                 <li className="checkout-menu-item">Shipping</li>
                 <li className="checkout-menu-item active">Billing</li>
@@ -41,6 +48,7 @@ export const CheckOut: React.FC<{}> = () => {
               </ul>
             </div>
           </div>
+
           <div className="col-lg-12">
             <div className="checkout-main-content">
               <MainContent exportObj={exportObj} />
