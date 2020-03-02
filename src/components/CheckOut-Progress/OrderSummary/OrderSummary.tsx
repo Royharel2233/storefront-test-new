@@ -2,13 +2,11 @@ import React from "react";
 
 import "../style.scss";
 
-import {CheckOutProps} from '../interfaces';
-
 import { SingleItem } from "./SingleItem";
 
 import { SingleBigItem } from "./SingleBigItem";
 
-export const OrderSummary: React.FC<CheckOutProps> = ({exportObj}) => {
+export const OrderSummary: React.FC = () => {
 
  const orderListItem = [1,2,3,4].map( () => {
    return <SingleItem/>

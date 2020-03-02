@@ -5,27 +5,18 @@ import { OrderSummary } from "./OrderSummary/OrderSummary";
 import "./style.scss";
 
 export const CheckOut: React.FC<{}> = () => {
-  const [formState, setFormState] = useState(0);
-  const [pageState, setPageState] = useState(0);
-  const [userState, setUserState] = useState({
-    firstName: "",
-    lastName: "",
-    address: "Demo Address",
-    city: "",
-    zip: 0,
-    state: "",
-    country: "",
-    email: "",
-    phone: "",
-  });
+  const [tabBar, setTabBar] = useState(0);
 
-  const exportObj = {
-    formState,
-    setFormState,
-    pageState,
-    setPageState,
-    userState,
-    setUserState,
+  const onTabShippingHandler = (): any => {
+    return setTabBar(0)
+  };
+
+  const onTabBillingHander = (): any => {
+    return setTabBar(1)
+  };
+
+  const onTabReviewHander = (): any => {
+    return setTabBar(2)
   };
 
   return (
@@ -42,17 +33,17 @@ export const CheckOut: React.FC<{}> = () => {
               </div>
 
               <ul className="checkout-menu" >
-                <li className="checkout-menu-item">Shipping</li>
-                <li className="checkout-menu-item active">Billing</li>
-                <li className="checkout-menu-item">Review</li>
+                <li onClick={onTabShippingHandler} className={"checkout-menu-item active"}>Shipping</li>
+                <li onClick={onTabBillingHander} className={"checkout-menu-item "}>Billing</li>
+                <li onClick={onTabReviewHander} className={"checkout-menu-item"}>Review</li>
               </ul>
             </div>
           </div>
 
           <div className="col-lg-12">
             <div className="checkout-main-content">
-              <MainContent exportObj={exportObj} />
-              <OrderSummary exportObj={exportObj} />
+              <MainContent  numberTab={tabBar} />
+              <OrderSummary/>
             </div>
           </div>
         </div>

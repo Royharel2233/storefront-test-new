@@ -66,167 +66,169 @@ const MainMenu: React.FC = () => {
     <OverlayContext.Consumer>
       {overlayContext => (
           <div className="container">
-            <div className="col-lg-12">
-              <nav className="navbar navbar-expand-md p-0">
-                <div className="preheader">
-                  <button
-                    className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false"
-                  >
-                    <i className="fa fa-bars"></i>
-                  </button>
+            <div className="row">
+              <div className="col-lg-12">
+                <nav className="navbar navbar-expand-md p-0">
+                  <div className="preheader">
+                    <button
+                      className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                      aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    >
+                      <i className="fa fa-bars"></i>
+                    </button>
 
-                  <select
-                    name="lang"
-                    id="lang"
-                    className="lang_selection"
-                    style={{visibility: "hidden"}}>
-                    <option value="En">EN</option>
-                    <option value="Fr">FR</option>
-                    <option value="ar">AR</option>
-                    <option value="de">DE</option>
-                  </select>
+                    <select
+                      name="lang"
+                      id="lang"
+                      className="lang_selection"
+                      style={{visibility: "hidden"}}>
+                      <option value="En">EN</option>
+                      <option value="Fr">FR</option>
+                      <option value="ar">AR</option>
+                      <option value="de">DE</option>
+                    </select>
 
-                  <Link to={baseUrl}>
-                    <img
-                      src={logoImg}
-                      alt="LuxOut Shades"
-                      className="img-fluid logo"/>
-                  </Link>
+                    <Link to={baseUrl}>
+                      <img
+                        src={logoImg}
+                        alt="LuxOut Shades"
+                        className="img-fluid logo"/>
+                    </Link>
 
-                  <ul className="list-inline preheader_nav">
-                    <Online>
-                      <Media
-                        query={{ minWidth: smallScreen }}
+                    <ul className="list-inline preheader_nav">
+                      <Online>
+                        <Media
+                          query={{ minWidth: smallScreen }}
 
-                        render={() => (
-                          <>
-                            {user ? (
-                              <MenuDropdownCopy
-                                head={
-                                  <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                    <img src={userImg} className="img-fluid"/>
-                                  </a>
-                                }
-                                content={
-                                  <ul className="dropdown-menu">
-                                    <li className="dropdown-item">
-                                      <Link to={accountUrl}>
-                                        <Trans id="Profile" />
-                                      </Link>
-                                    </li>
-                                    <li className="dropdown-item">
-                                      <Link to={orderHistoryUrl}>
-                                        <Trans id="My order" />
-                                      </Link>
-                                    </li >
-                                    <li onClick={signOut} className="dropdown-item" data-testid="logout-link">
-                                      <button>
-                                        Log Out
-                                      </button>
-                                    </li>
-                                  </ul>
-                                }
-                              />
-                            ) : (
+                          render={() => (
+                            <>
+                              {user ? (
+                                <MenuDropdownCopy
+                                  head={
+                                    <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                                      <img src={userImg} className="img-fluid"/>
+                                    </a>
+                                  }
+                                  content={
+                                    <ul className="dropdown-menu">
+                                      <li className="dropdown-item">
+                                        <Link to={accountUrl}>
+                                          <Trans id="Profile" />
+                                        </Link>
+                                      </li>
+                                      <li className="dropdown-item">
+                                        <Link to={orderHistoryUrl}>
+                                          <Trans id="My order" />
+                                        </Link>
+                                      </li >
+                                      <li onClick={signOut} className="dropdown-item" data-testid="logout-link">
+                                        <button>
+                                          Log Out
+                                        </button>
+                                      </li>
+                                    </ul>
+                                  }
+                                />
+                              ) : (
+                                <li
+                                  data-testid="login-btn"
+                                  className="list-inline-item dropdown"
+                                  onClick={() =>
+                                    overlayContext.show(
+                                      OverlayType.login,
+                                      OverlayTheme.right
+                                    )
+                                  }
+                                >
+                                  {/* change to the Disconnected avatar */}
+                                  <img src={offlineAvatar} className="img-fluid"/>
+                                </li>
+                              )}
                               <li
-                                data-testid="login-btn"
-                                className="list-inline-item dropdown"
+                                className="list-inline-item"
                                 onClick={() =>
-                                  overlayContext.show(
-                                    OverlayType.login,
-                                    OverlayTheme.right
-                                  )
+                                  overlayContext.show(OverlayType.search, OverlayTheme.right)
                                 }
                               >
-                                {/* change to the Disconnected avatar */}
-                                <img src={offlineAvatar} className="img-fluid"/>
+                                <Media
+                                  query={{ minWidth: mediumScreen }}
+                                />
+                                <a className="search">
+                                  <img src={searchImg1} className="img-fluid" />
+                                </a>
                               </li>
-                            )}
+                            </>
+                          )}
+                        />
+                        <CartContext.Consumer>
+                          {cart => (
                             <li
                               className="list-inline-item"
-                              onClick={() =>
-                                overlayContext.show(OverlayType.search, OverlayTheme.right)
-                              }
+                              onClick={() => {
+                                overlayContext.show(
+                                  OverlayType.cart,
+                                  OverlayTheme.right
+                                )
+                              }}
                             >
-                              <Media
-                                query={{ minWidth: mediumScreen }}
-                              />
-                              <a className="search">
-                                <img src={searchImg1} className="img-fluid" />
-                              </a>
-                            </li>
-                          </>
-                        )}
-                      />
-                      <CartContext.Consumer>
-                        {cart => (
-                          <li
-                            className="list-inline-item"
-                            onClick={() => {
-                              overlayContext.show(
-                                OverlayType.cart,
-                                OverlayTheme.right
-                              )
-                            }}
-                          >
-                            <a className="cart">
-                              <img src={cartImg} className="img-fluid" />
-                              {cart.getQuantity() > 0 ? (
-                                <span className="badge badge-pill badge-warning">
+                              <a className="cart">
+                                <img src={cartImg} className="img-fluid" />
+                                {cart.getQuantity() > 0 ? (
+                                  <span className="badge badge-pill badge-warning">
                               {cart.getQuantity()}
                             </span>
-                              ) : null}
-                            </a>
-                          </li>
-                        )}
-                      </CartContext.Consumer>
-                    </Online>
-                    <Offline>
-                      <li className="main-menu__offline">
-                        <Media
-                          query={{ minWidth: mediumScreen }}
-                          render={() => <span>Offline</span>}
-                        />
-                      </li>
-                    </Offline>
-
-                  </ul>
-                </div>
-
-                <div className={`${visibleHeader}`}>
-                  <TypedMainMenuQuery renderOnError displayLoader={false}>
-                    {({ data }) => {
-                      const items = maybe(() => data.shop.navigation.main.items, []);
-                      return (
-                        <ul className="navbar-nav ml-auto">
-                          <li
-                            className="nav-item"
-                            onClick={() =>
-                              overlayContext.show(
-                                OverlayType.sideNav,
-                                OverlayTheme.left,
-                                { data: items }
-                              )
-                            }
-                          >
-                          </li>
+                                ) : null}
+                              </a>
+                            </li>
+                          )}
+                        </CartContext.Consumer>
+                      </Online>
+                      <Offline>
+                        <li className="main-menu__offline">
                           <Media
                             query={{ minWidth: mediumScreen }}
-                            render={() =>
-                              items.map(item => (
-                                <li className="nav-item" key={item.id}>
-                                  <NavDropdown overlay={overlayContext} {...item} />
-                                </li>
-                              ))
-                            }
+                            render={() => <span>Offline</span>}
                           />
-                        </ul>
-                      );
-                    }}
-                  </TypedMainMenuQuery>
-                </div>
-              </nav>
+                        </li>
+                      </Offline>
+
+                    </ul>
+                  </div>
+
+                  <div className={`${visibleHeader}`}>
+                    <TypedMainMenuQuery renderOnError displayLoader={false}>
+                      {({ data }) => {
+                        const items = maybe(() => data.shop.navigation.main.items, []);
+                        return (
+                          <ul className="navbar-nav ml-auto">
+                            <li
+                              className="nav-item"
+                              onClick={() =>
+                                overlayContext.show(
+                                  OverlayType.sideNav,
+                                  OverlayTheme.left,
+                                  { data: items }
+                                )
+                              }
+                            >
+                            </li>
+                            <Media
+                              query={{ minWidth: mediumScreen }}
+                              render={() =>
+                                items.map(item => (
+                                  <li className="nav-item" key={item.id}>
+                                    <NavDropdown overlay={overlayContext} {...item} />
+                                  </li>
+                                ))
+                              }
+                            />
+                          </ul>
+                        );
+                      }}
+                    </TypedMainMenuQuery>
+                  </div>
+                </nav>
+              </div>
             </div>
           </div>
       )}

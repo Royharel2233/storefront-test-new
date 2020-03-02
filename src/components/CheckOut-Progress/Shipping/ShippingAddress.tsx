@@ -2,44 +2,17 @@ import React, { useState } from "react";
 import Select from 'react-select';
 import "../style.scss";
 
-import { CheckOutProps } from "../interfaces";
+export const ShippingAddress: React.FC = () => {
 
-export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
-  const { userState, setUserState, setFormState } = exportObj;
-  // defines the current display of the new address form
   const [displayState, setDisplayState] = useState({
     display: "",
   });
 
   const [selectedOption, setSelectOption] = useState(null);
-  // handles the change made by the inputs (input) variable is given as param to the onChange function
-  const handleChange = (input: string | number) => (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const value = e.target.value;
-    // returns boolean
-    e.preventDefault();
-    // sets the user's new address object to the state
-    setUserState({
-      ...userState,
-      [input]: value,
-    });
-  };
 
-  const [newAddress, setNewAddress] = useState("Enter New Address");
+  const newAddress = "Enter New Address";
 
   // handles submit by "ship to this address btn"
-  const handleSubmit = () => {
-
-    // checkes if the phone is correct
-    if (userState.phone.length >= 9) {
-      setNewAddress(userState.address);
-      setFormState(1);
-    } else {
-      console.warn("phone number invalid");
-    }
-
-  };
 
   const handleChangeTest = selectedOption => {
     setSelectOption( selectedOption);
@@ -52,7 +25,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
   };
 
   const options = [
-    { value: userState.address, label: userState.address },
+    { value: 'userState.address', label: 'userState.address' },
     { value: newAddress, label: newAddress },
   ];
 
@@ -94,7 +67,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                       value={"tony"}
                       type="text"
                       className={"form-field-input"}
-                      onChange={handleChange("firstName")}
                       id="first_name"
                     />
 
@@ -109,7 +81,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                     </label>
 
                     <input
-                      onChange={handleChange("address")}
                       type="text"
                       id="address"
                       value="212 W 33RD ST"
@@ -128,7 +99,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("city")}
                       type="text"
                       value="new york"
                       id="city" />
@@ -144,7 +114,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("state")}
                       type="text"
                       value="NY - NEW YORK"
                       id="state" />
@@ -160,7 +129,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("email")}
                       type="email"
                       value="email@email.com"
                       id="email_address"
@@ -201,7 +169,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                       value={"tony"}
                       type="text"
                       className={"form-field-input"}
-                      onChange={handleChange("firstName")}
                       id="first_name"
                     />
 
@@ -217,7 +184,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
                     </label>
 
                     <input
-                      onChange={handleChange("address_two")}
                       className={"form-field-input"}
                       type="text"
                       value="suite 12"
@@ -236,7 +202,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("city")}
                       type="text"
                       value="new york"
                       id="city" />
@@ -252,7 +217,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("country")}
                       type="text"
                       value={"USA"}
                       id="country"
@@ -269,7 +233,6 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
                     <input
                       className={"form-field-input"}
-                      onChange={handleChange("phone")}
                       type="tel"
                       value={"(212) - 232 - 2222"}
                       id="phone_number"
@@ -286,8 +249,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
               <div className="col-lg-12">
                 <button
                   className="checkout-page-button"
-                  type="button"
-                  onClick={() => handleSubmit()}>SHIP TO THIS ADDRESS</button>
+                  type="button">SHIP TO THIS ADDRESS</button>
               </div>
             </div>
           </form>

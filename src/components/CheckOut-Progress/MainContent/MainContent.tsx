@@ -1,46 +1,51 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 import { PaymentMethod } from "../Billing/PaymentMethod";
-import { CheckOutProps } from '../interfaces'
-import { ShippingAddress } from '../Shipping/ShippingAddress'
+import { ShippingAddress } from "../Shipping/ShippingAddress";
 import { ShippingMethod } from '../Shipping/ShippingMethod'
 
 import '../style.scss'
 
-export const MainContent: React.FC<CheckOutProps> = ({ exportObj }) => {
+interface CheckOutProps {
+  numberTab: number;
+}
 
-  useEffect(() => {
-    RenderPage(exportObj.formState, exportObj);
-    return () => {
-      RenderPage(0, exportObj)
-    };
-  }, [exportObj.formState]);
+export const MainContent: React.FC<CheckOutProps> =
+  (props: CheckOutProps) => {
 
-  return (
-    <div className="right-side">
-      {RenderPage(exportObj.formState, exportObj)}
-    </div>
-  )
-};
+    return (
+      <>
+        <div className="right-side">
+          {RenderPage(props.numberTab)}
+        </div>
+      </>
+    )
+  };
 
-function RenderPage(param: number, exportObj) {
-  switch (param) {
-    case 1:
+const RenderPage = (numberTab: number) => {
+  switch (numberTab) {
+    case 0:
       return (
         <>
-          <ShippingAddress exportObj={exportObj} />
+          <ShippingAddress/>
           <ShippingMethod/>
         </>
       );
       break;
-    case 0:
+    case 1:
       return (
         <>
-          <ShippingAddress exportObj={exportObj} />
           <ShippingMethod/>
           <PaymentMethod/>
         </>
       );
       break;
+
+    case 2:
+      return (
+        <>
+          <span>Testing</span>
+        </>
+      )
   }
-}
+};
