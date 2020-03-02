@@ -11,13 +11,14 @@ export const CheckOut: React.FC<{}> = () => {
     return setTabBar(0)
   };
 
-  const onTabBillingHander = (): any => {
+  const onTabBillingHandler = (): any => {
     return setTabBar(1)
   };
 
-  const onTabReviewHander = (): any => {
+  const onTabReviewHandler = (): any => {
     return setTabBar(2)
   };
+
 
   return (
     <div className="checkout-page">
@@ -34,8 +35,8 @@ export const CheckOut: React.FC<{}> = () => {
 
               <ul className="checkout-menu" >
                 <li onClick={onTabShippingHandler} className={"checkout-menu-item active"}>Shipping</li>
-                <li onClick={onTabBillingHander} className={"checkout-menu-item "}>Billing</li>
-                <li onClick={onTabReviewHander} className={"checkout-menu-item"}>Review</li>
+                <li onClick={onTabBillingHandler} className={"checkout-menu-item"}>Billing</li>
+                <li onClick={onTabReviewHandler} className={"checkout-menu-item"}>Review</li>
               </ul>
             </div>
           </div>

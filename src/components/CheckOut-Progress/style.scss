@@ -293,7 +293,7 @@
       .order-small__item-names {
         padding: 5px;
 
-        span{
+        span {
           display: block;
 
           &:nth-child(1) {
@@ -363,9 +363,80 @@
       }
     }
 
+    .promos-offers {
+      position: relative;
+      padding-top: 20px;
+
+      .promos-offers-header {
+        padding-bottom: 14px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+
+      .promos-offers-input-group {
+        padding-bottom: 8px;
+      }
+
+      .promos-offers-form {
+        border: solid 1px var(--yellow);
+        border-radius: 0;
+        height: 32px;
+        line-height: 0 !important;
+      }
+
+      .promos-offers-form::placeholder {
+        color: #a3a5ad;
+        font-size: 10px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 1.2px;
+        vertical-align: center;
+      }
+
+      .promos-offers-button {
+        font-size: 10px;
+        font-weight: bold;
+        font-family: Lato;
+        border: solid 1px #343538 !important;
+        border-radius: 0;
+        height: 32px;
+
+        &.successfully {
+          background-color: #1d2124;
+          color: white;
+        }
+
+        &.invalid {
+          background-color: white;
+          color: #343538;
+        }
+
+      }
+
+      .promos-offers-message {
+        //font-family: Lato;
+        font-size: 10px;
+        font-weight: bold;
+        font-stretch: normal;
+        //font-style: normal;
+        line-height: 1.6;
+        letter-spacing: 1.2px;
+
+        &.successfully {
+          color: var(--yellow);
+        }
+
+        &.invalid {
+          color: #ff4444;
+        }
+      }
+    }
     .order-summary-table {
       position: relative;
       border-top: 1px solid #a3a5ad;
+      margin-top: 8px;
 
       .order-summary-table-wrap {
         padding-top: 15px;
@@ -399,6 +470,10 @@
           font-weight: 700;
           line-height: 19px;
           color: #343538;
+
+          &.promotion {
+            color: $yellow;
+          }
 
           &.text-s {
             font-weight: 400;

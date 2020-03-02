@@ -58,7 +58,7 @@ const MainMenu: React.FC = () => {
     }
   },[]);
 
-  const visibleHeader = classNames('FooterMain', visible, {
+  const visibleTypedMainMenu = classNames('BlockHidden', visible, {
     'no-visible': !visible,
   });
 
@@ -195,7 +195,7 @@ const MainMenu: React.FC = () => {
                     </ul>
                   </div>
 
-                  <div className={`${visibleHeader}`}>
+                  <div className={`${visibleTypedMainMenu}`}>
                     <TypedMainMenuQuery renderOnError displayLoader={false}>
                       {({ data }) => {
                         const items = maybe(() => data.shop.navigation.main.items, []);

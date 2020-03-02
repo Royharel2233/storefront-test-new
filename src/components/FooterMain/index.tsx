@@ -36,7 +36,7 @@ const FooterMain = () => {
     }
   },[]);
 
-  const visibleFooter = classNames('FooterMain', visible, {
+  const visibleFooter = classNames('BlockHidden', visible, {
     'no-visible': !visible,
   });
 
