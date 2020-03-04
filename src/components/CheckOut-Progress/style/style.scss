@@ -1,7 +1,9 @@
+<<<<<<< Updated upstream
 @import "../../../css/variables";
 
+=======
+>>>>>>> Stashed changes
 .checkout-page {
-
   &-checkbox {
     position: relative;
   }
@@ -15,7 +17,7 @@
     font-weight: bold;
     padding: 15px 30px 14px;
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:hover {
       background: #141211;
@@ -24,7 +26,6 @@
     &:focus {
       outline: none;
     }
-
   }
 
   .checkout-header {
@@ -71,7 +72,6 @@
         font-weight: bold;
       }
     }
-
   }
 
   .checkout-main-content {
@@ -83,7 +83,7 @@
 
       h3 {
         line-height: 32px;
-        font-size:  21px;
+        font-size: 21px;
         font-weight: 900;
         letter-spacing: 0.5px;
         margin: 0 0 15px;
@@ -96,7 +96,6 @@
       margin-bottom: 15px;
 
       .shipping-address-form {
-
         .css-o3h76h-control {
           border: none;
         }
@@ -105,27 +104,24 @@
          @extend %checkout-select;
 
           &:focus {
-            outline: none
+            outline: none;
           }
 
           option:hover {
             background: #fdcd4a;
           }
-
         }
 
         .new-address-state {
           select {
             width: 47%;
           }
-
         }
-
       }
-
     }
     .shipping-method {
-      display: none;
+      display: flex;
+      flex-direction: column;
       box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
       padding: 30px;
 
@@ -135,36 +131,24 @@
         margin: 0 0 15px;
       }
 
-      table {
-        width: 100%;
+        .prev-tr {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-bottom: 15px;
 
-        tbody {
-          position: relative;
-
-          tr {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 15px;
-
-            &:before {
-              content: "";
-              width: 8px;
-              height: 8px;
-              background: #fff;
-              border: 1px #343538 solid;
-              border-radius: 50%;
-              position: absolute;
-              margin-top: 9px;
-            }
-
-          }
-
+          // &:before {
+          //   content: "";
+          //   width: 8px;
+          //   height: 8px;
+          //   background: #fff;
+          //   border: 1px #343538 solid;
+          //   border-radius: 50%;
+          //   position: absolute;
+          //   margin-top: 9px;
+          // }
         }
-
-      }
-
     }
-
   }
 
   .order-summary {
@@ -186,10 +170,10 @@
         font-size: 10px;
         letter-spacing: 1.2px;
         cursor: pointer;
-        transition: all .3s;
+        transition: all 0.3s;
 
         &:hover {
-          color: #343538
+          color: #343538;
         }
       }
 
@@ -244,7 +228,7 @@
       .order-small__item-names {
         padding: 5px;
 
-        span{
+        span {
           display: block;
 
           &:nth-child(1) {
@@ -255,7 +239,6 @@
           &:nth-child(2) {
             color: #737680;
           }
-
         }
       }
     }
@@ -285,7 +268,6 @@
             height: 100%;
             display: block;
           }
-
         }
       }
 
@@ -356,11 +338,10 @@
             font-size: 12px;
           }
         }
-
       }
     }
-
   }
+<<<<<<< Updated upstream
 
   .payment-method {
     padding: 30px;
@@ -386,4 +367,20 @@
 
   }
 
+=======
+>>>>>>> Stashed changes
+}
+
+p.shipping-price {
+  top: 2;
+  right: 3;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: 0.4px;
+  color: #343538;
+  text-align: right;
 }

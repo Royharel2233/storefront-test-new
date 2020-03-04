@@ -4,7 +4,19 @@ interface ProgressBarProps {
   currentProgress: {
     currentProgress: number;
     setCurrentProgress: React.Dispatch<React.SetStateAction<number>>;
-    currentStringState: string;
+    OrdersPageState: {
+      orderNumber: string;
+      orderedOn: string;
+      currentStringState: string;
+    };
+    setOrdersPageState: React.Dispatch<
+      React.SetStateAction<{
+        orderNumber: string;
+        orderedOn: string;
+        currentStringState: string;
+      }>
+    >;
+    currentStringState?: string;
     active?: string;
   };
 }
@@ -14,8 +26,10 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   const progress = { width: `${currentProgress.currentProgress}%` };
   const [active, setActive] = React.useState("");
+
   const checkState = (stringParam: string) =>
     stringParam === active ? "active" : "";
+
   const checkProgress = () => {
     const states = {
       1: "order placed",
@@ -24,10 +38,29 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       4: "in transit",
       5: "delivered",
     };
+
+    const progressByState = (stringState: string) => {
+      if (stringState === states[1]) {
+        return 20;
+      } else if (stringState === states[2]) {
+        return 35;
+      } else if (stringState === states[3]) {
+        return 58;
+      } else if (stringState === states[4]) {
+        return 80;
+      } else if (stringState === states[5]) {
+        return 100;
+      }
+    };
+
     for (const key in states) {
       if (states.hasOwnProperty(key)) {
         const element: string = states[key];
-        if (element.toUpperCase() === currentProgress.currentStringState) {
+        if (
+          element.toUpperCase() ===
+          currentProgress.OrdersPageState.currentStringState
+        ) {
+          currentProgress.setCurrentProgress(progressByState(element));
           return setActive(element.toUpperCase());
         }
       }
@@ -53,24 +86,17 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
             aria-valuemin={0}
             aria-valuemax={100}
           >
-            {currentProgress.currentProgress}%
+            {/* {currentProgress.currentProgress}% */}
           </div>
         </div>
-        <div className="current-order-status w-75">
-          <div className="row d-flex justify-content-between">
+        <div className="current-order-status w-100 mt-2 ">
+          <div className="row d-flex justify-content-between w-75 m-auto">
             <p className={checkState("ORDER PLACED")}>order placed</p>
             <p className={checkState("PROCESSING")}>processing</p>
             <p className={checkState("PREPARING TO SHIP")}>preparing to ship</p>
             <p className={checkState("IN TRANSIT")}>in transit</p>
             <p className={checkState("DELIVERED")}>delivered</p>
           </div>
-        </div>
-        <div>
-          <span>Order Notes</span>
-          <p>
-            Lorem Ipsum dolor. Please call me and email. This is an urgent order
-            please please pelase. ship as soon as possible.
-          </p>
         </div>
       </div>
     </>

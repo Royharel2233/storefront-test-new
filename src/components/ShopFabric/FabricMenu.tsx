@@ -1,14 +1,21 @@
 import React from "react";
+
+import {
+  Category_products,
+} from "../../views/Category/types/Category";
+
 import "./style/style.scss";
 
 interface FabricMenuProps {
   currentQuery: string;
   setCurrentQuery: React.Dispatch<React.SetStateAction<string>>;
+  currentProducts: Category_products
 }
 
 export const FabricMenu: React.FC<FabricMenuProps> = ({
   currentQuery,
   setCurrentQuery,
+  currentProducts,
 }) => {
   return (
         <div className="shop-fabric-menu">

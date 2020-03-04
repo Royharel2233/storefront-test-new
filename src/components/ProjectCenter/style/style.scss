@@ -23,14 +23,15 @@
 .user-dashboard-nav .create-new a {
   text-decoration: none;
 }
-.user-dashboard-nav .create-new a span {
+.user-dashboard-nav .create-new  span {
   position: relative;
   font-size: 12px;
   font-weight: bold;
   line-height: 1.33;
   letter-spacing: 1.2px;
+  cursor: pointer;
 }
-.user-dashboard-nav .create-new a span:before {
+.user-dashboard-nav .create-new  span:before {
   content: "";
   width: 0;
   height: 0;
@@ -224,6 +225,18 @@
   letter-spacing: 1.2px;
   color: #737680;
 
+  p.ordered-on {
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    text-transform: none;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: 0.4px;
+    color: #343538;
+  }
+
   p.active {
     font-family: Lato;
     font-size: 12px;
@@ -233,17 +246,7 @@
     font-style: normal;
     line-height: 1.33;
     letter-spacing: 1.2px;
-    color: #343538
-  }
-
-  span {
-    font-family: Lato;
-    font-size: 16px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.63;
-    letter-spacing: 0.4px;
+    color: #343538;
   }
 
   p {
@@ -254,5 +257,74 @@
     font-style: normal;
     line-height: 1.59;
     letter-spacing: 0.27px;
+  }
+}
+
+.new-project {
+  p.close-button {
+    font-size: 19px;
+    cursor: pointer;
+  }
+  .header {
+    span {
+      font-family: Lato;
+      font-size: 28px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.5;
+      letter-spacing: 0.7px;
+      color: #343538;
+    }
+  }
+
+  .new-project-form {
+    form .form-row {
+      margin-bottom: 10px;
+      label {
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+        display: block;
+        color: #a3a5ad
+      }
+      input {
+        width: 100%;
+        border: 0px;
+        border-bottom: 2px #343538 solid;
+        height: 23px;
+        outline: none;
+      }
+    }
+    form .submit {
+      width: 138.8px;
+      height: 45px;
+      input {
+        background: #343538;
+        border: 0px;
+        padding: 15px 43px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+        color: #fdcd4a;
+      }
+
+      button {
+        height: 45px;
+        background: #343538;
+        border: 0px;
+        padding: 15px 43px;
+        font-size: 12px;
+        font-weight: bold;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+        color: #fdcd4a;
+      }
+    }
   }
 }

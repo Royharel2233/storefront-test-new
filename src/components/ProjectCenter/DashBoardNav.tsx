@@ -3,8 +3,12 @@ import "./style/style.scss";
 
 import { ProjectCenterProps } from "../ProjectCenter/interface";
 
+import { NewProject } from "./SingleProject/NewProject";
+
+
 export const DashBoardNav: React.FC<ProjectCenterProps> = ({ exportObj }) => {
   const { pageState, setPageState, functions } = exportObj;
+  const [showPopUp, setShowPopUp] = React.useState(false);
 
   return (
     <div className="user-dashboard-nav">
@@ -27,10 +31,12 @@ export const DashBoardNav: React.FC<ProjectCenterProps> = ({ exportObj }) => {
         </a>
       </div>
       <div className="create-new">
-        <a href="#">
           <span className="triangular"></span>
-          <span className="dark-grey">CREATE A NEW PROJECT</span>
-        </a>
+          <span onClick={() => setShowPopUp(true)} className="dark-grey">CREATE A NEW PROJECT</span>
+          <NewProject
+            show={showPopUp}
+            hide={() => setShowPopUp(!showPopUp)}
+          />
         <hr />
       </div>
     </div>

@@ -34,6 +34,10 @@ export const categoryProductsQuery = gql`
       totalCount
       edges {
         node {
+          variants {
+                id
+                name
+                }
           attributes {
                 attribute {
                   id

@@ -184,7 +184,6 @@ export const ShopFabric: React.FC<PageProps> = ({ match }) => {
           
             return (
               <div className="shop-fabric w-1239 container">
-                )}
                 <ShopFabricPage
                   currentQuery={currentQuery}
                   setCurrentQuery={setCurrentQuery}

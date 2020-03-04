@@ -20,6 +20,7 @@ const classNames = require('classnames');
 
 import {
   aboutUs,
+  childSafety,
   contactUs,
   shippingHandling,
   warrantyPage,
@@ -57,11 +58,41 @@ const FooterMain = () => {
                   <li>
                     <a href="#">Installation</a>
                   </li>
+<<<<<<< Updated upstream
                   <Link to={warrantyPage}>
                     <li>
                       <a href="#">Warranty</a>
                     </li>
                   </Link>
+=======
+                </Link>
+                <Link to={childSafety}>
+                  <li>
+                    <a href="#">Child Safety</a>
+                  </li>
+                </Link>
+                <li>
+                  <a href="#">Videos</a>
+                </li>
+                <li>
+                  <a href="#">Motorization</a>
+                </li>
+                <li>
+                  <a href="#">Finishing Touches</a>
+                </li>
+                <li>
+                  <a href="#">Commercial Product Info</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-3">
+              <ul className="list-unstyled mb-0">
+                <li>about</li>
+                <li>
+                  <a href="#">Why LuXout?</a>
+                </li>
+                <Link to={contactUs}>
+>>>>>>> Stashed changes
                   <li>
                     <a href="#">Child Safety</a>
                   </li>
@@ -71,6 +102,7 @@ const FooterMain = () => {
                   <li>
                     <a href="#">Motorization</a>
                   </li>
+<<<<<<< Updated upstream
                   <li>
                     <a href="#">Finishing Touches</a>
                   </li>
@@ -131,6 +163,24 @@ const FooterMain = () => {
                   </li>
                 </ul>
               </div>
+=======
+                </Link>
+                <li>
+                  <a href="#">Our Process</a>
+                </li>
+                <li>
+                  <a href="#">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-3">
+              <ul className="list-unstyled">
+                <li>legal</li>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+              </ul>
+>>>>>>> Stashed changes
             </div>
           </div>
           <NewsLetterSignUp />
