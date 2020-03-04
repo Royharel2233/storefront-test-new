@@ -485,6 +485,7 @@
     }
   }
 
+
   .shipping-method, .payment-method {
     @extend %checkout-method;
 
@@ -504,6 +505,25 @@
       @extend %checkout-select;
     }
 
+    .icon-payment-method {
+
+      &.credit-card {
+        border-radius: 3.3px;
+        border: solid 2.1px #e6e7e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 28.7px;
+      }
+
+      &.paypal {
+        //height: 18px;
+        //width: 74.6px;
+        margin-top: -80px;
+        margin-bottom: -80px;
+      }
+    }
   }
 
 }

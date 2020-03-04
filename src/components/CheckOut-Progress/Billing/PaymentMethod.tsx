@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import Select from 'react-select';
+import { IconCreditCard } from './../assets/icons/IconCreditCard';
+
 import "../style.scss";
 
 export const PaymentMethod: React.FC<{}> = () => {
 
+  const newPaymentMethod = 'new payment method'
+
   const [selectedOption, setSelectOption] = useState(null);
+
+  const [displayState, setDisplayState] = useState({
+    display: "",
+  });
 
   const onMethodSelect = selectedOption => {
     setSelectOption(selectedOption);
+
+    if (selectedOption.value === newPaymentMethod) {
+      setDisplayState({ display: "none" });
+    } else {
+      setDisplayState({ display: "block" });
+    }
   };
 
   const options = [
@@ -15,8 +29,8 @@ export const PaymentMethod: React.FC<{}> = () => {
       label: 'post office',
     },
 
-    { value: 'new payment method',
-      label: 'new payment method',
+    { value: newPaymentMethod,
+      label: newPaymentMethod,
     },
 
   ];
@@ -40,9 +54,40 @@ export const PaymentMethod: React.FC<{}> = () => {
         onChange={onMethodSelect}>
       </Select>
 
+      <div className="new-shipping-address" style={displayState}>
+
+
+      </div>
       <button className={"checkout-page-button"}>
         Review order
       </button>
+      <IconCreditCard
+        className='icon-payment-method credit-card'
+        name="visa"
+        height='200px'
+        width='28.7px'
+      />
+
+      <IconCreditCard
+        className='icon-payment-method paypal'
+        name="paypal"
+        height='180px'
+        width='74.6px'
+      />
+
+      <IconCreditCard
+        className='icon-payment-method credit-card'
+        name="american_express"
+        height='200px'
+        width='28.7px'
+      />
+
+      <IconCreditCard
+        className='icon-payment-method credit-card'
+        name="mastercard"
+        height='200px'
+        width='28.7px'
+      />
     </div>
   )
 };
