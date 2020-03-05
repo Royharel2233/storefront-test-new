@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+import "../assets/style.scss";
 import { PaymentMethod } from "./PaymentMethod";
 
 export const BillingAddress: React.FC<{}> = () => {

@@ -4,7 +4,7 @@ import { PaymentMethod } from "../Billing/PaymentMethod";
 import { ShippingAddress } from "../Shipping/ShippingAddress";
 import { ShippingMethod } from '../Shipping/ShippingMethod'
 
-import '../style.scss'
+import '../assets/style.scss'
 
 interface CheckOutProps {
   numberTab: number;

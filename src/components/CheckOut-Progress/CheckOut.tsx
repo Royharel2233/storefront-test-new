@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { MainContent } from "./MainContent/MainContent";
 import { OrderSummary } from "./OrderSummary/OrderSummary";
 
-import "./style.scss";
+import "./assets/style.scss";
 
 export const CheckOut: React.FC<{}> = () => {
   const [tabBar, setTabBar] = useState(0);

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import "../style.scss";
+import "../assets/style.scss";
 
 import { SingleItem } from "./SingleItem";
 

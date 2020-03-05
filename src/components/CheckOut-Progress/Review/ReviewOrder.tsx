@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.scss";
+import "../assets/style.scss";
 
 export const CkeckoutReview: React.FC<{}> = () => {
   return (

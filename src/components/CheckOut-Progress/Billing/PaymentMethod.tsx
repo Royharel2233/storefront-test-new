@@ -3,7 +3,7 @@ import Select from 'react-select';
 import { IconCreditCard } from './../assets/icons/IconCreditCard';
 import { IconPaypal } from "./../assets/icons/IconPaypal";
 
-import "../style.scss";
+import "../assets/style.scss";
 
 
 export const PaymentMethod: React.FC<{}> = () => {

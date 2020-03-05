@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Select from 'react-select';
-import "../style.scss";
+import "../assets/style.scss";
 
 export const ShippingAddress: React.FC = () => {
 
