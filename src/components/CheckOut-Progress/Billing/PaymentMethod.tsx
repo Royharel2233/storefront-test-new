@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Select from 'react-select';
 import { IconCreditCard } from './../assets/icons/IconCreditCard';
+import { IconPaypal } from "./../assets/icons/IconPaypal";
 
 import "../style.scss";
 
+
 export const PaymentMethod: React.FC<{}> = () => {
 
-  const newPaymentMethod = 'new payment method'
+  const newPaymentMethod = 'new payment method';
 
   const [selectedOption, setSelectOption] = useState(null);
 
@@ -18,9 +20,9 @@ export const PaymentMethod: React.FC<{}> = () => {
     setSelectOption(selectedOption);
 
     if (selectedOption.value === newPaymentMethod) {
-      setDisplayState({ display: "none" });
-    } else {
       setDisplayState({ display: "block" });
+    } else {
+      setDisplayState({ display: "none" });
     }
   };
 
@@ -54,40 +56,101 @@ export const PaymentMethod: React.FC<{}> = () => {
         onChange={onMethodSelect}>
       </Select>
 
-      <div className="new-shipping-address" style={displayState}>
+      <div className="new-payment_method" style={displayState}>
 
+        <div
+          // onClick={onChangeHandler}
+          className="form-field-radio">
+          <label>
+            <input
+              id="credit-card"
+              name="method"
+              checked
+              type="radio"
+              value="credit-card"
+            />
+            Credit Card
+            <IconCreditCard
+              className="credit-card"
+              name="mastercard"
+              height='20px'
+              width='28.7px'
+            />
+            <IconCreditCard
+              className="credit-card"
+              name="visa"
+              height='20px'
+              width='28.7px'
+            />
+            <IconCreditCard
+              className="credit-card"
+              name="american_express"
+              height='200px'
+              width='28.7px'
+            />
+            <span className="checkmark">{''}</span>
+          </label>
+        </div>
+
+          <div className='credit-card-details'>
+            <div className='card-number field'>
+              <label>CARD NUMBER</label>
+              <input
+                className={"form-field-input"}
+                type="text"
+                id="card-number" />
+            </div>
+
+            <div className='validity-term field'>
+              <label>MM/YY</label>
+              <input
+                className={"form-field-input"}
+                type="text"
+                id="validity-term" />
+            </div>
+
+          <div className='security-code field'>
+            <label>SECURITY CODE</label>
+            <input
+              className={"form-field-input"}
+              type="text"
+              id="security-code" />
+          </div>
+      </div>
+
+        <div className="form-field-radio">
+          <label>
+          <input
+            id="paypal"
+            name="method"
+            type="radio"
+            value="paypal"
+          />
+            <IconPaypal/>
+            <span className="checkmark">{''}</span>
+          </label>
+        </div>
+
+        <div className="form-field w-100 mt-3">
+          <div className="form-field-checkbox">
+            <input
+              type="checkbox"
+              name="save_payment_method"
+              id="save_payment_method"
+              value="save_payment_method"
+            />
+
+            <label
+              className={"form-field-checkbox-label"}
+              htmlFor="save_payment_method">Save payment method for future use
+            </label>
+          </div>
+        </div>
 
       </div>
-      <button className={"checkout-page-button"}>
+      <button className="checkout-page-button">
         Review order
       </button>
-      <IconCreditCard
-        className='icon-payment-method credit-card'
-        name="visa"
-        height='200px'
-        width='28.7px'
-      />
-
-      <IconCreditCard
-        className='icon-payment-method paypal'
-        name="paypal"
-        height='180px'
-        width='74.6px'
-      />
-
-      <IconCreditCard
-        className='icon-payment-method credit-card'
-        name="american_express"
-        height='200px'
-        width='28.7px'
-      />
-
-      <IconCreditCard
-        className='icon-payment-method credit-card'
-        name="mastercard"
-        height='200px'
-        width='28.7px'
-      />
     </div>
   )
 };

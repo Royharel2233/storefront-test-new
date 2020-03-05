@@ -3,6 +3,10 @@
 
 .checkout-page {
 
+  .IconPaypal {
+    max-height: 76px;
+  }
+
   &-checkbox {
     position: relative;
   }
@@ -398,7 +402,6 @@
       .promos-offers-button {
         font-size: 10px;
         font-weight: bold;
-        font-family: Lato;
         border: solid 1px #343538 !important;
         border-radius: 0;
         height: 32px;
@@ -505,23 +508,55 @@
       @extend %checkout-select;
     }
 
-    .icon-payment-method {
+    .credit-card {
+      border-radius: 3.3px;
+      border: solid 2.1px #e6e7e8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      width: 28.7px;
+      margin: 0 7px 0 7px;
+    }
 
-      &.credit-card {
-        border-radius: 3.3px;
-        border: solid 2.1px #e6e7e8;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 20px;
-        width: 28.7px;
+    .paypal {
+      margin-top: -80px;
+      margin-bottom: -80px;
+    }
+
+
+    .credit-card-details {
+      //margin: 17px;
+      display: flex;
+
+      .field {
+        margin: 30px 15px 30px 15px;
+        font-size: 12px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+        color: #343538;
       }
 
-      &.paypal {
-        //height: 18px;
-        //width: 74.6px;
-        margin-top: -80px;
-        margin-bottom: -80px;
+      .card-number input {
+        width: 320px;
+      }
+
+      .validity-term input{
+        width: 150px;
+      }
+
+      .security-code input{
+        width: 150px;
+      }
+
+      input {
+        outline: 0;
+        border-width: 0 0 2px;
+        border-color: #343538;
+        margin-top: 5px;
       }
     }
   }

@@ -3,7 +3,7 @@ import React from 'react'
 interface PaymentMethodProps {
   className: string;
   name: string;
-  height: string;
+  height?: string;
   width: string;
 }
 
