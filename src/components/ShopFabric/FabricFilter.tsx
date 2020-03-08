@@ -35,18 +35,18 @@ export interface IFilterAttributes {
   values: ISingleFilterAttribute[];
 }
 
-const demoObj: IFilterAttributes = {
-  id: "",
-  name: "No Val",
-  slug: name,
-  values: [
-    {
-      id: "",
-      name: "No Name",
-      slug: name,
-    },
-  ],
-};
+// const demoObj: IFilterAttributes = {
+//   id: "",
+//   name: "No Val",
+//   slug: name,
+//   values: [
+//     {
+//       id: "",
+//       name: "No Name",
+//       slug: name,
+//     },
+//   ],
+// };
 
 export const FabricFilter: React.FC<{
   currentQuery: string;
@@ -87,7 +87,7 @@ export const FabricFilter: React.FC<{
     setShowFilter(!showFilter);
   };
 
-  const checkFilter = async (stringParam: string) => {
+  const checkFilter = (stringParam: string) => {
     let filteredAttribute;
     const splitter = array => {
       const newSlug = array.attribute.slug.split("-");
@@ -137,25 +137,24 @@ export const FabricFilter: React.FC<{
                 <div className="text-center">
                   <div className="">
                     <Checkbox>
-                      {/* <div className="row"> */}
-                      <input
-                        tabIndex={0}
-                        type="checkbox"
-                        checked={
-                          currentProduct === product.node.id
-                            ? viewCurrentProduct(product.node.id)
-                            : null
-                        }
-                        readOnly
-                        className="dark-grey bold"
-                      />
-                      <label
-                        className="text-dark"
-                        onClick={() => updateState(product.node.id)}
-                      >
-                        {product.node.name.split("-", 1)}
-                      </label>
-                      {/* </div> */}
+                      <div className="row">
+                        <input
+                          tabIndex={0}
+                          type="checkbox"
+                          name={product.node.name}
+                          checked={
+                            currentProduct === product.node.id
+                              ? viewCurrentProduct(product.node.id)
+                              : null
+                          }
+                          readOnly
+                          onClick={() => updateState(product.node.id)}
+                          className="dark-grey bold"
+                        />
+                        <label className="text-dark">
+                          {product.node.name.split("-", 1)}
+                        </label>
+                      </div>
                     </Checkbox>
                   </div>
                   {currentProduct === product.node.id ? (
@@ -167,13 +166,15 @@ export const FabricFilter: React.FC<{
                       }
                     >
                       <div className="mb-1">
-                        <EachFilterAttr
-                          attribute={currentAttribute || demoObj}
-                          onAttributeFiltersChange={onAttributeFiltersChange}
-                          filters={filters}
-                          key={index}
-                          filtersLimit={5}
-                        />
+                        {!currentAttribute ? null : (
+                          <EachFilterAttr
+                            attribute={currentAttribute}
+                            onAttributeFiltersChange={onAttributeFiltersChange}
+                            filters={filters}
+                            key={index}
+                            filtersLimit={5}
+                          />
+                        )}
                       </div>
                     </div>
                   ) : null}
