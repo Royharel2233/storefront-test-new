@@ -263,6 +263,10 @@ export interface Category_products_edges_node {
   id: string;
   name: string;
   attributes: { attribute: IFilterAttributes }[] | null;
+  variants: {
+    id: string,
+    name: string
+  }
   /**
    * The main thumbnail for a product.
    */

@@ -80,6 +80,7 @@ export const ShopFabric: React.FC<PageProps> = ({ match }) => {
     FilterQuerySet
   );
   const [currentQuery, setCurrentQuery] = useState("359");
+  
   const clearFilters = () => {
     setAttributeFilters({});
   };
@@ -184,7 +185,6 @@ export const ShopFabric: React.FC<PageProps> = ({ match }) => {
           
             return (
               <div className="shop-fabric w-1239 container">
-                )}
                 <ShopFabricPage
                   currentQuery={currentQuery}
                   setCurrentQuery={setCurrentQuery}

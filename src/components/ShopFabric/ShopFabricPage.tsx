@@ -93,6 +93,7 @@ const ShopFabricPage: React.FC<PageProps> = ({
           <FabricMenu
             currentQuery={currentQuery}
             setCurrentQuery={setCurrentQuery}
+            currentProducts={products}
           />
         </div>
         <div className="col-sm-12">

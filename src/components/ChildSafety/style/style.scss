@@ -1,0 +1,70 @@
+.child-safety {
+  .header {
+    width: 100%;
+    height: 405px;
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-bottom: 45px;
+    background: url("../../../img/child_safety_background.svg");
+    .content {
+      margin-left: 198.3px;
+      max-width: 325px;
+      h1 {
+        margin: 0px 0px 10.7px;
+        font-family: Lato;
+        font-size: 36px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.2;
+        letter-spacing: 0.89px;
+        color: white;
+      }
+      p {
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: 0.27px;
+        color: white;
+      }
+    }
+  }
+
+  .main-content {
+    .main {
+      h1 {
+        font-family: Lato;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.63;
+        letter-spacing: 0.4px;
+        color: black;
+      }
+      p {
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: 0.27px;
+      }
+    }
+
+    .side-pics {
+      display: flex;
+      flex-direction: column;
+      align-content: flex-end;
+      img {
+        width: 20vh;
+        margin: 1rem;
+      }
+    }
+  }
+}

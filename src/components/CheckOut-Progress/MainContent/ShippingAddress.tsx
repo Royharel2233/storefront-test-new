@@ -11,11 +11,13 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
     display: "",
   });
 
-  const [selectedOption, setSelectOption] = useState(null);
+  const [, setSelectOption] = useState('');
+  // add selected Option
+
   // handles the change made by the inputs (input) variable is given as param to the onChange function
   const handleChange = (input: string | number) => (
     e: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  ) => {  
     const value = e.target.value;
     // returns boolean
     e.preventDefault();
@@ -66,7 +68,7 @@ export const ShippingAddress: React.FC<CheckOutProps> = ({ exportObj }) => {
 
             <Select
               className={"shipping-address-form-select"}
-              value={selectedOption}
+              value={options[0]}
               options={options}
               theme={theme => ({
                 ...theme,
