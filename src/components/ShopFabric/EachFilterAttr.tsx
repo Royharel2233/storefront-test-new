@@ -193,7 +193,6 @@ export const EachFilterAttr: React.FC<IProps> = ({
   const [viewAllOptions, setViewAllOptions] = React.useState(false);
   // const [currentAttribute] = React.useState('')
   const ref = React.useRef<HTMLDivElement>(null);
-
   return (
     <div className="d-flex justify-content-center flex-direction-column">
       {attribute.values &&
@@ -203,7 +202,7 @@ export const EachFilterAttr: React.FC<IProps> = ({
           } else {
             return (
               <div className="m-auto p-2">
-                <Header>{attribute.name}</Header>
+                {/* <Header>{attribute.name}</Header> */}
                 <Checkbox
                   ref={ref}
                   className="p-2 m-2"

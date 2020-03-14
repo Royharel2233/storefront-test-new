@@ -25,6 +25,13 @@ export const MainContent: React.FC<CheckOutProps> = ({ exportObj }) => {
 
 function RenderPage(param: number, exportObj) {
     switch (param) {
+      case 2:
+        return (
+          <>
+              <ShippingAddress exportObj={exportObj} />
+              <PaymentMethod/>
+          </>
+        );
         case 1:
             return (
               <>

@@ -1,105 +1,55 @@
-.main-container {
-  width: 1440px;
-  height: 1969px;
-  background-color: var(--white);
+.gray-background {
+  background: rgba(0, 0, 0, 0.05);
 }
-
-.each-item-container {
-  width: 1240px;
-  height: 135px;
-  box-shadow: 0 7.1px 28.6px 0 rgba(58, 60, 68, 0.06);
-  background-color: var(--white);
+.news-mail-block article {
+  margin-bottom: 30px;
 }
-
-.each-item-description {
-  height: 39px;
-  font-family: Lato;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  overflow-wrap: normal;
-  line-height: 1.59;
-  letter-spacing: 0.27px;
-  color: var(--black);
+.title-block {
+  padding: 150px;
+  border: 1px solid #eee;
+  margin-bottom: 45px;
+  background-image: url('../../../images/ContactUsBackground.svg');
 }
-
-.each-item-header {
-  width: 159px;
-  height: 25px;
-  margin-top: 10px;
-  font-family: Lato;
+.title-block h1 {
+  text-align: center;
+  color: #282828;
+}
+.news-block {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+}
+.news-block div h4 {
+  display: inline-block;
   font-size: 18px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.35;
-  letter-spacing: 0.37px;
-  color: var(--black);
+  font-weight: 600;
 }
-
-.each-item-image {
-    width: 180px;
-    height: 135px;
-    float: left;
-    left: 0;
-    top: 0;
-  }
-
-  .read-more {
-    width: 68px;
-    height: 16px;
-    font-family: Lato;
-    font-size: 10px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.6;
-    letter-spacing: 1.2px;
-    color: var(--dark-grey);
-  }
-
-.main-banner{
-    width: 100%;
-    height: 405px;
-    display: flex;
-    align-items: center;
-    color: white;
-    background: url("../../../images/shipping-handling_background.png");
-    margin-bottom: 45px;
+.news-block div p {
+  font-size: 12px;
+  font-weight: 600;
 }
-.main-banner .content{
-    margin-left: 198.3px;
-    max-width: 325px;
+.image-news {
+  padding: 0;
+}
+.text-news {
+  padding: 15px;
+  
+}
+.post-date {
+  font-weight: 900;
+  font-size: 10px;
+  text-transform: uppercase;
+  // float: right;
+  display: inline-block;
+}
+.read-more {
+  float: right;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  border-bottom: 2px solid #fdcd4a;
+}
+.read-more:hover {
+  cursor: pointer;
+  color: #fdcd4a;
 
 }
-.main-banner .content h1{
-    margin: 0px 0px 10.7px;
-    font-family: Lato;
-    font-size: 36px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: 0.89px;
-    color: var(--charcoal-black);
-}
-
-.news-date {
-    float: right;
-    margin-top: 10px;
-    margin-right: 3px;
-}
-
-.news-created-date {
-    height: 16px;
-    font-family: Lato;
-    font-size: 10px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    text-transform: uppercase;
-    line-height: 1.6;
-    letter-spacing: 1.2px;
-    color: var(--charcoal-black);
-  }

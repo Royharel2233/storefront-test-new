@@ -366,8 +366,6 @@
 }
 
 p.shipping-price {
-  top: 2;
-  right: 3;
   font-family: Lato;
   font-size: 16px;
   font-weight: bold;
@@ -376,5 +374,6 @@ p.shipping-price {
   line-height: 1.63;
   letter-spacing: 0.4px;
   color: #343538;
+  display: inline;
   text-align: right;
 }

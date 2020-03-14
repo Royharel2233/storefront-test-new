@@ -7,7 +7,7 @@ import { OrderSummary } from "./OrderSummary/OrderSummary";
 import "./style/style.scss";
 
 export const CheckOut: React.FC<{}> = () => {
-  const [formState, setFormState] = useState(1);
+  const [formState, setFormState] = useState(2);
   const [pageState, setPageState] = useState(0);
   const [userState, setUserState] = useState({
     firstName: "",

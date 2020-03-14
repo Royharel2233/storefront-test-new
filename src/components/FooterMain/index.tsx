@@ -44,23 +44,23 @@ const FooterMain = () => {
     <div className={visibleFooter}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-3">
+          <div className="col-lg-2">
             <a href="/">
               <img src={logo_image} className="img-fluid logo" alt="logo" />
             </a>
           </div>
-          <div className="col-lg-6 col-md-12">
+          <div className="col-lg-10 col-md-12">
             <div className="row">
-              <div className="col-md-3">
+              <div className="col-md-2">
                 <ul className="list-unstyled mb-0">
                   <li>PRODUCT</li>
                   <li>
                     <a href="#">Installation</a>
                   </li>
                   <Link to={warrantyPage}>
-                  <li>
-                    <a href="#">Warranty</a>
-                  </li>
+                    <li>
+                      <a href="#">Warranty</a>
+                    </li>
                   </Link>
                   <Link to={childSafety}>
                     <li>
@@ -84,7 +84,7 @@ const FooterMain = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-2">
                 <ul className="list-unstyled mb-0">
                   <li>about</li>
                   <li>
@@ -101,9 +101,9 @@ const FooterMain = () => {
                     </li>
                   </Link>
                   <Link to={shippingHandling}>
-                  <li>
-                    <a href="#">Shipping + Handling</a>
-                  </li>
+                    <li>
+                      <a href="#">Shipping + Handling</a>
+                    </li>
                   </Link>
                   <li>
                     <a href="#">Our Process</a>
@@ -113,7 +113,7 @@ const FooterMain = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-md-3">
+              <div className="col-md-2">
                 <ul className="list-unstyled">
                   <li>legal</li>
                   <li>
@@ -121,8 +121,10 @@ const FooterMain = () => {
                   </li>
                 </ul>
               </div>
+              <div className="col-md-6">
+                <NewsLetterSignUp />
+              </div>
             </div>
-            <NewsLetterSignUp />
           </div>
         </div>
         <div className="container copyright">
