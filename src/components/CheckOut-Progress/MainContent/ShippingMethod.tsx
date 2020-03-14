@@ -106,13 +106,12 @@ export const ShippingMethod: React.FC<CheckOutProps> = ({}) => {
   const [currentMethod, setCurrentMethod] = React.useState("");
 
   const checkIfAttributeIsChecked = (slug: string) => {
-        if (currentMethod === slug) {
-          return true;
-        } else {
-          return false;
-        }
+    if (currentMethod === slug) {
+      return true;
+    } else {
+      return false;
+    }
   };
-
   return (
     <div className="shipping-method" style={{ display: "block" }}>
       <h3 className="dark-grey">Shipping Method</h3>
@@ -164,9 +163,45 @@ export const ShippingMethod: React.FC<CheckOutProps> = ({}) => {
             <label onClick={() => setCurrentMethod("air-fright")}>
               Air Fright
             </label>
-            <div className="d-inline" >
-              <p className="shipping-price text-right">$100</p>
+            <div className="d-inline-block float-right mr-3">
+              <p className="shipping-price">$100</p>
             </div>
+            <p className="mt-0 ml-4 p-1">
+              *Freight is $15/shade up to 90” wide.
+              <br />
+              *For shades over 90”, a quote is needed. Choose this option and a
+              LuXout representative will reach out to you shortly after placing
+              your order.
+            </p>
+          </div>
+          <hr className="bg-dark"/>
+          <div className="row">
+            <input
+              tabIndex={-1}
+              type="checkbox"
+              name="pickUp"
+              checked={
+                currentMethod === "pick-up"
+                  ? checkIfAttributeIsChecked(currentMethod)
+                  : null
+              }
+              value="pick-up"
+              readOnly
+              className="dark-grey bold"
+            />
+            <label onClick={() => setCurrentMethod("pick-up")}>
+              Pick Up
+            </label>
+            <div className="d-inline-block float-right mr-3">
+              <p className="shipping-price ">Free</p>
+            </div>
+            <p className="mt-0 ml-4 p-1">
+              *Freight is $15/shade up to 90” wide.
+              <br />
+              *For shades over 90”, a quote is needed. Choose this option and a
+              LuXout representative will reach out to you shortly after placing
+              your order.
+            </p>
           </div>
         </Checkbox>
       </div>

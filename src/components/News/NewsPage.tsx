@@ -1,18 +1,19 @@
-import React from 'react'
+import React from "react";
 
-import {EachItem} from './EachItem'
 
-import './style/style.scss'
+import { EachItem } from "./EachItem";
+
+import "./style/style.scss";
 
 export const NewsPage: React.FC<{}> = ({}) => {
-        return <div className="main-container container">
-            <div className="main-banner">
-                <div className="content">
-                <h1 className="">Our News</h1>
-                </div>
-            </div>
-            <div>
-                <EachItem/>
-            </div>
-        </div>;
-}
+  return (
+    <section className="news-mail-block" id="news-page">
+      <div className="container">
+        <div className="title-block">
+          <h1>Our News</h1>
+        </div>
+        <EachItem/>
+      </div>
+    </section>
+  );
+};

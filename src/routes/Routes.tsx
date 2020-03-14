@@ -55,6 +55,7 @@ import { LoginMain } from "@temp/components/LoginPage/LoginMain";
 
 import { ChildSafety } from "@temp/components/ChildSafety/ChildSafety";
 
+import {Photography} from '../components/Photography/Photography'
 
 const slugUrl = ":slug([a-z-0-9]+)/:id([0-9]+)/";
 export const baseUrl = "/";
@@ -84,6 +85,8 @@ export const warrantyPage = `${baseUrl}warranty-page/`;
 export const newsPage = `${baseUrl}news-page/`;
 export const loginPage = `${baseUrl}login-page/`;
 export const childSafety = `${baseUrl}child-safety/`;
+export const photography = `${baseUrl}photography/`;
+
 
 export const Routes: React.FC<{}> = ({ }) => (
   <Switch>
@@ -116,6 +119,7 @@ export const Routes: React.FC<{}> = ({ }) => (
     <Route path={newsPage} component={NewsPage} />
     <Route path={loginPage} component={LoginMain} />
     <Route path={childSafety} component={ChildSafety} />
+    <Route path={photography} component={Photography} />
     <Route component={NotFound} />
   </Switch>
 );

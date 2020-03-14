@@ -1,0 +1,61 @@
+.auth-title {
+    padding: 50px 50px;
+    text-align: center;
+    color: white;
+    background: #282828;
+}
+// .h1-auth-title {
+//     /*font-size: 36px;*/
+// }
+
+.txt-auth-title {
+    margin: auto;
+    max-width: 650px;
+    font-size: 12px;
+}
+
+.small-gray-background {
+  width: 850px;
+  height: 560px;
+  position: absolute;
+  background: #fafafa;
+  z-index: 0;
+}
+.photography-image-block {
+  position: relative;
+}
+.photography-image-block img {
+  z-index: 5;
+  margin-left: 80px;
+  margin-top: 40px;
+  position: relative;
+}
+.photography-block {
+  margin-top: 50px;
+  margin-bottom: 130px;
+}
+.photography-text-block {
+  margin-top: 95px;
+  padding-left: 65px;
+}
+.photography-text-block p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: #737680;
+  max-width: 450px;
+}
+.link-btn {
+  border: none;
+  border-radius: 0;
+  display: block;
+  width: 140px;
+  padding: 10px 10px;
+  background: #343538;
+  color: #fdcd4a !important;
+  text-align: center;
+  cursor: pointer;
+}
+.link-btn:hover {
+  background: #fdcd4a;
+  color: #343538 !important;
+}
